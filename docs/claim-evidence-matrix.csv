@@ -1,0 +1,12 @@
+id,manuscript_label,claim,status,primary_evidence,remaining
+C01,thm:kernel,constructive structural kernel,mathematically-proved;scoped-machine-checked;tested,proofs/StructuralKernelProofs.tla;src/vgc/structure.py,full typed kernel and Core interface connection
+C02,thm:safety,controller safety,mathematically-proved;formalized;finite-checked,specification/Core.tla;specification/AsyncController.tla;proofs/ControllerSafety.tla,full strengthened Init/Next invariant;guard lemma is scoped
+C03,cor:domain,validator relative domain correctness,mathematically-proved,docs/paper/main.tex,adequacy and soundness outside restricted language
+C04,thm:refinement,asynchronous atomic forward simulation,mathematically-proved;planned,specification/AtomicController.tla,complete checked abstraction map and action correspondence
+C05,thm:local,exact direct invalidation,mathematically-proved;tested,docs/paper/main.tex;experiments/scenarios.py,no general machine proof
+C06,prop:isolation,observation relative isolation,mathematically-proved;tested,docs/paper/main.tex;experiments/scenarios.py,no confidentiality or distribution claim
+C07,thm:cost,episode generation bound,mathematically-proved;finite-checked;scoped-machine-checked,proofs/Budget.tla;specification/Core.tla,full episode history counting induction and aggregate bound
+C08,thm:termination,finite terminal outcome,mathematically-proved;finite-checked,models/core/chain-terminal.cfg,unbounded temporal mechanization;stable inputs and fairness required
+C09,thm:reconfig,transactional reconfiguration,mathematically-proved;tested;finite-checked,specification/AsyncController.tla;experiments/scenarios.py,general parameterized preservation proof
+C10,prop:observation,nonblocking observation projection,mathematically-proved;tested,docs/paper/main.tex;experiments/scenarios.py,no authenticated complete remote trace claim
+C11,thm:table,finite policy relation and behavior,mathematically-proved;scoped-machine-checked;finite-checked,proofs/DocumentPolicyProofs.tla;experiments/scenarios.py,Python decoder/interpreter refinement and full trace induction mechanization
