@@ -47,14 +47,15 @@
 \input{generated/numbers}
 
 \begin{document}
-\title{Safe Coordination of Untrusted AI Agents in Software Systems}
+\title{Safe Coordination of Untrusted AI Agents}
 \author{Majid~Babaei%
-\IEEEcompsocitemizethanks{\IEEEcompsocthanksitem M. Babaei is with the School of Computing, University of the Fraser Valley, BC, Canada.\protect\\ E-mail: majid.babaei@ufv.ca}}
+% \IEEEcompsocitemizethanks{\IEEEcompsocthanksitem M. Babaei is with the School of Computing, University of the Fraser Valley, BC, Canada.\protect\\ E-mail: majid.babaei@ufv.ca}}
+}
 \markboth{IEEE Transactions on Software Engineering}{Babaei: Safe Coordination of Untrusted AI Agents in Software Systems}
 
 \IEEEtitleabstractindextext{%
 \begin{abstract}
-Multi-agent frameworks built on large language models (LLMs) divide software development among agents that write requirements, designs, code and tests. Every individual answer can look valid while the workflow as a whole still goes wrong. A slow agent may answer a question that has since changed. Two locally valid outputs may disagree on an interface. A reviewer added late may be silently skipped. These are \emph{coordination} failures, and better prompting of each agent does not remove them. We present a coordination semantics in which agents only \emph{propose} primitive values, while a deterministic controller owns artifact structure, dependency tracking and publication. Each generated attribute carries an exact dependency signature over everything it may depend on: its source footprint, the shared context selected for it, and its generation contract. A guarded transition system admits a proposal only if it answers the current question. It invalidates exactly the work affected by a change, bounds generation attempts per dependency episode, and publishes only globally consistent snapshots. We prove structural integrity, currentness of accepted values, exact repair locality, a generation bound, a terminal success-or-failure outcome for acyclic workflows, a forward simulation from asynchronous to atomic execution, and safety of transactional reconfiguration. Counterexamples mark the boundary of each result. We instantiate the semantics in a TLA$^+$ model with scoped machine-checked lemmas and in a Python reference controller. In \AblTotalRuns{} randomized adversarial executions, the reference controller exposed no unsafe value, while every ablation that removes a non-redundant mechanism violated its targeted property. On \CostMaxN-document workspaces, exact signatures reduced generation requests per change \RatioFull$\times$ relative to full regeneration and \RatioWorkspace$\times$ relative to a whole-workspace footprint, without changing any accepted value.
+Multi-agent frameworks built on large language models (LLMs) divide software development among agents that write requirements, designs, code and tests. Every individual answer can look valid while the workflow as a whole still goes wrong. A slow agent may answer a question that has since changed. Two locally valid outputs may disagree on an interface. A reviewer added late may be silently skipped. These are \emph{coordination} failures, and better prompting of each agent does not remove them. In this study, we present a coordination semantics in which agents only \emph{propose} primitive values, while a deterministic controller owns artifact structure, dependency tracking and publication. Each generated attribute carries an exact dependency signature over everything it may depend on: its source footprint, the shared context selected for it, and its generation contract. A guarded transition system admits a proposal only if it answers the current question. It invalidates exactly the work affected by a change, bounds generation attempts per dependency episode, and publishes only globally consistent snapshots. We prove structural integrity, currentness of accepted values, exact repair locality, a generation bound, a terminal success-or-failure outcome for acyclic workflows, a forward simulation from asynchronous to atomic execution, and safety of transactional reconfiguration. Counterexamples mark the boundary of each result. We instantiate the semantics in a TLA$^+$ model with scoped machine-checked lemmas and in a Python reference controller. In \AblTotalRuns{} randomized adversarial executions, the reference controller exposed no unsafe value, while every ablation that removes a non-redundant mechanism violated its targeted property. On \CostMaxN-document workspaces, exact signatures reduced generation requests per change \RatioFull$\times$ relative to full regeneration and \RatioWorkspace$\times$ relative to a whole-workspace footprint, without changing any accepted value.
 \end{abstract}
 
 \begin{IEEEkeywords}
@@ -69,7 +70,7 @@ Large language models, multi-agent systems, software engineering workflows, runt
 \section{Introduction}\label{sec:intro}
 \IEEEPARstart{L}{arge} language models (LLMs) are now routinely embedded in software-engineering workflows~\cite{hou2024llm4se}. Frameworks such as MetaGPT~\cite{metagpt}, ChatDev~\cite{chatdev} and AutoGen~\cite{autogen} organize several LLM agents into roles (product manager, architect, programmer, tester) that hand artifacts to one another. Agentic tools such as SWE-agent~\cite{sweagent} edit real repositories. Recent surveys identify such LLM-based multi-agent systems as a central direction for automated software engineering~\cite{he2025mas,wang2024agents}.
 
-Most quality work in this area targets the \emph{individual answer}: is the generated code correct~\cite{evalplus,swebench}, does it parse~\cite{synchromesh,outlines}, does it pass a guardrail~\cite{nemoguardrails}? Multi-agent systems, however, also fail \emph{between} answers. An empirical study of multi-agent LLM systems attributes many failures to inter-agent misalignment and to missing or incorrect verification of task completion~\cite{cemri2025mast}. Consider three situations, each of which a per-answer check cannot detect:
+Most existing approaches evaluate individual answers in isolation, rather than the quality of interactions and hand-offs between agents. For example, they often ask: is the generated code correct~\cite{evalplus,swebench}, does it parse~\cite{synchromesh,outlines}, does it pass a guardrail~\cite{nemoguardrails}? Multi-agent systems, however, also fail \emph{between} answers. An empirical study of multi-agent LLM systems attributes many failures to inter-agent misalignment and to missing or incorrect verification of task completion~\cite{cemri2025mast}. Consider three situations, each of which a per-answer check cannot detect:
 \begin{itemize}
 \item \emph{Stale answer.} A coding agent is asked to implement requirement revision~1. While it works, the requirement changes to revision~2. The old answer arrives later, parses and passes its tests, and is accepted. It answers a question that no longer exists.
 \item \emph{Local validity, global conflict.} The design agent declares document identifiers as strings; the test agent independently assumes integers. Each output passes its own validator, yet the combination is inconsistent.
@@ -90,12 +91,57 @@ All artifacts, raw logs and the scripts that generate every number in this paper
 
 \textbf{Scope.} Our guarantees concern \emph{coordination} and are relative to declared validators. We never assume that an agent reasons correctly, and we need no probabilistic model of an LLM: for safety, the proposal source may return anything. Conversely, we do not claim that generated software is functionally correct beyond what its validators check. Section~\ref{sec:discharged} shows how a sufficiently restricted artifact language makes that stronger claim provable. The central inductive invariant and the refinement mapping are proved on paper; their full mechanization is ongoing work, and Table~\ref{tab:evidence} states precisely which parts are machine-checked.
 
-\textbf{Organization.} Section~\ref{sec:motivation} introduces the running example and the requirements. Section~\ref{sec:overview} gives an overview of the approach, and Section~\ref{sec:semantics} the formal semantics. Section~\ref{sec:guarantees} states and proves the guarantees. Section~\ref{sec:instantiation} describes the instantiation, Section~\ref{sec:evaluation} the evaluation, and Section~\ref{sec:threats} threats to validity. Section~\ref{sec:related} discusses related work and Section~\ref{sec:limitations} limitations, and Section~\ref{sec:conclusion} concludes.
+\textbf{Organization.} Section~\ref{sec:background} provides background on LLM agents, views, model transformations, incremental rebuilding, optimistic concurrency and TLA$^+$, and introduces the running example and the requirements. Section~\ref{sec:overview} gives an overview of the approach, and Section~\ref{sec:semantics} the formal semantics. Section~\ref{sec:guarantees} states and proves the guarantees. Section~\ref{sec:instantiation} describes the instantiation, Section~\ref{sec:evaluation} the evaluation, and Section~\ref{sec:threats} threats to validity. Section~\ref{sec:related} discusses related work and Section~\ref{sec:limitations} limitations, and Section~\ref{sec:conclusion} concludes.
 
 % =====================================================================
-\section{Motivating Example and Problem Statement}\label{sec:motivation}
+\section{Background}\label{sec:background}
+Our approach combines ideas from three areas: LLM-based multi-agent workflows, model-driven engineering, and incremental computation with optimistic concurrency. This section introduces the concepts from each area that the rest of the paper relies on.
 
-\subsection{A Multi-Agent Document-Service Workflow}
+%Each concept is first motivated by a problem that a coordinator of agents faces and then defined. Section~\ref{sec:motivation} applies the concepts to our running example, and Sections~\ref{sec:failures} and~\ref{sec:requirements} state the problem.
+
+\subsection{LLM Agents as Untrusted Proposers}\label{sec:bg-agents}
+In a multi-agent framework, each \emph{agent} is an LLM wrapped with a role instruction, such as ``you are the architect'', and possibly with tools~\cite{metagpt,chatdev,autogen}. The framework sends the agent a prompt assembled from the current artifacts and receives text, code or JSON in return. Three properties of this exchange matter for coordination. First, the reply may be wrong in ways that no prompt prevents: LLMs hallucinate~\cite{ji2023hallucination}, and the same prompt may yield different answers. Second, a call takes seconds to minutes, so other artifacts may change while it is outstanding. Third, delivery is unreliable: frameworks time out and retry calls, so a reply may arrive late, twice, or never. A coordinator therefore cannot treat a reply as a fact. It must treat the reply as a suggestion and check it.
+
+\begin{definition}[Request, proposal, validator]\label{def:proposal}
+A \emph{request} is one generation call to an agent. It carries a unique identity and the data the agent may see. A \emph{proposal} is a value returned for a request. A \emph{validator} is a deterministic, total predicate that decides whether a proposal is acceptable for the data it was requested on. An agent is an \emph{untrusted proposer}: for safety, we assume nothing about its proposals. It may return any value, a malformed one, a duplicate, or none.
+\end{definition}
+
+A validator may parse a value, run tests or check a schema, but its verdict concerns a single proposal. We call the instruction, output schema, validator and generation settings under which a request is made its \emph{generation contract}. Changing any of them changes what counts as a correct answer, just as changing a requirement does.
+
+\subsection{Views and Metamodels}\label{sec:bg-views}
+Software artifacts are structured. A requirement has an identifier and clauses, an endpoint has a signature and serves a request, and a test refers to the clause it checks. If artifacts are stored as free text, these relations remain implicit, and a coordinator cannot tell which test is affected when a clause changes. Model-driven engineering makes the relations explicit: each kind of artifact is represented as a \emph{model} that conforms to a \emph{metamodel}.
+
+\begin{definition}[Metamodel, view]\label{def:view}
+A \emph{metamodel} declares object types. For each type, it declares \emph{primitive attributes} (strings, Booleans, numbers or inert code text), typed \emph{references} to other types with multiplicities, and well-formedness predicates. A \emph{view} is a finite graph that conforms to a metamodel. Its nodes are objects with stable identities, which are retained when an attribute value changes. Its edges are typed references.
+\end{definition}
+
+The split between primitive attributes and references is central to our approach. A reference such as ``this endpoint serves request~17'' determines the \emph{shape} of the system: which artifacts exist and how they are connected. A primitive attribute such as the endpoint's signature text is \emph{content} that fills this shape. Agents write only primitive attributes; the controller owns all objects and references.
+
+Several views describe one system, and they overlap. A clause in the intake view constrains both a patch in the implementation view and a check in the verification view. Views are \emph{consistent} when such overlapping information agrees. Consistency checkers re-evaluate their rules after each model change~\cite{egyed2006instant,egyed2011tracking}. Work on networks of models shows that views can be consistent pairwise but not jointly~\cite{stevens,klare}. For this reason, a coordinator also needs a global check before it releases a set of artifacts.
+
+\subsection{Model Transformations and Traces}\label{sec:bg-transformations}
+Many artifacts are derived from others: every accepted request needs an endpoint, and every endpoint needs a patch. Whether such an artifact should exist depends only on its source view, so it can be decided deterministically, without asking an agent. Rule-based model transformation languages such as ATL~\cite{atl} capture this kind of derivation.
+
+\begin{definition}[Rule, match, trace]\label{def:rule}
+A transformation \emph{rule} consists of a source pattern, a guard, one target object type, and \emph{bindings} that compute the target's attributes and references. A \emph{match} is a tuple of source objects that fits the pattern and satisfies the guard. Each match yields exactly one target object. A \emph{trace} records which match produced which target, so that the target can be found, updated or deleted when the match changes or disappears.
+\end{definition}
+
+For example, rule $\mathsf{RequestToEndpoint}$ matches each accepted request and creates one endpoint with a reference to that request. If the request is deleted, the trace identifies the endpoint to delete. Classical transformations compute every binding with an expression. In our setting, some bindings are \emph{generated}: the endpoint's signature text is proposed by an agent. We call one generated primitive attribute of one target object a \emph{job}. Rules thus fix the skeleton deterministically, and jobs are the slots that agents fill.
+
+\subsection{Dependencies and Incremental Rebuilding}\label{sec:bg-incremental}
+When an input changes, a coordinator must decide which jobs to redo. Redoing every job is safe but wasteful, because each job costs an LLM call. Redoing too few leaves stale artifacts in place. Build systems face the same choice~\cite{mokhov}. A build task declares or discovers its \emph{dependencies}, and after a change it is rebuilt only if one of them changed. Make compares file timestamps, so saving a file without changing its content still triggers a rebuild. Content-based build systems instead store a key computed from the contents of the dependencies and rebuild a task only if its key changes. They also support \emph{early cutoff}: if a rebuilt task produces the same output as before, its dependents need not be rebuilt~\cite{mokhov}. Dependencies may be dynamic, known only once a task runs~\cite{erdweg2015pluto}, and self-adjusting computation applies the same ideas to general programs~\cite{acar}.
+
+We transfer these ideas to jobs. A job's \emph{footprint} is the source data its agent may read. Together with the shared context selected for the job and its generation contract, the footprint forms the job's \emph{observation}. An exact encoding of the observation is the job's \emph{dependency signature}; Section~\ref{sec:semantics} defines all three formally. The signature must cover everything that can affect whether a reply is valid. A build system that ignored the compiler version would reuse wrong binaries. Likewise, a coordinator that ignored the prompt or the validator would reuse answers to an old question. One difference from build systems remains. An LLM is not a deterministic function, so a regenerated value may differ from the old one even when both are valid. A value therefore cannot be checked by comparing it with a fresh run, only by validating it against its observation.
+
+\subsection{Optimistic Concurrency Control}\label{sec:bg-occ}
+A coordinator could prevent stale replies by locking a job's inputs until its agent answers. This would block every edit for the duration of an LLM call. Databases solve the same problem with \emph{optimistic concurrency control}~\cite{occ}. A transaction reads data and computes without holding locks. At commit time, a \emph{validation} phase checks whether the data it read has changed in the meantime. If so, the transaction aborts; otherwise its writes are installed. Validation and write form one atomic step, so no change can slip in between them.
+
+Our commit guard is such a validation phase. A request records the signature of the observation it was dispatched on. When a proposal arrives, the controller checks, in the same atomic step as the write, that the request is still active and that its signature still equals the job's current signature. Each request identity is used only once, so a late or duplicate reply is recognized and rejected.
+
+\subsection{Transition Systems, Invariants and TLA$^+$}\label{sec:bg-tla}
+We specify the controller as a state machine. A \emph{transition system} consists of states, initial states, and a relation that says which state may follow which. A \emph{safety property} states that nothing bad ever happens, for example that no stale value is ever usable. It is usually proved with an \emph{invariant}: a predicate that holds in every initial state and is preserved by every transition. A \emph{liveness property} states that something good eventually happens, for example that every stable workflow ends in success or failure. TLA$^+$~\cite{lamport1994tla,lamport2002specifying} is a language for specifying such systems. Its model checker TLC~\cite{yu1999tlc} explores every state of a finite instance, and its proof system TLAPS~\cite{cousineau2012tlaps} checks proofs that hold for all instances. \emph{Refinement} relates two specifications: a detailed asynchronous specification refines an abstract atomic one if every behavior of the first corresponds to a behavior of the second~\cite{abadi1991refinement,lynch1995simulations}.
+
+\subsection{Running Example: A Multi-Agent Document-Service Workflow}\label{sec:motivation}
 Our running example is a small document service developed by four agents, each responsible for one \emph{view} of the system (Fig.~\ref{fig:network}). An \emph{intake} view holds service requests and their clauses. A \emph{design} view holds one endpoint per accepted request. An \emph{implementation} view holds one code patch per endpoint. A \emph{verification} view holds one check per clause. A shared \emph{security context} contains findings, such as a path-traversal report, that are relevant to some patches and checks.
 
 The views are \emph{heterogeneous}: a requirement is neither an operation signature nor a test oracle. Nevertheless, an edit in one view can invalidate artifacts in others. Suppose the clause ``an archived document cannot be overwritten'' is tightened to ``overwriting an archived document returns HTTP status 409 (Conflict)''. The endpoint's signature \texttt{put(id, body)} does not change. The patch must still be regenerated, because the behavior it must implement changed. A dependency analysis that looks only at the interface would miss this.
@@ -119,7 +165,9 @@ The views are \emph{heterogeneous}: a requirement is neither an operation signat
 \caption{Running example. Solid arrows are declared source dependencies; $T_1$ derives an endpoint per request and $T_2$ a patch per endpoint. Dashed arrows carry selected shared context. The controller creates objects and references; agents propose only primitive attribute values (signature text, patch body, check oracle).}\label{fig:network}
 \end{figure}
 
-\subsection{Coordination Failures}
+In the terms of this section, the four boxes in Fig.~\ref{fig:network} are views, and $T_1$ and $T_2$ are transformation rules. The controller creates one endpoint per accepted request and one patch per endpoint, together with their references and traces. The jobs are the primitive slots inside these objects: an endpoint's signature text, a patch body and a check's oracle. Each job is filled by the agent that owns its view. The footprint of a patch job contains its endpoint's signature and the clause the patch implements. The context selected for it contains the security findings for that endpoint. Its contract includes the coding instruction and the patch validator.
+
+\subsection{Coordination Failures}\label{sec:failures}
 The workflow above admits four failure classes that per-answer checks cannot exclude.
 \begin{itemize}
 \item[\textbf{F1}] \emph{Stale reply.} A request is sent while the clause has revision~1, the clause changes to revision~2, and the old reply then arrives. It is syntactically valid and may even pass the old tests.
@@ -128,7 +176,7 @@ The workflow above admits four failure classes that per-answer checks cannot exc
 \item[\textbf{F4}] \emph{Unbounded or wasted generation.} A failing request is retried on every scheduler pass. Conversely, an unrelated edit causes every artifact to be regenerated.
 \end{itemize}
 
-\subsection{Requirements}
+\subsection{Requirements}\label{sec:requirements}
 A coordinator for untrusted generative agents should satisfy the following requirements. Section~\ref{sec:guarantees} answers each with a theorem.
 \begin{itemize}
 \item[\textbf{R1}] \emph{Structural integrity.} Artifact objects, traces and references are well typed and have exactly one producer, whatever the agents return.
@@ -165,7 +213,7 @@ The approach rests on four principles.
 \node[comp] (rec) at (9.9,1.35) {\textbf{Job records}\\\scriptsize value, stamp,\\episode, attempts};
 \node[comp] (disp) at (1.9,-1.35) {\textbf{Dispatch}\\\scriptsize request $u=(j,e,n)$\\only if $n<k$};
 \node[comp] (guard) at (9.9,-1.35) {\textbf{Commit guard}\\\scriptsize current $\wedge$ authorized\\$\wedge$ valid $\wedge$ normalizes};
-\node[comp] (pub) at (13.3,-1.35) {\textbf{Publication barrier}\\\scriptsize nothing dirty or pending;\\joint predicate $G$};
+\node[comp] (pub) at (12.8,-1.35) {\textbf{Publication barrier}\\\scriptsize nothing dirty or pending;\\joint predicate $G$};
 \node[draw=inkblue,fill=pale,align=center,text width=60mm,minimum height=8mm] (inp) at (3.9,3.65) {\textbf{Authoritative inputs:} source views, shared-context snapshots, configuration (rules, owners, contracts, validators)};
 \node[draw=inkblue,fill=pale,align=center,text width=20mm,minimum height=11mm] (snap) at (16.4,-1.35) {\textbf{Published}\\\textbf{snapshot}\\\scriptsize with revision $\rho$};
 \node[agent] (a1) at (2.9,-4.1) {Requirements agent};
@@ -254,7 +302,7 @@ Contract & $\eta_j$ & Identity of instruction, schema, validator, environment an
 We model the controller as a labeled transition system $(\mathcal S,\mathcal S_0,\Lambda,\to)$ with states $\mathcal S$, initial states $\mathcal S_0$, event labels $\Lambda$ and a transition relation. An \emph{invariant} holds initially and is preserved by every transition. Signatures, identities and primitive values are unbounded, so the system is infinite-state. Diagrams such as Fig.~\ref{fig:automaton} are therefore automaton \emph{schemas}, not claims that the workflow is a finite-state machine. For safety, the proposal source is fully nondeterministic: it may return any value, malformed data, duplicates, or nothing. This over-approximates every possible LLM behavior and needs no probability assumptions.
 
 \subsection{Views, Rules and the Structural Kernel}
-A \emph{view} is a finite graph with stable object identities, typed primitive attributes (strings, Booleans, numbers or inert code text) and typed references. A metamodel fixes types, multiplicities and well-formedness predicates. Let $X$ denote the authoritative source views together with immutable shared-context snapshots. Collection membership, object existence and the absence of a context item are observable data: a dependency analysis that looked only at existing attribute values would miss additions and deletions.
+Views and metamodels are as in Definition~\ref{def:view}. Let $X$ denote the authoritative source views together with immutable shared-context snapshots. Collection membership, object existence and the absence of a context item are observable data: a dependency analysis that looked only at existing attribute values would miss additions and deletions.
 
 A configuration $C$ contains view metamodels, transformation rules, ownership permissions, context-selection policies, validators, generation contracts and a global predicate $G$. Reads are \emph{ranked} (assumption A0 in Table~\ref{tab:assumptions}): rule matches, structural expressions, observations, selectors and validators read only external data or strictly earlier stages. A \emph{stage} groups independent rules processed after their prerequisites.
 
@@ -378,7 +426,7 @@ A7 & Adequate footprints; sound local and global validators & Domain correctness
 
 % =====================================================================
 \section{Guarantees}\label{sec:guarantees}
-This section states and proves the guarantees, organized by the requirements of Section~\ref{sec:motivation}. Table~\ref{tab:evidence} at the end summarizes each guarantee with its assumptions and supporting evidence.
+This section states and proves the guarantees, organized by the requirements of Section~\ref{sec:requirements}. Table~\ref{tab:evidence} at the end summarizes each guarantee with its assumptions and supporting evidence.
 
 \subsection{Safety (R1--R3)}
 A committed value need not remain fresh after an edit; the controller must instead prevent its \emph{use} until it is repaired. We therefore distinguish a historical acceptance invariant from current usability. Claiming that every stored value is always fresh would be false in exactly the change scenarios of interest.
@@ -728,7 +776,7 @@ The results suggest concrete design rules for orchestrators of LLM agents, such 
 \item \emph{Make completion a global predicate, recomputed after every change of team or rules.} Locally valid outputs that disagree reach publication otherwise.
 \item \emph{Budget per dependency episode, not per scheduler pass.} Per-pass budgets let a failing request be retried indefinitely.
 \end{enumerate}
-None of these rules depends on how good the underlying model is.
+The interesting fact here is: \textit{none of these rules depends on how good the underlying model is.}
 
 % =====================================================================
 \section{Threats to Validity}\label{sec:threats}
@@ -770,13 +818,13 @@ None of these rules depends on how good the underlying model is.
 
 % =====================================================================
 \section{Conclusion}\label{sec:conclusion}
-Reliable collaboration among generative agents is a coordination problem as much as a generation problem. Once agents are treated as untrusted proposers and a deterministic controller owns structure, dependencies, acceptance and publication, useful guarantees become provable without assuming anything about the agents. Exact dependency signatures and atomic commitment exclude stale, unauthorized and inconsistent results. A publication barrier separates local acceptance from global readiness. Per-episode budgets and an acyclic schedule yield an honest success-or-failure verdict, and transactional reconfiguration extends these properties to changes of team and rules. The evaluation shows that each mechanism is necessary and that exactness pays off: on the largest workspaces, most generation calls of coarser strategies were unnecessary.
+Reliable collaboration among generative AI agents is a coordination problem as much as a generation problem. Once agents are treated as untrusted proposers and a deterministic controller owns structure, dependencies, acceptance and publication, useful guarantees become provable without assuming anything about the agents. Exact dependency signatures and atomic commitment exclude stale, unauthorized and inconsistent results. A publication barrier separates local acceptance from global readiness. Per-episode budgets and an acyclic schedule yield an honest success-or-failure verdict, and transactional reconfiguration extends these properties to changes of team and rules. The evaluation shows that each mechanism is necessary and that exactness pays off: on the largest workspaces, most generation calls of coarser strategies were unnecessary.
 
 \section*{Data Availability}\label{sec:data}
-The replication package contains the TLA$^+$ specifications and proofs, the Python reference controller, the scenario definitions and traces, the RQ1/RQ2 campaign (\texttt{experiments/tse\_campaign.py}), and the scripts that generate every table, plot and number in this paper (\texttt{experiments/tse\_paper.py}, \texttt{experiments/analysis.py}), together with raw logs, exact commands, tool versions and source hashes. \texttt{python scripts/reproduce.py all -{}-profile core} re-runs the formal and scenario stages and deliberately reports the open central proof gate as incomplete; \texttt{python scripts/reproduce.py tse-campaign} and \texttt{tse-paper} re-run the RQ1/RQ2 campaign and regenerate this paper's evaluation fragments. [Archive DOI to be inserted upon acceptance.]
+The replication package contains the TLA$^+$ specifications and proofs, the Python reference controller, the scenario definitions and traces, the RQ1/RQ2 campaign (\texttt{experiments/tse\_campaign.py}), and the scripts that generate every table, plot and number in this paper (\texttt{experiments/tse\_paper.py}, \texttt{experiments/analysis.py}), together with raw logs, exact commands, tool versions and source hashes. \texttt{python scripts/reproduce.py all -{}-profile core} re-runs the formal and scenario stages and deliberately reports the open central proof gate as incomplete; \texttt{python scripts/reproduce.py tse-campaign} and \texttt{tse-paper} re-run the RQ1/RQ2 campaign and regenerate this paper's evaluation fragments.
 
 \section*{Declaration on the Use of AI}
-Generative AI assisted in developing the formalization, the artifact, the prose and internal critical reviews. These reviews are not independent human peer review. The author checked and is responsible for all claims, proofs, references and the final text.
+Generative AI tools were used to assist with organizing the repository code and checking the manuscript for grammatical errors. The author reviewed the generated suggestions and takes full responsibility for the accuracy and integrity of all claims, proofs, references, and the final manuscript.
 
 \bibliographystyle{IEEEtran}
 \bibliography{references,references-tse}
