@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "Please cite the accompanying draft manuscript; artifact verification is incomplete."
-title: "A Formal Semantics for Reliable Collaboration among Generative AI Agents in Software Systems"
+title: "Safe Coordination of Untrusted AI Agents in Software Systems"
 type: software
 version: 0.1.0
 authors:
