@@ -4,7 +4,7 @@ Replication package for the paper
 
 > M. Babaei, **"Safe Coordination of Untrusted AI Agents,"**
 > manuscript submitted to *IEEE Transactions on
-> Software Engineering*. Source: [docs/paper-tse/main.tex](docs/paper-tse/main.tex).
+> Software Engineering*.
 
 ## What this project is
 
