@@ -1,2 +1,0 @@
-# Reference controller, campaigns, and analysis use only Python >=3.11 stdlib.
-# Build only: setuptools==80.9.0 (not needed for scripts/reproduce.py).
