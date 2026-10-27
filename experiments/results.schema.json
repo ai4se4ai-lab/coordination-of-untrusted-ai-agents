@@ -1,0 +1,8 @@
+{
+ "$schema":"https://json-schema.org/draft/2020-12/schema",
+ "description":"Raw stage results are either a campaign list or a stage report object. Status belongs to the paired manifest; per-case outcomes retain their own status.",
+ "oneOf":[
+   {"type":"array","items":{"type":"object","properties":{"status":{"enum":["passed","counterexample","failed","timeout","out_of_memory","skipped","inconclusive"]}}}},
+   {"type":"object"}
+ ]
+}

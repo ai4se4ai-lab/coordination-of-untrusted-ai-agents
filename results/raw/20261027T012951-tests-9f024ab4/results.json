@@ -1,0 +1,17 @@
+{
+  "command": [
+    "C:\\Users\\babaei\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-v"
+  ],
+  "cwd": ".",
+  "elapsed_seconds": 0.6028117000241764,
+  "exit_code": 0,
+  "log": "tests.log",
+  "status": "passed",
+  "timeout_seconds": 90
+}

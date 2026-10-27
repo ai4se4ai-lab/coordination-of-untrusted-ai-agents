@@ -1,0 +1,183 @@
+{
+  "corruptions": [
+    {
+      "fault": "unknown-action",
+      "rejected": true
+    },
+    {
+      "fault": "sequence-gap",
+      "rejected": true
+    },
+    {
+      "fault": "counter",
+      "rejected": true
+    },
+    {
+      "fault": "provenance",
+      "rejected": true
+    },
+    {
+      "fault": "publication-revision",
+      "rejected": true
+    },
+    {
+      "fault": "missing-event",
+      "rejected": true
+    },
+    {
+      "fault": "acceptance-source-deletion",
+      "rejected": true
+    },
+    {
+      "fault": "acceptance-context-change",
+      "rejected": true
+    },
+    {
+      "fault": "acceptance-contract-change",
+      "rejected": true
+    }
+  ],
+  "scope": "independent recorded guard/effect and deterministic reconciliation checks; not universal implementation refinement or log authenticity",
+  "traces": [
+    {
+      "events": 9,
+      "status": "passed",
+      "trace": "S01.trace.json"
+    },
+    {
+      "events": 8,
+      "status": "passed",
+      "trace": "S02.trace.json"
+    },
+    {
+      "events": 17,
+      "status": "passed",
+      "trace": "S03.trace.json"
+    },
+    {
+      "events": 18,
+      "status": "passed",
+      "trace": "S04.trace.json"
+    },
+    {
+      "events": 1,
+      "status": "passed",
+      "trace": "S05.trace.json"
+    },
+    {
+      "events": 9,
+      "status": "passed",
+      "trace": "S06.trace.json"
+    },
+    {
+      "events": 9,
+      "status": "passed",
+      "trace": "S07.trace.json"
+    },
+    {
+      "events": 9,
+      "status": "passed",
+      "trace": "S08.trace.json"
+    },
+    {
+      "events": 9,
+      "status": "passed",
+      "trace": "S09.trace.json"
+    },
+    {
+      "events": 14,
+      "status": "passed",
+      "trace": "S10.trace.json"
+    },
+    {
+      "events": 3,
+      "status": "passed",
+      "trace": "S11.trace.json"
+    },
+    {
+      "events": 4,
+      "status": "passed",
+      "trace": "S12.trace.json"
+    },
+    {
+      "events": 4,
+      "status": "passed",
+      "trace": "S13.trace.json"
+    },
+    {
+      "events": 7,
+      "status": "passed",
+      "trace": "S14.trace.json"
+    },
+    {
+      "events": 7,
+      "status": "passed",
+      "trace": "S15.trace.json"
+    },
+    {
+      "events": 11,
+      "status": "passed",
+      "trace": "S16.trace.json"
+    },
+    {
+      "events": 17,
+      "status": "passed",
+      "trace": "S17.trace.json"
+    },
+    {
+      "events": 12,
+      "status": "passed",
+      "trace": "S18.trace.json"
+    },
+    {
+      "events": 11,
+      "status": "passed",
+      "trace": "S19.trace.json"
+    },
+    {
+      "events": 13,
+      "status": "passed",
+      "trace": "S20.trace.json"
+    },
+    {
+      "events": 12,
+      "status": "passed",
+      "trace": "S21.trace.json"
+    },
+    {
+      "events": 3,
+      "status": "passed",
+      "trace": "S22.trace.json"
+    },
+    {
+      "events": 12,
+      "status": "passed",
+      "trace": "S23.trace.json"
+    },
+    {
+      "events": 2,
+      "status": "passed",
+      "trace": "S24.trace.json"
+    },
+    {
+      "events": 10,
+      "status": "passed",
+      "trace": "S25.trace.json"
+    },
+    {
+      "events": 10,
+      "status": "passed",
+      "trace": "S26.trace.json"
+    },
+    {
+      "events": 2,
+      "status": "passed",
+      "trace": "S27.trace.json"
+    },
+    {
+      "events": 0,
+      "status": "passed",
+      "trace": "S28.trace.json"
+    }
+  ]
+}

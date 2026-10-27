@@ -1,0 +1,9 @@
+{
+  "campaign": "document-service-v1",
+  "provider": "scripted",
+  "budget": 2,
+  "repetitions": 1,
+  "ordering": "explicit deterministic scenarios; concurrent CAS S24 allows either winner",
+  "performance_claim": false,
+  "scenario_ids": ["S01","S02","S03","S04","S05","S06","S07","S08","S09","S10","S11","S12","S13","S14","S15","S16","S17","S18","S19","S20","S21","S22","S23","S24","S25","S26","S27","S28"]
+}

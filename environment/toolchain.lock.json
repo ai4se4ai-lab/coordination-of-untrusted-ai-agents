@@ -1,0 +1,48 @@
+{
+  "tla2tools.jar": {
+    "url": "https://github.com/tlaplus/tlaplus/releases/download/v1.8.0/tla2tools.jar",
+    "sha256": "78f7e2c6bf9a8b65eda665a23e94431255587e0b43a834a4e2af1723562d9b4a"
+  },
+  "springer.zip": {
+    "url": "https://cms-resources.apps.public.k8s.springernature.io/springer-cms/rest/v1/content/18782940/data/v12",
+    "sha256": "812e76dcaa9c28dc1bff1fb6065d51729b67d4ea140552a05088317414a3ecae"
+  },
+  "sn-jnl.cls": {
+    "sha256": "36d0c3273a59d48dc6a9c7b080dfa1ec50dc10229d8751568d1f2e490ffa5ecc",
+    "source": "springer.zip unmodified"
+  },
+  "sn-mathphys-num.bst": {
+    "sha256": "b3a7c7fbcc1e7f9619de634fcea2f5bb7a245818a5942bc576e40ea001633332",
+    "source": "springer.zip unmodified"
+  },
+  "tlapm": {
+    "url": "https://github.com/tlaplus/tlapm/releases/download/1.6.0-pre/tlapm-1.6.0-pre-x86_64-linux-gnu.tar.gz",
+    "sha256": "0d1b393a1042aa08961bb024c784a80a25009a5874258c0ddbbfd95b92e80fe5",
+    "release": "1.6.0-pre",
+    "failed_base_image": "debian@sha256:7ff6ba31527b9e336162fa061746c366c4b2032f4d2cff2078bea43f78efe3f8",
+    "base_image": "debian:trixie-slim@sha256:62bd423aeee912639ca8ee681c2b762cb3e25137e0a92b20be455898a9f034ad",
+    "reported_version": "5f5037f",
+    "z3": "4.8.9"
+  },
+  "python_tested": "3.13.14",
+  "java_tested": "Amazon Corretto 11.0.16.1",
+  "tlc_reported_version": "2026.10.26.231022 (fad899c)",
+  "actions": {
+    "checkout": {
+      "resolved_tag": "v4",
+      "sha": "11d5960a326750d5838078e36cf38b85af677262"
+    },
+    "setup-python": {
+      "resolved_tag": "v5",
+      "sha": "a26af69be951a213d495a4c3e4e4022e16d87065"
+    },
+    "setup-java": {
+      "resolved_tag": "v4",
+      "sha": "cf277c60eb25467037889841efdb72551f06f6c3"
+    },
+    "upload-artifact": {
+      "resolved_tag": "v4",
+      "sha": "ea165f8d65b6e75b540449e92b4886f43607fa02"
+    }
+  }
+}

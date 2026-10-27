@@ -1,0 +1,98 @@
+[
+  {
+    "command": [
+      "C:\\Program Files\\PaperCut MF Client\\runtime\\jre\\bin\\java.exe",
+      "-cp",
+      "C:\\Users\\babaei\\Desktop\\Research\\Ai4SE4AI\\verified-generative-coordination\\.tools\\tla2tools.jar",
+      "-DTLA-Library=C:\\Users\\babaei\\Desktop\\Research\\Ai4SE4AI\\verified-generative-coordination\\specification",
+      "tla2sany.SANY",
+      "C:\\Users\\babaei\\Desktop\\Research\\Ai4SE4AI\\verified-generative-coordination\\specification\\AsyncController.tla"
+    ],
+    "cwd": ".",
+    "elapsed_seconds": 2.5734120000270195,
+    "exit_code": 0,
+    "log": "AsyncController.log",
+    "status": "passed",
+    "timeout_seconds": 90
+  },
+  {
+    "command": [
+      "C:\\Program Files\\PaperCut MF Client\\runtime\\jre\\bin\\java.exe",
+      "-cp",
+      "C:\\Users\\babaei\\Desktop\\Research\\Ai4SE4AI\\verified-generative-coordination\\.tools\\tla2tools.jar",
+      "-DTLA-Library=C:\\Users\\babaei\\Desktop\\Research\\Ai4SE4AI\\verified-generative-coordination\\specification",
+      "tla2sany.SANY",
+      "C:\\Users\\babaei\\Desktop\\Research\\Ai4SE4AI\\verified-generative-coordination\\specification\\AtomicController.tla"
+    ],
+    "cwd": ".",
+    "elapsed_seconds": 1.6557102000224404,
+    "exit_code": 0,
+    "log": "AtomicController.log",
+    "status": "passed",
+    "timeout_seconds": 90
+  },
+  {
+    "command": [
+      "C:\\Program Files\\PaperCut MF Client\\runtime\\jre\\bin\\java.exe",
+      "-cp",
+      "C:\\Users\\babaei\\Desktop\\Research\\Ai4SE4AI\\verified-generative-coordination\\.tools\\tla2tools.jar",
+      "-DTLA-Library=C:\\Users\\babaei\\Desktop\\Research\\Ai4SE4AI\\verified-generative-coordination\\specification",
+      "tla2sany.SANY",
+      "C:\\Users\\babaei\\Desktop\\Research\\Ai4SE4AI\\verified-generative-coordination\\specification\\CaseStudy.tla"
+    ],
+    "cwd": ".",
+    "elapsed_seconds": 0.9958292999654077,
+    "exit_code": 0,
+    "log": "CaseStudy.log",
+    "status": "passed",
+    "timeout_seconds": 90
+  },
+  {
+    "command": [
+      "C:\\Program Files\\PaperCut MF Client\\runtime\\jre\\bin\\java.exe",
+      "-cp",
+      "C:\\Users\\babaei\\Desktop\\Research\\Ai4SE4AI\\verified-generative-coordination\\.tools\\tla2tools.jar",
+      "-DTLA-Library=C:\\Users\\babaei\\Desktop\\Research\\Ai4SE4AI\\verified-generative-coordination\\specification",
+      "tla2sany.SANY",
+      "C:\\Users\\babaei\\Desktop\\Research\\Ai4SE4AI\\verified-generative-coordination\\specification\\Core.tla"
+    ],
+    "cwd": ".",
+    "elapsed_seconds": 2.1111482999986038,
+    "exit_code": 0,
+    "log": "Core.log",
+    "status": "passed",
+    "timeout_seconds": 90
+  },
+  {
+    "command": [
+      "C:\\Program Files\\PaperCut MF Client\\runtime\\jre\\bin\\java.exe",
+      "-cp",
+      "C:\\Users\\babaei\\Desktop\\Research\\Ai4SE4AI\\verified-generative-coordination\\.tools\\tla2tools.jar",
+      "-DTLA-Library=C:\\Users\\babaei\\Desktop\\Research\\Ai4SE4AI\\verified-generative-coordination\\specification",
+      "tla2sany.SANY",
+      "C:\\Users\\babaei\\Desktop\\Research\\Ai4SE4AI\\verified-generative-coordination\\specification\\DocumentPolicy.tla"
+    ],
+    "cwd": ".",
+    "elapsed_seconds": 1.1535274000489153,
+    "exit_code": 0,
+    "log": "DocumentPolicy.log",
+    "status": "passed",
+    "timeout_seconds": 90
+  },
+  {
+    "command": [
+      "C:\\Program Files\\PaperCut MF Client\\runtime\\jre\\bin\\java.exe",
+      "-cp",
+      "C:\\Users\\babaei\\Desktop\\Research\\Ai4SE4AI\\verified-generative-coordination\\.tools\\tla2tools.jar",
+      "-DTLA-Library=C:\\Users\\babaei\\Desktop\\Research\\Ai4SE4AI\\verified-generative-coordination\\specification",
+      "tla2sany.SANY",
+      "C:\\Users\\babaei\\Desktop\\Research\\Ai4SE4AI\\verified-generative-coordination\\specification\\StructuralKernel.tla"
+    ],
+    "cwd": ".",
+    "elapsed_seconds": 1.1258822999661788,
+    "exit_code": 0,
+    "log": "StructuralKernel.log",
+    "status": "passed",
+    "timeout_seconds": 90
+  }
+]

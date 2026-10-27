@@ -1,0 +1,63 @@
+# Local tools, Python environments, and build/cache output
+.tools/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+build/
+dist/
+tmp/
+
+# Transient TLA+/TLAPS state (keep proof sources and proof-status.json)
+states/
+.tlacache/
+*.tlaps/
+
+# Manuscript build intermediates
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.toc
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+*.lof
+*.lot
+docs/paper/*.pdf
+
+# Internal development notes and AI review output, outside the paper artifact.
+# Keep technical docs, claim/evidence records, proof status, and result data.
+/docs/VERIFIED_GENERATIVE_COORDINATION_DEVELOPMENT_PLAN.md
+/docs/progress.md
+/docs/decisions/
+/docs/baseline-inventory.md
+/reviews/
+/results/processed/**/paper-qa.json
+
+# Local editor/assistant state and OS files
+/.vscode/
+/.idea/
+/.codex/
+/.claude/
+/.cursor/
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.swp
+*.swo
+*~
+
+# Local credentials (allow a sanitized example configuration)
+.env
+.env.*
+!.env.example
+*.key

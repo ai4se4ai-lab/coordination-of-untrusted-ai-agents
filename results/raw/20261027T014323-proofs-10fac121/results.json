@@ -1,0 +1,174 @@
+{
+  "backend_config": {
+    "command": [
+      "docker",
+      "run",
+      "--rm",
+      "--network",
+      "none",
+      "--mount",
+      "type=bind,source=C:\\Users\\babaei\\Desktop\\Research\\Ai4SE4AI\\verified-generative-coordination,target=/work",
+      "-w",
+      "/work/proofs",
+      "vgc-tlaps:local",
+      "/work/.tools/tlapm/bin/tlapm",
+      "--config"
+    ],
+    "cwd": ".",
+    "elapsed_seconds": 3.4475645000347868,
+    "exit_code": 0,
+    "log": "backends.log",
+    "status": "passed",
+    "timeout_seconds": 20
+  },
+  "central_gate": "incomplete",
+  "lemmas": [
+    {
+      "command": [
+        "docker",
+        "run",
+        "--rm",
+        "--network",
+        "none",
+        "--mount",
+        "type=bind,source=C:\\Users\\babaei\\Desktop\\Research\\Ai4SE4AI\\verified-generative-coordination,target=/work",
+        "-w",
+        "/work/proofs",
+        "vgc-tlaps:local",
+        "/work/.tools/tlapm/bin/tlapm",
+        "--strict",
+        "--cleanfp",
+        "--timing",
+        "-I",
+        "/work/specification",
+        "Budget.tla"
+      ],
+      "cwd": ".",
+      "elapsed_seconds": 2.8666938000242226,
+      "exit_code": 0,
+      "log": "Budget.log",
+      "module": "Budget",
+      "omitted_obligations": 0,
+      "proved_obligations": 8,
+      "reported_obligation_counts": [
+        "8"
+      ],
+      "scope": "scoped lemma; not full controller verification",
+      "status": "passed",
+      "timeout_seconds": 60,
+      "total_obligations": 8
+    },
+    {
+      "command": [
+        "docker",
+        "run",
+        "--rm",
+        "--network",
+        "none",
+        "--mount",
+        "type=bind,source=C:\\Users\\babaei\\Desktop\\Research\\Ai4SE4AI\\verified-generative-coordination,target=/work",
+        "-w",
+        "/work/proofs",
+        "vgc-tlaps:local",
+        "/work/.tools/tlapm/bin/tlapm",
+        "--strict",
+        "--cleanfp",
+        "--timing",
+        "-I",
+        "/work/specification",
+        "ControllerSafety.tla"
+      ],
+      "cwd": ".",
+      "elapsed_seconds": 3.8477372999768704,
+      "exit_code": 0,
+      "log": "ControllerSafety.log",
+      "module": "ControllerSafety",
+      "omitted_obligations": 0,
+      "proved_obligations": 2,
+      "reported_obligation_counts": [
+        "2"
+      ],
+      "scope": "scoped lemma; not full controller verification",
+      "status": "passed",
+      "timeout_seconds": 60,
+      "total_obligations": 2
+    },
+    {
+      "command": [
+        "docker",
+        "run",
+        "--rm",
+        "--network",
+        "none",
+        "--mount",
+        "type=bind,source=C:\\Users\\babaei\\Desktop\\Research\\Ai4SE4AI\\verified-generative-coordination,target=/work",
+        "-w",
+        "/work/proofs",
+        "vgc-tlaps:local",
+        "/work/.tools/tlapm/bin/tlapm",
+        "--strict",
+        "--cleanfp",
+        "--timing",
+        "-I",
+        "/work/specification",
+        "StructuralKernelProofs.tla"
+      ],
+      "cwd": ".",
+      "elapsed_seconds": 2.40953730000183,
+      "exit_code": 0,
+      "log": "StructuralKernelProofs.log",
+      "module": "StructuralKernelProofs",
+      "omitted_obligations": 0,
+      "proved_obligations": 9,
+      "reported_obligation_counts": [
+        "9"
+      ],
+      "scope": "scoped lemma; not full controller verification",
+      "status": "passed",
+      "timeout_seconds": 60,
+      "total_obligations": 9
+    },
+    {
+      "command": [
+        "docker",
+        "run",
+        "--rm",
+        "--network",
+        "none",
+        "--mount",
+        "type=bind,source=C:\\Users\\babaei\\Desktop\\Research\\Ai4SE4AI\\verified-generative-coordination,target=/work",
+        "-w",
+        "/work/proofs",
+        "vgc-tlaps:local",
+        "/work/.tools/tlapm/bin/tlapm",
+        "--strict",
+        "--cleanfp",
+        "--timing",
+        "-I",
+        "/work/specification",
+        "DocumentPolicyProofs.tla"
+      ],
+      "cwd": ".",
+      "elapsed_seconds": 3.195182100054808,
+      "exit_code": 0,
+      "log": "DocumentPolicyProofs.log",
+      "module": "DocumentPolicyProofs",
+      "omitted_obligations": 0,
+      "proved_obligations": 6,
+      "reported_obligation_counts": [
+        "6"
+      ],
+      "scope": "scoped lemma; not full controller verification",
+      "status": "passed",
+      "timeout_seconds": 60,
+      "total_obligations": 6
+    }
+  ],
+  "remaining": [
+    "Core Init/Next inductive invariant",
+    "history/episode counting proof",
+    "asynchronous/atomic action correspondence",
+    "kernel interface connection",
+    "policy interpreter trace induction"
+  ]
+}

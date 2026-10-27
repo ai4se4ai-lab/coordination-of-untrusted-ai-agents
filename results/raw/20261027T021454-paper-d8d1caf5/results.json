@@ -1,0 +1,62 @@
+[
+  {
+    "command": [
+      "pdflatex",
+      "-interaction=nonstopmode",
+      "-halt-on-error",
+      "main.tex"
+    ],
+    "cwd": "docs\\paper",
+    "elapsed_seconds": 6.813459500030149,
+    "exit_code": 0,
+    "log": "step-0.log",
+    "status": "passed",
+    "timeout_seconds": 90
+  },
+  {
+    "command": [
+      "bibtex",
+      "main"
+    ],
+    "cwd": "docs\\paper",
+    "elapsed_seconds": 0.6437415999826044,
+    "exit_code": 0,
+    "log": "step-1.log",
+    "status": "passed",
+    "timeout_seconds": 90
+  },
+  {
+    "command": [
+      "pdflatex",
+      "-interaction=nonstopmode",
+      "-halt-on-error",
+      "main.tex"
+    ],
+    "cwd": "docs\\paper",
+    "elapsed_seconds": 6.586823199992068,
+    "exit_code": 0,
+    "log": "step-2.log",
+    "status": "passed",
+    "timeout_seconds": 90
+  },
+  {
+    "command": [
+      "pdflatex",
+      "-interaction=nonstopmode",
+      "-halt-on-error",
+      "main.tex"
+    ],
+    "cwd": "docs\\paper",
+    "elapsed_seconds": 6.7378124999813735,
+    "exit_code": 0,
+    "log": "step-3.log",
+    "status": "passed",
+    "timeout_seconds": 90
+  },
+  {
+    "layout_and_reference_warnings": [
+      "Overfull \\hbox (29.62013pt too wide) in paragraph at lines 567--568",
+      "Overfull \\hbox (52.89455pt too wide) in paragraph at lines 632--633"
+    ]
+  }
+]

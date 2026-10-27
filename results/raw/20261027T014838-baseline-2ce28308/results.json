@@ -1,0 +1,10 @@
+{
+  "missing": [
+    "original explorers",
+    "original reports",
+    "original reviews",
+    "original publisher files"
+  ],
+  "reason": "not present in supplied checkout",
+  "snapshot": "verification/baseline"
+}

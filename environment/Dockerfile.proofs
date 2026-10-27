@@ -1,0 +1,5 @@
+FROM debian:trixie-slim@sha256:62bd423aeee912639ca8ee681c2b762cb3e25137e0a92b20be455898a9f034ad
+# TLAPS probes ps when starting; the slim base omits it.
+RUN apt-get update && apt-get install -y --no-install-recommends procps=2:4.0.4-9 libproc2-0=2:4.0.4-9 libncursesw6=6.5+20250216-2 libgmp10=2:6.3.0+dfsg-3 && rm -rf /var/lib/apt/lists/*
+WORKDIR /work
+ENV PATH="/work/.tools/tlapm/bin:${PATH}"
