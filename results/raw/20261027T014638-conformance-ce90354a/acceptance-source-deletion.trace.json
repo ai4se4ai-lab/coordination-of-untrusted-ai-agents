@@ -1,0 +1,475 @@
+{
+  "events": [
+    {
+      "action": "Dispatch",
+      "after": {
+        "active": [
+          "[\"requirements\",\"d1\"]"
+        ],
+        "bindings": [
+          {
+            "contract": "v1",
+            "owner": "requirements-worker",
+            "prerequisites": [],
+            "rank": 0,
+            "stage": "requirements"
+          },
+          {
+            "contract": "v1",
+            "owner": "architecture-worker",
+            "prerequisites": [
+              "requirements"
+            ],
+            "rank": 1,
+            "stage": "architecture"
+          },
+          {
+            "contract": "v1",
+            "owner": "implementation-worker",
+            "prerequisites": [
+              "architecture"
+            ],
+            "rank": 2,
+            "stage": "implementation"
+          },
+          {
+            "contract": "v1",
+            "owner": "verification-worker",
+            "prerequisites": [
+              "implementation"
+            ],
+            "rank": 3,
+            "stage": "verification"
+          }
+        ],
+        "budget": 2,
+        "configuration": 0,
+        "context": {},
+        "context_available": true,
+        "context_version": 0,
+        "documents": {
+          "d1": {
+            "strict": false
+          }
+        },
+        "history": {
+          "[\"[\\\"requirements\\\",\\\"d1\\\"]\",1,1]": {
+            "attempt": 1,
+            "episode": 1,
+            "identity": "[\"[\\\"requirements\\\",\\\"d1\\\"]\",1,1]",
+            "job": "[\"requirements\",\"d1\"]",
+            "observation": "{\"context\":{},\"contract\":\"v1\",\"owner\":\"requirements-worker\",\"predecessors\":{},\"schema\":\"document-service-v1\",\"source\":{\"strict\":false},\"stage\":\"requirements\"}",
+            "owner": "requirements-worker"
+          }
+        },
+        "nonce": 1,
+        "pending": {
+          "[\"[\\\"requirements\\\",\\\"d1\\\"]\",1,1]": {
+            "attempt": 1,
+            "episode": 1,
+            "identity": "[\"[\\\"requirements\\\",\\\"d1\\\"]\",1,1]",
+            "job": "[\"requirements\",\"d1\"]",
+            "observation": "{\"context\":{},\"contract\":\"v1\",\"owner\":\"requirements-worker\",\"predecessors\":{},\"schema\":\"document-service-v1\",\"source\":{\"strict\":false},\"stage\":\"requirements\"}",
+            "owner": "requirements-worker"
+          }
+        },
+        "published": null,
+        "records": {
+          "[\"requirements\",\"d1\"]": {
+            "attempts": 1,
+            "episode": 1,
+            "evidence_owner": null,
+            "evidence_request": null,
+            "failed": false,
+            "signature": "{\"context\":{},\"contract\":\"v1\",\"owner\":\"requirements-worker\",\"predecessors\":{},\"schema\":\"document-service-v1\",\"source\":{\"strict\":false},\"stage\":\"requirements\"}",
+            "stamp": null,
+            "value": null
+          }
+        },
+        "references": {
+          "target:[\"requirements\",\"d1\"]": []
+        },
+        "revision": 0,
+        "revoked": [],
+        "suspended": [
+          "[\"architecture\",\"d1\"]",
+          "[\"implementation\",\"d1\"]",
+          "[\"verification\",\"d1\"]"
+        ],
+        "targets": [
+          "target:[\"requirements\",\"d1\"]"
+        ]
+      },
+      "before": {
+        "active": [
+          "[\"requirements\",\"d1\"]"
+        ],
+        "bindings": [
+          {
+            "contract": "v1",
+            "owner": "requirements-worker",
+            "prerequisites": [],
+            "rank": 0,
+            "stage": "requirements"
+          },
+          {
+            "contract": "v1",
+            "owner": "architecture-worker",
+            "prerequisites": [
+              "requirements"
+            ],
+            "rank": 1,
+            "stage": "architecture"
+          },
+          {
+            "contract": "v1",
+            "owner": "implementation-worker",
+            "prerequisites": [
+              "architecture"
+            ],
+            "rank": 2,
+            "stage": "implementation"
+          },
+          {
+            "contract": "v1",
+            "owner": "verification-worker",
+            "prerequisites": [
+              "implementation"
+            ],
+            "rank": 3,
+            "stage": "verification"
+          }
+        ],
+        "budget": 2,
+        "configuration": 0,
+        "context": {},
+        "context_available": true,
+        "context_version": 0,
+        "documents": {
+          "d1": {
+            "strict": false
+          }
+        },
+        "history": {},
+        "nonce": 1,
+        "pending": {},
+        "published": null,
+        "records": {
+          "[\"requirements\",\"d1\"]": {
+            "attempts": 0,
+            "episode": 1,
+            "evidence_owner": null,
+            "evidence_request": null,
+            "failed": false,
+            "signature": "{\"context\":{},\"contract\":\"v1\",\"owner\":\"requirements-worker\",\"predecessors\":{},\"schema\":\"document-service-v1\",\"source\":{\"strict\":false},\"stage\":\"requirements\"}",
+            "stamp": null,
+            "value": null
+          }
+        },
+        "references": {
+          "target:[\"requirements\",\"d1\"]": []
+        },
+        "revision": 0,
+        "revoked": [],
+        "suspended": [
+          "[\"architecture\",\"d1\"]",
+          "[\"implementation\",\"d1\"]",
+          "[\"verification\",\"d1\"]"
+        ],
+        "targets": [
+          "target:[\"requirements\",\"d1\"]"
+        ]
+      },
+      "event_sequence": 1,
+      "job_key": "[\"requirements\",\"d1\"]",
+      "outcome": "dispatched",
+      "request_id": "[\"[\\\"requirements\\\",\\\"d1\\\"]\",1,1]"
+    },
+    {
+      "action": "ResolveAccepted",
+      "after": {
+        "active": [],
+        "bindings": [
+          {
+            "contract": "v1",
+            "owner": "requirements-worker",
+            "prerequisites": [],
+            "rank": 0,
+            "stage": "requirements"
+          },
+          {
+            "contract": "v1",
+            "owner": "architecture-worker",
+            "prerequisites": [
+              "requirements"
+            ],
+            "rank": 1,
+            "stage": "architecture"
+          },
+          {
+            "contract": "v1",
+            "owner": "implementation-worker",
+            "prerequisites": [
+              "architecture"
+            ],
+            "rank": 2,
+            "stage": "implementation"
+          },
+          {
+            "contract": "v1",
+            "owner": "verification-worker",
+            "prerequisites": [
+              "implementation"
+            ],
+            "rank": 3,
+            "stage": "verification"
+          }
+        ],
+        "budget": 2,
+        "configuration": 0,
+        "context": {},
+        "context_available": true,
+        "context_version": 0,
+        "documents": {},
+        "history": {
+          "[\"[\\\"requirements\\\",\\\"d1\\\"]\",1,1]": {
+            "attempt": 1,
+            "episode": 1,
+            "identity": "[\"[\\\"requirements\\\",\\\"d1\\\"]\",1,1]",
+            "job": "[\"requirements\",\"d1\"]",
+            "observation": "{\"context\":{},\"contract\":\"v1\",\"owner\":\"requirements-worker\",\"predecessors\":{},\"schema\":\"document-service-v1\",\"source\":{\"strict\":false},\"stage\":\"requirements\"}",
+            "owner": "requirements-worker"
+          }
+        },
+        "nonce": 2,
+        "pending": {},
+        "published": null,
+        "records": {
+          "[\"architecture\",\"d1\"]": {
+            "attempts": 0,
+            "episode": 2,
+            "evidence_owner": null,
+            "evidence_request": null,
+            "failed": false,
+            "signature": "{\"context\":{},\"contract\":\"v1\",\"owner\":\"architecture-worker\",\"predecessors\":{\"requirements\":{\"clauses\":[\"R01\",\"R02\",\"R03\"],\"strict\":false}},\"schema\":\"document-service-v1\",\"source\":{},\"stage\":\"architecture\"}",
+            "stamp": null,
+            "value": null
+          },
+          "[\"requirements\",\"d1\"]": {
+            "attempts": 1,
+            "episode": 1,
+            "evidence_owner": "requirements-worker",
+            "evidence_request": "[\"[\\\"requirements\\\",\\\"d1\\\"]\",1,1]",
+            "failed": false,
+            "signature": "{\"context\":{},\"contract\":\"v1\",\"owner\":\"requirements-worker\",\"predecessors\":{},\"schema\":\"document-service-v1\",\"source\":{\"strict\":false},\"stage\":\"requirements\"}",
+            "stamp": "{\"context\":{},\"contract\":\"v1\",\"owner\":\"requirements-worker\",\"predecessors\":{},\"schema\":\"document-service-v1\",\"source\":{\"strict\":false},\"stage\":\"requirements\"}",
+            "value": {
+              "clauses": [
+                "R01",
+                "R02",
+                "R03"
+              ],
+              "strict": false
+            }
+          }
+        },
+        "references": {},
+        "revision": 1,
+        "revoked": [],
+        "suspended": [],
+        "targets": []
+      },
+      "before": {
+        "active": [
+          "[\"requirements\",\"d1\"]"
+        ],
+        "bindings": [
+          {
+            "contract": "v1",
+            "owner": "requirements-worker",
+            "prerequisites": [],
+            "rank": 0,
+            "stage": "requirements"
+          },
+          {
+            "contract": "v1",
+            "owner": "architecture-worker",
+            "prerequisites": [
+              "requirements"
+            ],
+            "rank": 1,
+            "stage": "architecture"
+          },
+          {
+            "contract": "v1",
+            "owner": "implementation-worker",
+            "prerequisites": [
+              "architecture"
+            ],
+            "rank": 2,
+            "stage": "implementation"
+          },
+          {
+            "contract": "v1",
+            "owner": "verification-worker",
+            "prerequisites": [
+              "implementation"
+            ],
+            "rank": 3,
+            "stage": "verification"
+          }
+        ],
+        "budget": 2,
+        "configuration": 0,
+        "context": {},
+        "context_available": true,
+        "context_version": 0,
+        "documents": {
+          "d1": {
+            "strict": false
+          }
+        },
+        "history": {
+          "[\"[\\\"requirements\\\",\\\"d1\\\"]\",1,1]": {
+            "attempt": 1,
+            "episode": 1,
+            "identity": "[\"[\\\"requirements\\\",\\\"d1\\\"]\",1,1]",
+            "job": "[\"requirements\",\"d1\"]",
+            "observation": "{\"context\":{},\"contract\":\"v1\",\"owner\":\"requirements-worker\",\"predecessors\":{},\"schema\":\"document-service-v1\",\"source\":{\"strict\":false},\"stage\":\"requirements\"}",
+            "owner": "requirements-worker"
+          }
+        },
+        "nonce": 1,
+        "pending": {
+          "[\"[\\\"requirements\\\",\\\"d1\\\"]\",1,1]": {
+            "attempt": 1,
+            "episode": 1,
+            "identity": "[\"[\\\"requirements\\\",\\\"d1\\\"]\",1,1]",
+            "job": "[\"requirements\",\"d1\"]",
+            "observation": "{\"context\":{},\"contract\":\"v1\",\"owner\":\"requirements-worker\",\"predecessors\":{},\"schema\":\"document-service-v1\",\"source\":{\"strict\":false},\"stage\":\"requirements\"}",
+            "owner": "requirements-worker"
+          }
+        },
+        "published": null,
+        "records": {
+          "[\"requirements\",\"d1\"]": {
+            "attempts": 1,
+            "episode": 1,
+            "evidence_owner": null,
+            "evidence_request": null,
+            "failed": false,
+            "signature": "{\"context\":{},\"contract\":\"v1\",\"owner\":\"requirements-worker\",\"predecessors\":{},\"schema\":\"document-service-v1\",\"source\":{\"strict\":false},\"stage\":\"requirements\"}",
+            "stamp": null,
+            "value": null
+          }
+        },
+        "references": {
+          "target:[\"requirements\",\"d1\"]": []
+        },
+        "revision": 0,
+        "revoked": [],
+        "suspended": [
+          "[\"architecture\",\"d1\"]",
+          "[\"implementation\",\"d1\"]",
+          "[\"verification\",\"d1\"]"
+        ],
+        "targets": [
+          "target:[\"requirements\",\"d1\"]"
+        ]
+      },
+      "event_sequence": 2,
+      "normalization": true,
+      "outcome": "committed",
+      "proposal": {
+        "clauses": [
+          "R01",
+          "R02",
+          "R03"
+        ],
+        "strict": false
+      },
+      "request_id": "[\"[\\\"requirements\\\",\\\"d1\\\"]\",1,1]",
+      "validation": true
+    }
+  ],
+  "initial": {
+    "active": [
+      "[\"requirements\",\"d1\"]"
+    ],
+    "bindings": [
+      {
+        "contract": "v1",
+        "owner": "requirements-worker",
+        "prerequisites": [],
+        "rank": 0,
+        "stage": "requirements"
+      },
+      {
+        "contract": "v1",
+        "owner": "architecture-worker",
+        "prerequisites": [
+          "requirements"
+        ],
+        "rank": 1,
+        "stage": "architecture"
+      },
+      {
+        "contract": "v1",
+        "owner": "implementation-worker",
+        "prerequisites": [
+          "architecture"
+        ],
+        "rank": 2,
+        "stage": "implementation"
+      },
+      {
+        "contract": "v1",
+        "owner": "verification-worker",
+        "prerequisites": [
+          "implementation"
+        ],
+        "rank": 3,
+        "stage": "verification"
+      }
+    ],
+    "budget": 2,
+    "configuration": 0,
+    "context": {},
+    "context_available": true,
+    "context_version": 0,
+    "documents": {
+      "d1": {
+        "strict": false
+      }
+    },
+    "history": {},
+    "nonce": 1,
+    "pending": {},
+    "published": null,
+    "records": {
+      "[\"requirements\",\"d1\"]": {
+        "attempts": 0,
+        "episode": 1,
+        "evidence_owner": null,
+        "evidence_request": null,
+        "failed": false,
+        "signature": "{\"context\":{},\"contract\":\"v1\",\"owner\":\"requirements-worker\",\"predecessors\":{},\"schema\":\"document-service-v1\",\"source\":{\"strict\":false},\"stage\":\"requirements\"}",
+        "stamp": null,
+        "value": null
+      }
+    },
+    "references": {
+      "target:[\"requirements\",\"d1\"]": []
+    },
+    "revision": 0,
+    "revoked": [],
+    "suspended": [
+      "[\"architecture\",\"d1\"]",
+      "[\"implementation\",\"d1\"]",
+      "[\"verification\",\"d1\"]"
+    ],
+    "targets": [
+      "target:[\"requirements\",\"d1\"]"
+    ]
+  }
+}

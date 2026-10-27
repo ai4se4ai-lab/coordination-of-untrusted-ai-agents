@@ -1,0 +1,59 @@
+[
+  {
+    "command": [
+      "pdflatex",
+      "-interaction=nonstopmode",
+      "-halt-on-error",
+      "main.tex"
+    ],
+    "cwd": "docs\\paper",
+    "elapsed_seconds": 2.513966500002425,
+    "exit_code": 0,
+    "log": "step-0.log",
+    "status": "passed",
+    "timeout_seconds": 90
+  },
+  {
+    "command": [
+      "bibtex",
+      "main"
+    ],
+    "cwd": "docs\\paper",
+    "elapsed_seconds": 0.6562645999947563,
+    "exit_code": 0,
+    "log": "step-1.log",
+    "status": "passed",
+    "timeout_seconds": 90
+  },
+  {
+    "command": [
+      "pdflatex",
+      "-interaction=nonstopmode",
+      "-halt-on-error",
+      "main.tex"
+    ],
+    "cwd": "docs\\paper",
+    "elapsed_seconds": 3.7591770000290126,
+    "exit_code": 0,
+    "log": "step-2.log",
+    "status": "passed",
+    "timeout_seconds": 90
+  },
+  {
+    "command": [
+      "pdflatex",
+      "-interaction=nonstopmode",
+      "-halt-on-error",
+      "main.tex"
+    ],
+    "cwd": "docs\\paper",
+    "elapsed_seconds": 2.1295182000030763,
+    "exit_code": 0,
+    "log": "step-3.log",
+    "status": "passed",
+    "timeout_seconds": 90
+  },
+  {
+    "layout_and_reference_warnings": []
+  }
+]

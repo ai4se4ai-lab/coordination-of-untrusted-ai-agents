@@ -1,0 +1,6 @@
+{
+ "$schema":"https://json-schema.org/draft/2020-12/schema",
+ "type":"object",
+ "propertyNames":{"type":"string","pattern":"^(?!target:).*$"},
+ "additionalProperties":{"type":"object","properties":{"strict":{"type":"boolean"}},"required":["strict"],"additionalProperties":false}
+}

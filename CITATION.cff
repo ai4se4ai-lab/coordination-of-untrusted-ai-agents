@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "Please cite the accompanying draft manuscript; artifact verification is incomplete."
+title: "Safe Coordination of Untrusted AI Agents in Software Systems"
+type: software
+version: 0.1.0
+authors:
+  - family-names: Babaei
+    given-names: Majid
+    affiliation: University of the Fraser Valley
+# Authorship retained from the supplied manuscript; no DOI or invented URL.

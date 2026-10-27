@@ -1,0 +1,66 @@
+{
+  "archive_sha256": "cee85e2b0c811a999174e008811734c3ab7bf1c8abe92f8e905d198f0f164b2f",
+  "checksums_verified": 557,
+  "commands": [
+    {
+      "command": [
+        "C:\\Users\\babaei\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/bootstrap_tools.py"
+      ],
+      "cwd": "C:\\Users\\babaei\\AppData\\Local\\Temp\\vgc-reproduce-cgx7gh9q",
+      "elapsed_seconds": 12.451004499976989,
+      "exit_code": 0,
+      "log": "bootstrap.log"
+    },
+    {
+      "command": [
+        "C:\\Users\\babaei\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+        "scripts/reproduce.py",
+        "all",
+        "--profile",
+        "core",
+        "--timeout",
+        "60"
+      ],
+      "cwd": "C:\\Users\\babaei\\AppData\\Local\\Temp\\vgc-reproduce-cgx7gh9q",
+      "elapsed_seconds": 117.6167231000145,
+      "exit_code": 1,
+      "log": "all.log"
+    }
+  ],
+  "comparison": {
+    "central_proof_gate": "incomplete",
+    "corruptions_rejected": 9,
+    "model_passes": 9,
+    "mutant_counterexamples": 7,
+    "mutant_survivors": [
+      "no-cancel",
+      "no-recheck"
+    ],
+    "policy_event_words": 1093,
+    "policy_tables_enumerated": 8192,
+    "reachability_witnesses": 5,
+    "scenario_passes": 28,
+    "scoped_proved_obligations": 25,
+    "trace_passes": 28
+  },
+  "extracted_directory": "C:\\Users\\babaei\\AppData\\Local\\Temp\\vgc-reproduce-cgx7gh9q",
+  "scientific_outcomes_match": true,
+  "scope": "fresh directory with installed host/container tools; not fresh OS or full verification",
+  "stage_exit_codes": {
+    "analyze": 0,
+    "baseline": 1,
+    "case-study": 0,
+    "claims": 0,
+    "conformance": 0,
+    "doctor": 0,
+    "models": 0,
+    "mutations": 0,
+    "package": 0,
+    "paper": 0,
+    "proofs": 1,
+    "spec-check": 0,
+    "tests": 0,
+    "witnesses": 0
+  }
+}

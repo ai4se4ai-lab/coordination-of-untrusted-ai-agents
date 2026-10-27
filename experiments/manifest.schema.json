@@ -1,0 +1,12 @@
+{
+ "$schema":"https://json-schema.org/draft/2020-12/schema",
+ "type":"object",
+ "required":["run_id","utc","kind","commit","git_status","source_sha256","configuration","python","os","command","status"],
+ "properties":{
+   "run_id":{"type":"string","minLength":1},"utc":{"type":"string","format":"date-time"},
+   "kind":{"type":"string"},"commit":{"type":"string"},"git_status":{"type":"string"},
+   "source_sha256":{"type":"object","additionalProperties":{"type":"string","pattern":"^[0-9a-f]{64}$"}},
+   "configuration":{"type":"object"},"command":{"type":"array","items":{"type":"string"}},
+   "status":{"enum":["passed","counterexample","failed","timeout","out_of_memory","skipped","inconclusive"]}
+ }
+}

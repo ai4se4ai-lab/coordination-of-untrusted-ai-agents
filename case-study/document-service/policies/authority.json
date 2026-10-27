@@ -1,0 +1,7 @@
+{
+ "source_context_ingress":"trusted host caller; no worker edit capability",
+ "worker_permissions":"only resolve the request's inert primitive JSON attribute",
+ "cache_restoration":"exact observation, same contract and owner, current grant",
+ "regrant":"identical owner and contract can reuse historical evidence; change contract to prohibit reuse",
+ "publication":"trusted controller action; no independent worker deployment effects"
+}

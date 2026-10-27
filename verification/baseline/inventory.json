@@ -1,0 +1,19 @@
+{
+  "utc": "2026-10-27T01:21:02.791026+00:00",
+  "commit": "0622620fa6802870f24ffa4fbf7ff07dc4051a3f",
+  "git_status": "?? docs/\n?? verification/\n",
+  "sha256": {
+    "docs\\paper\\main.tex": "7d7ddd4b64d273c9aaa7b1fc31c1be0cc489ed49cc0775fb032e5a2b19925dec",
+    "docs\\paper\\references.bib": "5ed10414570473d9502c28ccf864b715a5f1a2fe1a277b328002d3ea481a3e21",
+    "docs\\VERIFIED_GENERATIVE_COORDINATION_DEVELOPMENT_PLAN.md": "1521f667b1e5f6b506947cceafa4b7f0cf7ff28d24d519cb2fd8e09ce46f1ce7",
+    "LICENSE": "1ff821e5a5dea488b7513677056258e15f646ca96b8c21f1f2f2b7d6f793339c"
+  },
+  "missing": [
+    "explore.py",
+    "interactions.py",
+    "historical reports",
+    "reviews",
+    "baseline PDF",
+    "Springer class and style"
+  ]
+}

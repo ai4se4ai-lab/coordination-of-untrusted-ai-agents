@@ -1,0 +1,106 @@
+{
+  "bibtex": {
+    "command": [
+      "bibtex",
+      "--version"
+    ],
+    "cwd": ".",
+    "elapsed_seconds": 0.40605470002628863,
+    "exit_code": 0,
+    "log": "bibtex.log",
+    "status": "passed",
+    "timeout_seconds": 20,
+    "version_output": "MiKTeX-BibTeX 4.1 (MiKTeX 24.1)\n\u00a9 1985, 1988, 2010 Oren Patashnik; all rights reserved.\nusing bzip2 version 1.0.8, 13-Jul-2019\ncompiled with curl version 8.4.0; using libcurl/8.4.0 Schannel\ncompiled with expat version 2.5; using expat_2.5.0\ncompiled with liblzma version 50040002; using 50040002\ncompiled with libressl version LibreSSL 3.8.1; using LibreSSL 3.8.1\ncompiled with MiKTeX Application Framework version 4.8; using 4.8\ncompiled with MiKTeX Core version 4.23; using 4.23\ncompiled with MiKTeX Archive Extractor version 4.1; using 4.1\ncompiled with MiKTeX Package Manager version 4.10; using 4.10\ncompiled with uriparser version 0.9.7\ncompiled with zlib version 1.2.13; using 1.2.13\n\nbibtex: major issue: So far, you have not checked for MiKTeX updates.\n"
+  },
+  "docker": {
+    "command": [
+      "docker",
+      "version",
+      "--format",
+      "{{.Server.Version}}"
+    ],
+    "cwd": ".",
+    "elapsed_seconds": 0.14025240001501516,
+    "exit_code": 0,
+    "log": "docker.log",
+    "status": "passed",
+    "timeout_seconds": 20,
+    "version_output": "29.5.3\n\n"
+  },
+  "java": {
+    "command": [
+      "C:\\Program Files\\PaperCut MF Client\\runtime\\jre\\bin\\java.exe",
+      "-version"
+    ],
+    "cwd": ".",
+    "elapsed_seconds": 0.20235759997740388,
+    "exit_code": 0,
+    "log": "java.log",
+    "status": "passed",
+    "timeout_seconds": 20,
+    "version_output": "\nopenjdk version \"11.0.16.1\" 2022-08-12 LTS\nOpenJDK Runtime Environment Corretto-11.0.16.9.1 (build 11.0.16.1+9-LTS)\nOpenJDK 64-Bit Server VM Corretto-11.0.16.9.1 (build 11.0.16.1+9-LTS, mixed mode)\n"
+  },
+  "pdflatex": {
+    "command": [
+      "pdflatex",
+      "--version"
+    ],
+    "cwd": ".",
+    "elapsed_seconds": 0.47978340002009645,
+    "exit_code": 0,
+    "log": "pdflatex.log",
+    "status": "passed",
+    "timeout_seconds": 20,
+    "version_output": "MiKTeX-pdfTeX 4.18 (MiKTeX 24.1)\n\u00a9 1982 D. E. Knuth, \u00a9 1996-2023 H\u00e0n Th\u1ebf Th\u00e0nh\nTeX is a trademark of the American Mathematical Society.\nusing bzip2 version 1.0.8, 13-Jul-2019\ncompiled with curl version 8.4.0; using libcurl/8.4.0 Schannel\ncompiled with expat version 2.5; using expat_2.5.0\ncompiled with jpeg version 9.5\ncompiled with liblzma version 50040002; using 50040002\ncompiled with libpng version 1.6.39; using 1.6.39\ncompiled with libressl version LibreSSL 3.8.1; using LibreSSL 3.8.1\ncompiled with MiKTeX Application Framework version 4.8; using 4.8\ncompiled with MiKTeX Core version 4.23; using 4.23\ncompiled with MiKTeX Archive Extractor version 4.1; using 4.1\ncompiled with MiKTeX Package Manager version 4.10; using 4.10\ncompiled with uriparser version 0.9.7\ncompiled with xpdf version 4.04\ncompiled with zlib version 1.2.13; using 1.2.13\n\npdflatex: major issue: So far, you have not checked for MiKTeX updates.\n"
+  },
+  "python": {
+    "command": [
+      "C:\\Users\\babaei\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+      "--version"
+    ],
+    "cwd": ".",
+    "elapsed_seconds": 0.16003249998902902,
+    "exit_code": 0,
+    "log": "python.log",
+    "status": "passed",
+    "timeout_seconds": 20,
+    "version_output": "Python 3.13.14\n\n"
+  },
+  "scope": "Tool availability report; not a proof or model check",
+  "tlaps": {
+    "command": [
+      "tlapm",
+      "--version"
+    ],
+    "elapsed_seconds": 0.009290200017858297,
+    "exit_code": null,
+    "log": "tlaps.log",
+    "status": "skipped",
+    "timeout_seconds": 20,
+    "version_output": "[WinError 2] The system cannot find the file specified"
+  },
+  "tlaps_container": {
+    "command": [
+      "docker",
+      "run",
+      "--rm",
+      "--network",
+      "none",
+      "--mount",
+      "type=bind,source=C:\\Users\\babaei\\Desktop\\Research\\Ai4SE4AI\\verified-generative-coordination,target=/work",
+      "vgc-tlaps:local",
+      "/work/.tools/tlapm/bin/tlapm",
+      "--version"
+    ],
+    "cwd": ".",
+    "elapsed_seconds": 1.7957574999891222,
+    "exit_code": 0,
+    "log": "tlaps_container.log",
+    "status": "passed",
+    "timeout_seconds": 20,
+    "version_output": "5f5037f\n\n"
+  },
+  "tlc_jar": {
+    "status": "installed"
+  }
+}

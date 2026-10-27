@@ -1,0 +1,1730 @@
+{
+ "ablation": {
+  "full": {
+   "dispatches": 385,
+   "elapsed_seconds": 1.9298802000121213,
+   "flags": [],
+   "median_first_violation_step": {
+    "authority": null,
+    "budget": null,
+    "invalid": null,
+    "publish": null,
+    "stale": null,
+    "structure": null,
+    "upstream": null
+   },
+   "publications": 33,
+   "removed": "Reference controller (all guards)",
+   "runs": 20,
+   "runs_publishing": 12,
+   "runs_violating": {
+    "authority": 0,
+    "budget": 0,
+    "invalid": 0,
+    "publish": 0,
+    "stale": 0,
+    "structure": 0,
+    "upstream": 0
+   },
+   "runs_with_any_violation": 0,
+   "runs_with_api_exception": 0
+  },
+  "no-authority": {
+   "dispatches": 413,
+   "elapsed_seconds": 1.3505031999666244,
+   "flags": [
+    "authority"
+   ],
+   "median_first_violation_step": {
+    "authority": 26,
+    "budget": null,
+    "invalid": null,
+    "publish": 24,
+    "stale": 40,
+    "structure": null,
+    "upstream": 29
+   },
+   "publications": 39,
+   "removed": "Authority check",
+   "runs": 20,
+   "runs_publishing": 16,
+   "runs_violating": {
+    "authority": 15,
+    "budget": 0,
+    "invalid": 0,
+    "publish": 5,
+    "stale": 8,
+    "structure": 0,
+    "upstream": 12
+   },
+   "runs_with_any_violation": 15,
+   "runs_with_api_exception": 0
+  },
+  "no-budget": {
+   "dispatches": 385,
+   "elapsed_seconds": 1.0726470000226982,
+   "flags": [
+    "budget"
+   ],
+   "median_first_violation_step": {
+    "authority": null,
+    "budget": null,
+    "invalid": null,
+    "publish": null,
+    "stale": null,
+    "structure": null,
+    "upstream": null
+   },
+   "publications": 33,
+   "removed": "Persistent episode budget",
+   "runs": 20,
+   "runs_publishing": 12,
+   "runs_violating": {
+    "authority": 0,
+    "budget": 0,
+    "invalid": 0,
+    "publish": 0,
+    "stale": 0,
+    "structure": 0,
+    "upstream": 0
+   },
+   "runs_with_any_violation": 0,
+   "runs_with_api_exception": 0
+  },
+  "no-cancel": {
+   "dispatches": 385,
+   "elapsed_seconds": 1.3740755999460816,
+   "flags": [
+    "cancel"
+   ],
+   "median_first_violation_step": {
+    "authority": null,
+    "budget": null,
+    "invalid": null,
+    "publish": null,
+    "stale": null,
+    "structure": null,
+    "upstream": null
+   },
+   "publications": 33,
+   "removed": "Request cancellation on reconcile",
+   "runs": 20,
+   "runs_publishing": 12,
+   "runs_violating": {
+    "authority": 0,
+    "budget": 0,
+    "invalid": 0,
+    "publish": 0,
+    "stale": 0,
+    "structure": 0,
+    "upstream": 0
+   },
+   "runs_with_any_violation": 0,
+   "runs_with_api_exception": 0
+  },
+  "no-candidate": {
+   "dispatches": 379,
+   "elapsed_seconds": 1.2109104000264779,
+   "flags": [
+    "structure"
+   ],
+   "median_first_violation_step": {
+    "authority": null,
+    "budget": null,
+    "invalid": null,
+    "publish": 41,
+    "stale": null,
+    "structure": 10,
+    "upstream": null
+   },
+   "publications": 27,
+   "removed": "Candidate normalization",
+   "runs": 20,
+   "runs_publishing": 12,
+   "runs_violating": {
+    "authority": 0,
+    "budget": 0,
+    "invalid": 0,
+    "publish": 2,
+    "stale": 0,
+    "structure": 7,
+    "upstream": 0
+   },
+   "runs_with_any_violation": 7,
+   "runs_with_api_exception": 0
+  },
+  "no-context": {
+   "dispatches": 376,
+   "elapsed_seconds": 1.2396972999558784,
+   "flags": [
+    "context"
+   ],
+   "median_first_violation_step": {
+    "authority": null,
+    "budget": null,
+    "invalid": null,
+    "publish": 49,
+    "stale": 45,
+    "structure": null,
+    "upstream": 45
+   },
+   "publications": 36,
+   "removed": "Selected context in footprint",
+   "runs": 20,
+   "runs_publishing": 12,
+   "runs_violating": {
+    "authority": 0,
+    "budget": 0,
+    "invalid": 0,
+    "publish": 1,
+    "stale": 3,
+    "structure": 0,
+    "upstream": 3
+   },
+   "runs_with_any_violation": 3,
+   "runs_with_api_exception": 0
+  },
+  "no-contract": {
+   "dispatches": 363,
+   "elapsed_seconds": 1.1766868000268005,
+   "flags": [
+    "contract"
+   ],
+   "median_first_violation_step": {
+    "authority": null,
+    "budget": null,
+    "invalid": null,
+    "publish": 26,
+    "stale": 30,
+    "structure": null,
+    "upstream": 33
+   },
+   "publications": 30,
+   "removed": "Contract identity in signature",
+   "runs": 20,
+   "runs_publishing": 12,
+   "runs_violating": {
+    "authority": 0,
+    "budget": 0,
+    "invalid": 0,
+    "publish": 3,
+    "stale": 11,
+    "structure": 0,
+    "upstream": 6
+   },
+   "runs_with_any_violation": 11,
+   "runs_with_api_exception": 0
+  },
+  "no-global": {
+   "dispatches": 385,
+   "elapsed_seconds": 1.6297900999779813,
+   "flags": [
+    "global"
+   ],
+   "median_first_violation_step": {
+    "authority": null,
+    "budget": null,
+    "invalid": null,
+    "publish": 17,
+    "stale": null,
+    "structure": null,
+    "upstream": null
+   },
+   "publications": 54,
+   "removed": "Global publication predicate",
+   "runs": 20,
+   "runs_publishing": 15,
+   "runs_violating": {
+    "authority": 0,
+    "budget": 0,
+    "invalid": 0,
+    "publish": 7,
+    "stale": 0,
+    "structure": 0,
+    "upstream": 0
+   },
+   "runs_with_any_violation": 7,
+   "runs_with_api_exception": 0
+  },
+  "no-obsolete": {
+   "dispatches": 382,
+   "elapsed_seconds": 1.2085508999880403,
+   "flags": [
+    "cancel",
+    "recheck"
+   ],
+   "median_first_violation_step": {
+    "authority": null,
+    "budget": null,
+    "invalid": null,
+    "publish": null,
+    "stale": 35,
+    "structure": null,
+    "upstream": null
+   },
+   "publications": 33,
+   "removed": "Both obsolete-response defences",
+   "runs": 20,
+   "runs_publishing": 12,
+   "runs_violating": {
+    "authority": 0,
+    "budget": 0,
+    "invalid": 0,
+    "publish": 0,
+    "stale": 1,
+    "structure": 0,
+    "upstream": 0
+   },
+   "runs_with_any_violation": 1,
+   "runs_with_api_exception": 0
+  },
+  "no-recheck": {
+   "dispatches": 385,
+   "elapsed_seconds": 1.2934458999661729,
+   "flags": [
+    "recheck"
+   ],
+   "median_first_violation_step": {
+    "authority": null,
+    "budget": null,
+    "invalid": null,
+    "publish": null,
+    "stale": null,
+    "structure": null,
+    "upstream": null
+   },
+   "publications": 33,
+   "removed": "Commit-time signature recheck",
+   "runs": 20,
+   "runs_publishing": 12,
+   "runs_violating": {
+    "authority": 0,
+    "budget": 0,
+    "invalid": 0,
+    "publish": 0,
+    "stale": 0,
+    "structure": 0,
+    "upstream": 0
+   },
+   "runs_with_any_violation": 0,
+   "runs_with_api_exception": 0
+  },
+  "no-upstream": {
+   "dispatches": 411,
+   "elapsed_seconds": 1.320045200001914,
+   "flags": [
+    "upstream"
+   ],
+   "median_first_violation_step": {
+    "authority": null,
+    "budget": null,
+    "invalid": null,
+    "publish": 41,
+    "stale": 20,
+    "structure": null,
+    "upstream": 18
+   },
+   "publications": 41,
+   "removed": "Upstream usability gate",
+   "runs": 20,
+   "runs_publishing": 13,
+   "runs_violating": {
+    "authority": 0,
+    "budget": 0,
+    "invalid": 0,
+    "publish": 8,
+    "stale": 14,
+    "structure": 0,
+    "upstream": 17
+   },
+   "runs_with_any_violation": 17,
+   "runs_with_api_exception": 0
+  }
+ },
+ "actions": {
+  "context": 7,
+  "contract": 4,
+  "deliver": 26,
+  "dispatch": 26,
+  "drain": 6,
+  "edit": 7,
+  "publish": 6,
+  "reviewer": 2,
+  "revoke": 3,
+  "settle": 6,
+  "timeout": 4
+ },
+ "config": {
+  "ablation_runs": 20,
+  "ablation_steps": 60,
+  "changes": 10,
+  "seeds": 2,
+  "sizes": [
+   1,
+   2,
+   4
+  ]
+ },
+ "cost": {
+  "all_outcomes_equivalent": true,
+  "runs": [
+   {
+    "n": 1,
+    "outcome_equivalent": true,
+    "per_kind": {
+     "exact": {
+      "context-equal": [
+       1,
+       0,
+       0
+      ],
+      "context-selected": [
+       1,
+       2,
+       927
+      ],
+      "context-unselected": [
+       2,
+       0,
+       0
+      ],
+      "contract": [
+       5,
+       5,
+       1721
+      ],
+      "source": [
+       1,
+       4,
+       1189
+      ]
+     },
+     "full": {
+      "context-equal": [
+       1,
+       4,
+       903
+      ],
+      "context-selected": [
+       1,
+       4,
+       1013
+      ],
+      "context-unselected": [
+       2,
+       8,
+       1798
+      ],
+      "contract": [
+       5,
+       20,
+       4596
+      ],
+      "source": [
+       1,
+       4,
+       898
+      ]
+     },
+     "no-cutoff": {
+      "context-equal": [
+       1,
+       0,
+       0
+      ],
+      "context-selected": [
+       1,
+       2,
+       559
+      ],
+      "context-unselected": [
+       2,
+       0,
+       0
+      ],
+      "contract": [
+       5,
+       13,
+       2806
+      ],
+      "source": [
+       1,
+       4,
+       822
+      ]
+     },
+     "version": {
+      "context-equal": [
+       1,
+       2,
+       861
+      ],
+      "context-selected": [
+       1,
+       2,
+       967
+      ],
+      "context-unselected": [
+       2,
+       4,
+       1720
+      ],
+      "contract": [
+       5,
+       5,
+       1761
+      ],
+      "source": [
+       1,
+       4,
+       1229
+      ]
+     },
+     "workspace": {
+      "context-equal": [
+       1,
+       0,
+       0
+      ],
+      "context-selected": [
+       1,
+       4,
+       2016
+      ],
+      "context-unselected": [
+       2,
+       8,
+       3375
+      ],
+      "contract": [
+       5,
+       5,
+       2276
+      ],
+      "source": [
+       1,
+       4,
+       1689
+      ]
+     }
+    },
+    "seed": 7101
+   },
+   {
+    "n": 1,
+    "outcome_equivalent": true,
+    "per_kind": {
+     "exact": {
+      "context-equal": [
+       2,
+       0,
+       0
+      ],
+      "context-selected": [
+       0,
+       0,
+       0
+      ],
+      "context-unselected": [
+       2,
+       0,
+       0
+      ],
+      "contract": [
+       1,
+       1,
+       210
+      ],
+      "source": [
+       5,
+       20,
+       5887
+      ]
+     },
+     "full": {
+      "context-equal": [
+       2,
+       8,
+       1770
+      ],
+      "context-selected": [
+       0,
+       0,
+       0
+      ],
+      "context-unselected": [
+       2,
+       8,
+       1785
+      ],
+      "contract": [
+       1,
+       4,
+       897
+      ],
+      "source": [
+       5,
+       20,
+       4431
+      ]
+     },
+     "no-cutoff": {
+      "context-equal": [
+       2,
+       0,
+       0
+      ],
+      "context-selected": [
+       0,
+       0,
+       0
+      ],
+      "context-unselected": [
+       2,
+       0,
+       0
+      ],
+      "contract": [
+       1,
+       3,
+       659
+      ],
+      "source": [
+       5,
+       20,
+       4050
+      ]
+     },
+     "version": {
+      "context-equal": [
+       2,
+       4,
+       1708
+      ],
+      "context-selected": [
+       0,
+       0,
+       0
+      ],
+      "context-unselected": [
+       2,
+       4,
+       1712
+      ],
+      "contract": [
+       1,
+       1,
+       210
+      ],
+      "source": [
+       5,
+       20,
+       6087
+      ]
+     },
+     "workspace": {
+      "context-equal": [
+       2,
+       0,
+       0
+      ],
+      "context-selected": [
+       0,
+       0,
+       0
+      ],
+      "context-unselected": [
+       2,
+       8,
+       3363
+      ],
+      "contract": [
+       1,
+       1,
+       335
+      ],
+      "source": [
+       5,
+       20,
+       7647
+      ]
+     }
+    },
+    "seed": 7102
+   },
+   {
+    "n": 2,
+    "outcome_equivalent": true,
+    "per_kind": {
+     "exact": {
+      "context-equal": [
+       2,
+       0,
+       0
+      ],
+      "context-selected": [
+       3,
+       6,
+       2773
+      ],
+      "context-unselected": [
+       0,
+       0,
+       0
+      ],
+      "contract": [
+       4,
+       8,
+       2341
+      ],
+      "source": [
+       1,
+       4,
+       1297
+      ]
+     },
+     "full": {
+      "context-equal": [
+       2,
+       16,
+       3730
+      ],
+      "context-selected": [
+       3,
+       24,
+       5720
+      ],
+      "context-unselected": [
+       0,
+       0,
+       0
+      ],
+      "contract": [
+       4,
+       32,
+       7583
+      ],
+      "source": [
+       1,
+       8,
+       1908
+      ]
+     },
+     "no-cutoff": {
+      "context-equal": [
+       2,
+       0,
+       0
+      ],
+      "context-selected": [
+       3,
+       6,
+       1668
+      ],
+      "context-unselected": [
+       0,
+       0,
+       0
+      ],
+      "contract": [
+       4,
+       22,
+       5095
+      ],
+      "source": [
+       1,
+       4,
+       930
+      ]
+     },
+     "version": {
+      "context-equal": [
+       2,
+       8,
+       3604
+      ],
+      "context-selected": [
+       3,
+       12,
+       5476
+      ],
+      "context-unselected": [
+       0,
+       0,
+       0
+      ],
+      "contract": [
+       4,
+       8,
+       2381
+      ],
+      "source": [
+       1,
+       4,
+       1337
+      ]
+     },
+     "workspace": {
+      "context-equal": [
+       2,
+       0,
+       0
+      ],
+      "context-selected": [
+       3,
+       24,
+       10784
+      ],
+      "context-unselected": [
+       0,
+       0,
+       0
+      ],
+      "contract": [
+       4,
+       8,
+       3425
+      ],
+      "source": [
+       1,
+       8,
+       3602
+      ]
+     }
+    },
+    "seed": 7202
+   },
+   {
+    "n": 2,
+    "outcome_equivalent": true,
+    "per_kind": {
+     "exact": {
+      "context-equal": [
+       0,
+       0,
+       0
+      ],
+      "context-selected": [
+       2,
+       4,
+       1838
+      ],
+      "context-unselected": [
+       2,
+       0,
+       0
+      ],
+      "contract": [
+       3,
+       6,
+       3080
+      ],
+      "source": [
+       3,
+       12,
+       3809
+      ]
+     },
+     "full": {
+      "context-equal": [
+       0,
+       0,
+       0
+      ],
+      "context-selected": [
+       2,
+       16,
+       3940
+      ],
+      "context-unselected": [
+       2,
+       16,
+       3965
+      ],
+      "contract": [
+       3,
+       24,
+       5971
+      ],
+      "source": [
+       3,
+       24,
+       5892
+      ]
+     },
+     "no-cutoff": {
+      "context-equal": [
+       0,
+       0,
+       0
+      ],
+      "context-selected": [
+       2,
+       4,
+       1100
+      ],
+      "context-unselected": [
+       2,
+       0,
+       0
+      ],
+      "contract": [
+       3,
+       8,
+       2213
+      ],
+      "source": [
+       3,
+       12,
+       2708
+      ]
+     },
+     "version": {
+      "context-equal": [
+       0,
+       0,
+       0
+      ],
+      "context-selected": [
+       2,
+       8,
+       3814
+      ],
+      "context-unselected": [
+       2,
+       8,
+       3832
+      ],
+      "contract": [
+       3,
+       6,
+       3200
+      ],
+      "source": [
+       3,
+       12,
+       3929
+      ]
+     },
+     "workspace": {
+      "context-equal": [
+       0,
+       0,
+       0
+      ],
+      "context-selected": [
+       2,
+       16,
+       8566
+      ],
+      "context-unselected": [
+       2,
+       16,
+       9070
+      ],
+      "contract": [
+       3,
+       6,
+       4568
+      ],
+      "source": [
+       3,
+       24,
+       12514
+      ]
+     }
+    },
+    "seed": 7203
+   },
+   {
+    "n": 4,
+    "outcome_equivalent": true,
+    "per_kind": {
+     "exact": {
+      "context-equal": [
+       0,
+       0,
+       0
+      ],
+      "context-selected": [
+       4,
+       8,
+       3689
+      ],
+      "context-unselected": [
+       0,
+       0,
+       0
+      ],
+      "contract": [
+       3,
+       12,
+       5484
+      ],
+      "source": [
+       3,
+       12,
+       3650
+      ]
+     },
+     "full": {
+      "context-equal": [
+       0,
+       0,
+       0
+      ],
+      "context-selected": [
+       4,
+       64,
+       15497
+      ],
+      "context-unselected": [
+       0,
+       0,
+       0
+      ],
+      "contract": [
+       3,
+       48,
+       11670
+      ],
+      "source": [
+       3,
+       48,
+       11620
+      ]
+     },
+     "no-cutoff": {
+      "context-equal": [
+       0,
+       0,
+       0
+      ],
+      "context-selected": [
+       4,
+       8,
+       2216
+      ],
+      "context-unselected": [
+       0,
+       0,
+       0
+      ],
+      "contract": [
+       3,
+       24,
+       5682
+      ],
+      "source": [
+       3,
+       12,
+       2551
+      ]
+     },
+     "version": {
+      "context-equal": [
+       0,
+       0,
+       0
+      ],
+      "context-selected": [
+       4,
+       32,
+       14904
+      ],
+      "context-unselected": [
+       0,
+       0,
+       0
+      ],
+      "contract": [
+       3,
+       12,
+       5644
+      ],
+      "source": [
+       3,
+       12,
+       3770
+      ]
+     },
+     "workspace": {
+      "context-equal": [
+       0,
+       0,
+       0
+      ],
+      "context-selected": [
+       4,
+       64,
+       38262
+      ],
+      "context-unselected": [
+       0,
+       0,
+       0
+      ],
+      "contract": [
+       3,
+       12,
+       8868
+      ],
+      "source": [
+       3,
+       48,
+       28650
+      ]
+     }
+    },
+    "seed": 7404
+   },
+   {
+    "n": 4,
+    "outcome_equivalent": true,
+    "per_kind": {
+     "exact": {
+      "context-equal": [
+       0,
+       0,
+       0
+      ],
+      "context-selected": [
+       1,
+       2,
+       927
+      ],
+      "context-unselected": [
+       2,
+       0,
+       0
+      ],
+      "contract": [
+       4,
+       16,
+       3496
+      ],
+      "source": [
+       3,
+       12,
+       3839
+      ]
+     },
+     "full": {
+      "context-equal": [
+       0,
+       0,
+       0
+      ],
+      "context-selected": [
+       1,
+       16,
+       3924
+      ],
+      "context-unselected": [
+       2,
+       32,
+       7780
+      ],
+      "contract": [
+       4,
+       64,
+       15486
+      ],
+      "source": [
+       3,
+       48,
+       11589
+      ]
+     },
+     "no-cutoff": {
+      "context-equal": [
+       0,
+       0,
+       0
+      ],
+      "context-selected": [
+       1,
+       2,
+       559
+      ],
+      "context-unselected": [
+       2,
+       0,
+       0
+      ],
+      "contract": [
+       4,
+       48,
+       11473
+      ],
+      "source": [
+       3,
+       12,
+       2739
+      ]
+     },
+     "version": {
+      "context-equal": [
+       0,
+       0,
+       0
+      ],
+      "context-selected": [
+       1,
+       8,
+       3730
+      ],
+      "context-unselected": [
+       2,
+       16,
+       7442
+      ],
+      "contract": [
+       4,
+       16,
+       3576
+      ],
+      "source": [
+       3,
+       12,
+       3959
+      ]
+     },
+     "workspace": {
+      "context-equal": [
+       0,
+       0,
+       0
+      ],
+      "context-selected": [
+       1,
+       16,
+       10482
+      ],
+      "context-unselected": [
+       2,
+       32,
+       20794
+      ],
+      "contract": [
+       4,
+       16,
+       8312
+      ],
+      "source": [
+       3,
+       48,
+       29972
+      ]
+     }
+    },
+    "seed": 7405
+   }
+  ],
+  "summary": {
+   "1": {
+    "exact": {
+     "by_kind": {
+      "context-equal": {
+       "bytes_per_request": null,
+       "changes": 3,
+       "requests_per_change": 0.0
+      },
+      "context-selected": {
+       "bytes_per_request": 463.5,
+       "changes": 1,
+       "requests_per_change": 2.0
+      },
+      "context-unselected": {
+       "bytes_per_request": null,
+       "changes": 4,
+       "requests_per_change": 0.0
+      },
+      "contract": {
+       "bytes_per_request": 321.8333333333333,
+       "changes": 6,
+       "requests_per_change": 1.0
+      },
+      "source": {
+       "bytes_per_request": 294.8333333333333,
+       "changes": 6,
+       "requests_per_change": 4.0
+      }
+     },
+     "kbytes_per_change": 0.4967,
+     "requests_per_change": 1.6
+    },
+    "full": {
+     "by_kind": {
+      "context-equal": {
+       "bytes_per_request": 222.75,
+       "changes": 3,
+       "requests_per_change": 4.0
+      },
+      "context-selected": {
+       "bytes_per_request": 253.25,
+       "changes": 1,
+       "requests_per_change": 4.0
+      },
+      "context-unselected": {
+       "bytes_per_request": 223.9375,
+       "changes": 4,
+       "requests_per_change": 4.0
+      },
+      "contract": {
+       "bytes_per_request": 228.875,
+       "changes": 6,
+       "requests_per_change": 4.0
+      },
+      "source": {
+       "bytes_per_request": 222.04166666666666,
+       "changes": 6,
+       "requests_per_change": 4.0
+      }
+     },
+     "kbytes_per_change": 0.90455,
+     "requests_per_change": 4.0
+    },
+    "no-cutoff": {
+     "by_kind": {
+      "context-equal": {
+       "bytes_per_request": null,
+       "changes": 3,
+       "requests_per_change": 0.0
+      },
+      "context-selected": {
+       "bytes_per_request": 279.5,
+       "changes": 1,
+       "requests_per_change": 2.0
+      },
+      "context-unselected": {
+       "bytes_per_request": null,
+       "changes": 4,
+       "requests_per_change": 0.0
+      },
+      "contract": {
+       "bytes_per_request": 216.5625,
+       "changes": 6,
+       "requests_per_change": 2.6666666666666665
+      },
+      "source": {
+       "bytes_per_request": 203.0,
+       "changes": 6,
+       "requests_per_change": 4.0
+      }
+     },
+     "kbytes_per_change": 0.44480000000000003,
+     "requests_per_change": 2.1
+    },
+    "version": {
+     "by_kind": {
+      "context-equal": {
+       "bytes_per_request": 428.1666666666667,
+       "changes": 3,
+       "requests_per_change": 2.0
+      },
+      "context-selected": {
+       "bytes_per_request": 483.5,
+       "changes": 1,
+       "requests_per_change": 2.0
+      },
+      "context-unselected": {
+       "bytes_per_request": 429.0,
+       "changes": 4,
+       "requests_per_change": 2.0
+      },
+      "contract": {
+       "bytes_per_request": 328.5,
+       "changes": 6,
+       "requests_per_change": 1.0
+      },
+      "source": {
+       "bytes_per_request": 304.8333333333333,
+       "changes": 6,
+       "requests_per_change": 4.0
+      }
+     },
+     "kbytes_per_change": 0.81275,
+     "requests_per_change": 2.3
+    },
+    "workspace": {
+     "by_kind": {
+      "context-equal": {
+       "bytes_per_request": null,
+       "changes": 3,
+       "requests_per_change": 0.0
+      },
+      "context-selected": {
+       "bytes_per_request": 504.0,
+       "changes": 1,
+       "requests_per_change": 4.0
+      },
+      "context-unselected": {
+       "bytes_per_request": 421.125,
+       "changes": 4,
+       "requests_per_change": 4.0
+      },
+      "contract": {
+       "bytes_per_request": 435.1666666666667,
+       "changes": 6,
+       "requests_per_change": 1.0
+      },
+      "source": {
+       "bytes_per_request": 389.0,
+       "changes": 6,
+       "requests_per_change": 4.0
+      }
+     },
+     "kbytes_per_change": 1.03505,
+     "requests_per_change": 2.5
+    }
+   },
+   "2": {
+    "exact": {
+     "by_kind": {
+      "context-equal": {
+       "bytes_per_request": null,
+       "changes": 2,
+       "requests_per_change": 0.0
+      },
+      "context-selected": {
+       "bytes_per_request": 461.1,
+       "changes": 5,
+       "requests_per_change": 2.0
+      },
+      "context-unselected": {
+       "bytes_per_request": null,
+       "changes": 2,
+       "requests_per_change": 0.0
+      },
+      "contract": {
+       "bytes_per_request": 387.2142857142857,
+       "changes": 7,
+       "requests_per_change": 2.0
+      },
+      "source": {
+       "bytes_per_request": 319.125,
+       "changes": 4,
+       "requests_per_change": 4.0
+      }
+     },
+     "kbytes_per_change": 0.7569,
+     "requests_per_change": 2.0
+    },
+    "full": {
+     "by_kind": {
+      "context-equal": {
+       "bytes_per_request": 233.125,
+       "changes": 2,
+       "requests_per_change": 8.0
+      },
+      "context-selected": {
+       "bytes_per_request": 241.5,
+       "changes": 5,
+       "requests_per_change": 8.0
+      },
+      "context-unselected": {
+       "bytes_per_request": 247.8125,
+       "changes": 2,
+       "requests_per_change": 8.0
+      },
+      "contract": {
+       "bytes_per_request": 242.03571428571428,
+       "changes": 7,
+       "requests_per_change": 8.0
+      },
+      "source": {
+       "bytes_per_request": 243.75,
+       "changes": 4,
+       "requests_per_change": 8.0
+      }
+     },
+     "kbytes_per_change": 1.9354500000000001,
+     "requests_per_change": 8.0
+    },
+    "no-cutoff": {
+     "by_kind": {
+      "context-equal": {
+       "bytes_per_request": null,
+       "changes": 2,
+       "requests_per_change": 0.0
+      },
+      "context-selected": {
+       "bytes_per_request": 276.8,
+       "changes": 5,
+       "requests_per_change": 2.0
+      },
+      "context-unselected": {
+       "bytes_per_request": null,
+       "changes": 2,
+       "requests_per_change": 0.0
+      },
+      "contract": {
+       "bytes_per_request": 243.6,
+       "changes": 7,
+       "requests_per_change": 4.285714285714286
+      },
+      "source": {
+       "bytes_per_request": 227.375,
+       "changes": 4,
+       "requests_per_change": 4.0
+      }
+     },
+     "kbytes_per_change": 0.6857000000000001,
+     "requests_per_change": 2.8
+    },
+    "version": {
+     "by_kind": {
+      "context-equal": {
+       "bytes_per_request": 450.5,
+       "changes": 2,
+       "requests_per_change": 4.0
+      },
+      "context-selected": {
+       "bytes_per_request": 464.5,
+       "changes": 5,
+       "requests_per_change": 4.0
+      },
+      "context-unselected": {
+       "bytes_per_request": 479.0,
+       "changes": 2,
+       "requests_per_change": 4.0
+      },
+      "contract": {
+       "bytes_per_request": 398.64285714285717,
+       "changes": 7,
+       "requests_per_change": 2.0
+      },
+      "source": {
+       "bytes_per_request": 329.125,
+       "changes": 4,
+       "requests_per_change": 4.0
+      }
+     },
+     "kbytes_per_change": 1.3786500000000002,
+     "requests_per_change": 3.3
+    },
+    "workspace": {
+     "by_kind": {
+      "context-equal": {
+       "bytes_per_request": null,
+       "changes": 2,
+       "requests_per_change": 0.0
+      },
+      "context-selected": {
+       "bytes_per_request": 483.75,
+       "changes": 5,
+       "requests_per_change": 8.0
+      },
+      "context-unselected": {
+       "bytes_per_request": 566.875,
+       "changes": 2,
+       "requests_per_change": 8.0
+      },
+      "contract": {
+       "bytes_per_request": 570.9285714285714,
+       "changes": 7,
+       "requests_per_change": 2.0
+      },
+      "source": {
+       "bytes_per_request": 503.625,
+       "changes": 4,
+       "requests_per_change": 8.0
+      }
+     },
+     "kbytes_per_change": 2.6264499999999997,
+     "requests_per_change": 5.1
+    }
+   },
+   "4": {
+    "exact": {
+     "by_kind": {
+      "context-equal": {
+       "bytes_per_request": null,
+       "changes": 0,
+       "requests_per_change": null
+      },
+      "context-selected": {
+       "bytes_per_request": 461.6,
+       "changes": 5,
+       "requests_per_change": 2.0
+      },
+      "context-unselected": {
+       "bytes_per_request": null,
+       "changes": 2,
+       "requests_per_change": 0.0
+      },
+      "contract": {
+       "bytes_per_request": 320.7142857142857,
+       "changes": 7,
+       "requests_per_change": 4.0
+      },
+      "source": {
+       "bytes_per_request": 312.0416666666667,
+       "changes": 6,
+       "requests_per_change": 4.0
+      }
+     },
+     "kbytes_per_change": 1.05425,
+     "requests_per_change": 3.1
+    },
+    "full": {
+     "by_kind": {
+      "context-equal": {
+       "bytes_per_request": null,
+       "changes": 0,
+       "requests_per_change": null
+      },
+      "context-selected": {
+       "bytes_per_request": 242.7625,
+       "changes": 5,
+       "requests_per_change": 16.0
+      },
+      "context-unselected": {
+       "bytes_per_request": 243.125,
+       "changes": 2,
+       "requests_per_change": 16.0
+      },
+      "contract": {
+       "bytes_per_request": 242.46428571428572,
+       "changes": 7,
+       "requests_per_change": 16.0
+      },
+      "source": {
+       "bytes_per_request": 241.76041666666666,
+       "changes": 6,
+       "requests_per_change": 16.0
+      }
+     },
+     "kbytes_per_change": 3.8783000000000003,
+     "requests_per_change": 16.0
+    },
+    "no-cutoff": {
+     "by_kind": {
+      "context-equal": {
+       "bytes_per_request": null,
+       "changes": 0,
+       "requests_per_change": null
+      },
+      "context-selected": {
+       "bytes_per_request": 277.5,
+       "changes": 5,
+       "requests_per_change": 2.0
+      },
+      "context-unselected": {
+       "bytes_per_request": null,
+       "changes": 2,
+       "requests_per_change": 0.0
+      },
+      "contract": {
+       "bytes_per_request": 238.26388888888889,
+       "changes": 7,
+       "requests_per_change": 10.285714285714286
+      },
+      "source": {
+       "bytes_per_request": 220.41666666666666,
+       "changes": 6,
+       "requests_per_change": 4.0
+      }
+     },
+     "kbytes_per_change": 1.261,
+     "requests_per_change": 5.3
+    },
+    "version": {
+     "by_kind": {
+      "context-equal": {
+       "bytes_per_request": null,
+       "changes": 0,
+       "requests_per_change": null
+      },
+      "context-selected": {
+       "bytes_per_request": 465.85,
+       "changes": 5,
+       "requests_per_change": 8.0
+      },
+      "context-unselected": {
+       "bytes_per_request": 465.125,
+       "changes": 2,
+       "requests_per_change": 8.0
+      },
+      "contract": {
+       "bytes_per_request": 329.2857142857143,
+       "changes": 7,
+       "requests_per_change": 4.0
+      },
+      "source": {
+       "bytes_per_request": 322.0416666666667,
+       "changes": 6,
+       "requests_per_change": 4.0
+      }
+     },
+     "kbytes_per_change": 2.15125,
+     "requests_per_change": 5.4
+    },
+    "workspace": {
+     "by_kind": {
+      "context-equal": {
+       "bytes_per_request": null,
+       "changes": 0,
+       "requests_per_change": null
+      },
+      "context-selected": {
+       "bytes_per_request": 609.3,
+       "changes": 5,
+       "requests_per_change": 16.0
+      },
+      "context-unselected": {
+       "bytes_per_request": 649.8125,
+       "changes": 2,
+       "requests_per_change": 16.0
+      },
+      "contract": {
+       "bytes_per_request": 613.5714285714286,
+       "changes": 7,
+       "requests_per_change": 4.0
+      },
+      "source": {
+       "bytes_per_request": 610.6458333333334,
+       "changes": 6,
+       "requests_per_change": 16.0
+      }
+     },
+     "kbytes_per_change": 7.267,
+     "requests_per_change": 11.8
+    }
+   }
+  }
+ },
+ "elapsed_seconds": 16.965325900004245,
+ "platform": "Windows-11-10.0.26100-SP0",
+ "properties": {
+  "authority": "Value from a revoked owner exposed",
+  "budget": "More than k requests in one dependency episode",
+  "invalid": "Value invalid for its current observation exposed",
+  "publish": "Snapshot published that violates the barrier",
+  "stale": "Obsolete or unavailable input exposed as usable",
+  "structure": "Ill-typed structure installed",
+  "upstream": "Value exposed while a prerequisite is unusable"
+ },
+ "python": "3.13.14",
+ "quick": true,
+ "source_sha256": {
+  "experiments/tse_campaign.py": "fdcd6a2c98b2a79a87b003c43737406337de1a141bdeb7fc84f68bcf764faee1",
+  "src/vgc/__init__.py": "78e18666013b59a6bfb5b3c0347eb24f76b111c6a2f74349d4c79ce720f27832",
+  "src/vgc/controller.py": "70e763b655518e09134f0213e4870876bf831eb5afe62528f80e9235dbe78d21",
+  "src/vgc/observations.py": "6d2275784a1e472bc00f7d60a705a91d488647e2e2a4eaa68ef698e15ce42506",
+  "src/vgc/providers/__init__.py": "783240a1b80efb464cb9de29e633335269c178f7dc54ce5080e82a17d33d637f",
+  "src/vgc/providers/scripted.py": "b2ca5e8123282dc84e13142b967b2564724928c722ab076992accb729f450911",
+  "src/vgc/scheduler.py": "46450668440e5e1b1bf90dd62f11e9c1fdc51dcf31524dc2d701e24188d50545",
+  "src/vgc/structure.py": "733bde0387202105126705a5723d76186de62c1885db922d899240a4f1a584ca",
+  "src/vgc/types.py": "efb7e5c1e41cdde2453c64cb8ef8e617104d60349f4c2949da6bd06ae426e895",
+  "src/vgc/validators.py": "e2bc97a84f20113ff0d3af866bfc4173b5745acfeae847a981625499c0366436"
+ },
+ "strategies": {
+  "exact": "Exact effective footprint (this paper)",
+  "full": "Full regeneration on every input change",
+  "no-cutoff": "No early cutoff (upstream acceptance identity)",
+  "version": "Version-keyed shared context",
+  "workspace": "Whole-workspace footprint"
+ }
+}
