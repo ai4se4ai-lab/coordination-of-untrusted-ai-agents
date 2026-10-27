@@ -82,6 +82,19 @@ class BoundaryTests(unittest.TestCase):
         self.assertTrue(repair(c))
         self.assertEqual(len(c.history), count)
 
+    def test_context_reactivation_failure_is_recorded_not_raised(self):
+        # Found by the randomized campaign: an integer architecture is admissible while
+        # implementation is suspended, so re-enabling context must fail normalization.
+        c = Controller()
+        u = c.dispatch(c.key("requirements", "d1"))
+        c.resolve(u, valid_proposal(c.pending[u]))
+        c.update_context(0, {}, available=False)
+        u = c.dispatch(c.key("architecture", "d1"))
+        self.assertEqual(c.resolve(u, valid_proposal(c.pending[u], "integer")), "committed")
+        before = c.snapshot()
+        self.assertEqual(c.update_context(1, {}, available=True), "rejected")
+        self.assertEqual(c.snapshot(), before)
+
     def test_zero_match_workflow_can_publish(self):
         c = Controller({})
         self.assertFalse(c.active)

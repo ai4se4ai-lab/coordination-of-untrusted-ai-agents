@@ -1,0 +1,5612 @@
+{
+ "ablation": {
+  "full": {
+   "dispatches": 8280,
+   "elapsed_seconds": 81.98426739999559,
+   "flags": [],
+   "median_first_violation_step": {
+    "authority": null,
+    "budget": null,
+    "invalid": null,
+    "publish": null,
+    "stale": null,
+    "structure": null,
+    "upstream": null
+   },
+   "publications": 769,
+   "removed": "Reference controller (all guards)",
+   "runs": 300,
+   "runs_publishing": 205,
+   "runs_violating": {
+    "authority": 0,
+    "budget": 0,
+    "invalid": 0,
+    "publish": 0,
+    "stale": 0,
+    "structure": 0,
+    "upstream": 0
+   },
+   "runs_with_any_violation": 0,
+   "runs_with_api_exception": 0
+  },
+  "no-authority": {
+   "dispatches": 9955,
+   "elapsed_seconds": 63.837654300034046,
+   "flags": [
+    "authority"
+   ],
+   "median_first_violation_step": {
+    "authority": 30,
+    "budget": null,
+    "invalid": null,
+    "publish": 48,
+    "stale": 39,
+    "structure": null,
+    "upstream": 36
+   },
+   "publications": 1245,
+   "removed": "Authority check",
+   "runs": 300,
+   "runs_publishing": 236,
+   "runs_violating": {
+    "authority": 275,
+    "budget": 0,
+    "invalid": 0,
+    "publish": 161,
+    "stale": 247,
+    "structure": 0,
+    "upstream": 252
+   },
+   "runs_with_any_violation": 277,
+   "runs_with_api_exception": 0
+  },
+  "no-budget": {
+   "dispatches": 8432,
+   "elapsed_seconds": 58.20527179999044,
+   "flags": [
+    "budget"
+   ],
+   "median_first_violation_step": {
+    "authority": null,
+    "budget": 51,
+    "invalid": null,
+    "publish": null,
+    "stale": null,
+    "structure": null,
+    "upstream": null
+   },
+   "publications": 828,
+   "removed": "Persistent episode budget",
+   "runs": 300,
+   "runs_publishing": 209,
+   "runs_violating": {
+    "authority": 0,
+    "budget": 71,
+    "invalid": 0,
+    "publish": 0,
+    "stale": 0,
+    "structure": 0,
+    "upstream": 0
+   },
+   "runs_with_any_violation": 71,
+   "runs_with_api_exception": 0
+  },
+  "no-cancel": {
+   "dispatches": 8260,
+   "elapsed_seconds": 65.58415160002187,
+   "flags": [
+    "cancel"
+   ],
+   "median_first_violation_step": {
+    "authority": null,
+    "budget": null,
+    "invalid": null,
+    "publish": null,
+    "stale": null,
+    "structure": null,
+    "upstream": null
+   },
+   "publications": 755,
+   "removed": "Request cancellation on reconcile",
+   "runs": 300,
+   "runs_publishing": 202,
+   "runs_violating": {
+    "authority": 0,
+    "budget": 0,
+    "invalid": 0,
+    "publish": 0,
+    "stale": 0,
+    "structure": 0,
+    "upstream": 0
+   },
+   "runs_with_any_violation": 0,
+   "runs_with_api_exception": 0
+  },
+  "no-candidate": {
+   "dispatches": 8278,
+   "elapsed_seconds": 39.4196408999851,
+   "flags": [
+    "structure"
+   ],
+   "median_first_violation_step": {
+    "authority": null,
+    "budget": null,
+    "invalid": null,
+    "publish": 48,
+    "stale": null,
+    "structure": 22,
+    "upstream": null
+   },
+   "publications": 687,
+   "removed": "Candidate normalization",
+   "runs": 300,
+   "runs_publishing": 189,
+   "runs_violating": {
+    "authority": 0,
+    "budget": 0,
+    "invalid": 0,
+    "publish": 15,
+    "stale": 0,
+    "structure": 133,
+    "upstream": 0
+   },
+   "runs_with_any_violation": 133,
+   "runs_with_api_exception": 0
+  },
+  "no-context": {
+   "dispatches": 7984,
+   "elapsed_seconds": 42.83485770004336,
+   "flags": [
+    "context"
+   ],
+   "median_first_violation_step": {
+    "authority": null,
+    "budget": null,
+    "invalid": null,
+    "publish": 70,
+    "stale": 59,
+    "structure": null,
+    "upstream": 59
+   },
+   "publications": 811,
+   "removed": "Selected context in footprint",
+   "runs": 300,
+   "runs_publishing": 202,
+   "runs_violating": {
+    "authority": 0,
+    "budget": 0,
+    "invalid": 0,
+    "publish": 53,
+    "stale": 130,
+    "structure": 0,
+    "upstream": 115
+   },
+   "runs_with_any_violation": 130,
+   "runs_with_api_exception": 0
+  },
+  "no-contract": {
+   "dispatches": 7313,
+   "elapsed_seconds": 36.46416760003194,
+   "flags": [
+    "contract"
+   ],
+   "median_first_violation_step": {
+    "authority": null,
+    "budget": null,
+    "invalid": null,
+    "publish": 60,
+    "stale": 39,
+    "structure": null,
+    "upstream": 48
+   },
+   "publications": 745,
+   "removed": "Contract identity in signature",
+   "runs": 300,
+   "runs_publishing": 197,
+   "runs_violating": {
+    "authority": 0,
+    "budget": 0,
+    "invalid": 0,
+    "publish": 89,
+    "stale": 241,
+    "structure": 0,
+    "upstream": 210
+   },
+   "runs_with_any_violation": 241,
+   "runs_with_api_exception": 0
+  },
+  "no-global": {
+   "dispatches": 8280,
+   "elapsed_seconds": 45.67320719995769,
+   "flags": [
+    "global"
+   ],
+   "median_first_violation_step": {
+    "authority": null,
+    "budget": null,
+    "invalid": null,
+    "publish": 30,
+    "stale": null,
+    "structure": null,
+    "upstream": null
+   },
+   "publications": 1040,
+   "removed": "Global publication predicate",
+   "runs": 300,
+   "runs_publishing": 234,
+   "runs_violating": {
+    "authority": 0,
+    "budget": 0,
+    "invalid": 0,
+    "publish": 102,
+    "stale": 0,
+    "structure": 0,
+    "upstream": 0
+   },
+   "runs_with_any_violation": 102,
+   "runs_with_api_exception": 0
+  },
+  "no-obsolete": {
+   "dispatches": 8253,
+   "elapsed_seconds": 47.79597679997096,
+   "flags": [
+    "cancel",
+    "recheck"
+   ],
+   "median_first_violation_step": {
+    "authority": null,
+    "budget": null,
+    "invalid": 50,
+    "publish": 60,
+    "stale": 53,
+    "structure": null,
+    "upstream": 65
+   },
+   "publications": 779,
+   "removed": "Both obsolete-response defences",
+   "runs": 300,
+   "runs_publishing": 204,
+   "runs_violating": {
+    "authority": 0,
+    "budget": 0,
+    "invalid": 74,
+    "publish": 36,
+    "stale": 106,
+    "structure": 0,
+    "upstream": 79
+   },
+   "runs_with_any_violation": 106,
+   "runs_with_api_exception": 0
+  },
+  "no-recheck": {
+   "dispatches": 8280,
+   "elapsed_seconds": 50.26494439999806,
+   "flags": [
+    "recheck"
+   ],
+   "median_first_violation_step": {
+    "authority": null,
+    "budget": null,
+    "invalid": null,
+    "publish": null,
+    "stale": null,
+    "structure": null,
+    "upstream": null
+   },
+   "publications": 769,
+   "removed": "Commit-time signature recheck",
+   "runs": 300,
+   "runs_publishing": 205,
+   "runs_violating": {
+    "authority": 0,
+    "budget": 0,
+    "invalid": 0,
+    "publish": 0,
+    "stale": 0,
+    "structure": 0,
+    "upstream": 0
+   },
+   "runs_with_any_violation": 0,
+   "runs_with_api_exception": 0
+  },
+  "no-upstream": {
+   "dispatches": 10210,
+   "elapsed_seconds": 55.60625309997704,
+   "flags": [
+    "upstream"
+   ],
+   "median_first_violation_step": {
+    "authority": null,
+    "budget": null,
+    "invalid": null,
+    "publish": 46,
+    "stale": 25,
+    "structure": null,
+    "upstream": 19
+   },
+   "publications": 1177,
+   "removed": "Upstream usability gate",
+   "runs": 300,
+   "runs_publishing": 228,
+   "runs_violating": {
+    "authority": 0,
+    "budget": 0,
+    "invalid": 0,
+    "publish": 172,
+    "stale": 260,
+    "structure": 0,
+    "upstream": 297
+   },
+   "runs_with_any_violation": 298,
+   "runs_with_api_exception": 0
+  }
+ },
+ "actions": {
+  "context": 7,
+  "contract": 4,
+  "deliver": 26,
+  "dispatch": 26,
+  "drain": 6,
+  "edit": 7,
+  "publish": 6,
+  "reviewer": 2,
+  "revoke": 3,
+  "settle": 6,
+  "timeout": 4
+ },
+ "config": {
+  "ablation_runs": 300,
+  "ablation_steps": 120,
+  "changes": 40,
+  "seeds": 5,
+  "sizes": [
+   1,
+   2,
+   4,
+   8,
+   16,
+   32
+  ]
+ },
+ "cost": {
+  "all_outcomes_equivalent": true,
+  "runs": [
+   {
+    "n": 1,
+    "outcome_equivalent": true,
+    "per_kind": {
+     "exact": {
+      "context-equal": [
+       5,
+       0,
+       0
+      ],
+      "context-selected": [
+       8,
+       16,
+       7426
+      ],
+      "context-unselected": [
+       4,
+       0,
+       0
+      ],
+      "contract": [
+       12,
+       12,
+       3763
+      ],
+      "source": [
+       11,
+       44,
+       14195
+      ]
+     },
+     "full": {
+      "context-equal": [
+       5,
+       20,
+       4982
+      ],
+      "context-selected": [
+       8,
+       32,
+       8113
+      ],
+      "context-unselected": [
+       4,
+       16,
+       3830
+      ],
+      "contract": [
+       12,
+       48,
+       11729
+      ],
+      "source": [
+       11,
+       44,
+       11054
+      ]
+     },
+     "no-cutoff": {
+      "context-equal": [
+       5,
+       0,
+       0
+      ],
+      "context-selected": [
+       8,
+       16,
+       4482
+      ],
+      "context-unselected": [
+       4,
+       0,
+       0
+      ],
+      "contract": [
+       12,
+       32,
+       7591
+      ],
+      "source": [
+       11,
+       44,
+       10163
+      ]
+     },
+     "version": {
+      "context-equal": [
+       5,
+       10,
+       4755
+      ],
+      "context-selected": [
+       8,
+       16,
+       7754
+      ],
+      "context-unselected": [
+       4,
+       8,
+       3661
+      ],
+      "contract": [
+       12,
+       12,
+       3885
+      ],
+      "source": [
+       11,
+       44,
+       14647
+      ]
+     },
+     "workspace": {
+      "context-equal": [
+       5,
+       0,
+       0
+      ],
+      "context-selected": [
+       8,
+       32,
+       16088
+      ],
+      "context-unselected": [
+       4,
+       16,
+       7406
+      ],
+      "contract": [
+       12,
+       12,
+       5567
+      ],
+      "source": [
+       11,
+       44,
+       21811
+      ]
+     }
+    },
+    "seed": 7101
+   },
+   {
+    "n": 1,
+    "outcome_equivalent": true,
+    "per_kind": {
+     "exact": {
+      "context-equal": [
+       7,
+       0,
+       0
+      ],
+      "context-selected": [
+       7,
+       14,
+       6479
+      ],
+      "context-unselected": [
+       6,
+       0,
+       0
+      ],
+      "contract": [
+       7,
+       7,
+       3108
+      ],
+      "source": [
+       13,
+       52,
+       16159
+      ]
+     },
+     "full": {
+      "context-equal": [
+       7,
+       28,
+       6722
+      ],
+      "context-selected": [
+       7,
+       28,
+       7071
+      ],
+      "context-unselected": [
+       6,
+       24,
+       5821
+      ],
+      "contract": [
+       7,
+       28,
+       6859
+      ],
+      "source": [
+       13,
+       52,
+       12429
+      ]
+     },
+     "no-cutoff": {
+      "context-equal": [
+       7,
+       0,
+       0
+      ],
+      "context-selected": [
+       7,
+       14,
+       3903
+      ],
+      "context-unselected": [
+       6,
+       0,
+       0
+      ],
+      "contract": [
+       7,
+       13,
+       3224
+      ],
+      "source": [
+       13,
+       52,
+       11390
+      ]
+     },
+     "version": {
+      "context-equal": [
+       7,
+       14,
+       6442
+      ],
+      "context-selected": [
+       7,
+       14,
+       6769
+      ],
+      "context-unselected": [
+       6,
+       12,
+       5584
+      ],
+      "contract": [
+       7,
+       7,
+       3212
+      ],
+      "source": [
+       13,
+       52,
+       16693
+      ]
+     },
+     "workspace": {
+      "context-equal": [
+       7,
+       0,
+       0
+      ],
+      "context-selected": [
+       7,
+       28,
+       14029
+      ],
+      "context-unselected": [
+       6,
+       24,
+       11386
+      ],
+      "contract": [
+       7,
+       7,
+       4249
+      ],
+      "source": [
+       13,
+       52,
+       23399
+      ]
+     }
+    },
+    "seed": 7102
+   },
+   {
+    "n": 1,
+    "outcome_equivalent": true,
+    "per_kind": {
+     "exact": {
+      "context-equal": [
+       5,
+       0,
+       0
+      ],
+      "context-selected": [
+       9,
+       18,
+       8336
+      ],
+      "context-unselected": [
+       3,
+       0,
+       0
+      ],
+      "contract": [
+       9,
+       9,
+       3534
+      ],
+      "source": [
+       14,
+       56,
+       18190
+      ]
+     },
+     "full": {
+      "context-equal": [
+       5,
+       20,
+       5049
+      ],
+      "context-selected": [
+       9,
+       36,
+       9054
+      ],
+      "context-unselected": [
+       3,
+       12,
+       3043
+      ],
+      "contract": [
+       9,
+       36,
+       9114
+      ],
+      "source": [
+       14,
+       56,
+       14203
+      ]
+     },
+     "no-cutoff": {
+      "context-equal": [
+       5,
+       0,
+       0
+      ],
+      "context-selected": [
+       9,
+       18,
+       5020
+      ],
+      "context-unselected": [
+       3,
+       0,
+       0
+      ],
+      "contract": [
+       9,
+       20,
+       5091
+      ],
+      "source": [
+       14,
+       56,
+       13056
+      ]
+     },
+     "version": {
+      "context-equal": [
+       5,
+       10,
+       4841
+      ],
+      "context-selected": [
+       9,
+       18,
+       8704
+      ],
+      "context-unselected": [
+       3,
+       6,
+       2918
+      ],
+      "contract": [
+       9,
+       9,
+       3637
+      ],
+      "source": [
+       14,
+       56,
+       18770
+      ]
+     },
+     "workspace": {
+      "context-equal": [
+       5,
+       0,
+       0
+      ],
+      "context-selected": [
+       9,
+       36,
+       16839
+      ],
+      "context-unselected": [
+       3,
+       12,
+       6049
+      ],
+      "contract": [
+       9,
+       9,
+       4957
+      ],
+      "source": [
+       14,
+       56,
+       27194
+      ]
+     }
+    },
+    "seed": 7103
+   },
+   {
+    "n": 1,
+    "outcome_equivalent": true,
+    "per_kind": {
+     "exact": {
+      "context-equal": [
+       5,
+       0,
+       0
+      ],
+      "context-selected": [
+       8,
+       16,
+       7454
+      ],
+      "context-unselected": [
+       1,
+       0,
+       0
+      ],
+      "contract": [
+       14,
+       14,
+       4527
+      ],
+      "source": [
+       12,
+       48,
+       15434
+      ]
+     },
+     "full": {
+      "context-equal": [
+       5,
+       20,
+       4954
+      ],
+      "context-selected": [
+       8,
+       32,
+       8118
+      ],
+      "context-unselected": [
+       1,
+       4,
+       1005
+      ],
+      "contract": [
+       14,
+       56,
+       13861
+      ],
+      "source": [
+       12,
+       48,
+       11996
+      ]
+     },
+     "no-cutoff": {
+      "context-equal": [
+       5,
+       0,
+       0
+      ],
+      "context-selected": [
+       8,
+       16,
+       4509
+      ],
+      "context-unselected": [
+       1,
+       0,
+       0
+      ],
+      "contract": [
+       14,
+       32,
+       8211
+      ],
+      "source": [
+       12,
+       48,
+       11033
+      ]
+     },
+     "version": {
+      "context-equal": [
+       5,
+       10,
+       4758
+      ],
+      "context-selected": [
+       8,
+       16,
+       7782
+      ],
+      "context-unselected": [
+       1,
+       2,
+       970
+      ],
+      "contract": [
+       14,
+       14,
+       4710
+      ],
+      "source": [
+       12,
+       48,
+       15916
+      ]
+     },
+     "workspace": {
+      "context-equal": [
+       5,
+       0,
+       0
+      ],
+      "context-selected": [
+       8,
+       32,
+       15850
+      ],
+      "context-unselected": [
+       1,
+       4,
+       1999
+      ],
+      "contract": [
+       14,
+       14,
+       6555
+      ],
+      "source": [
+       12,
+       48,
+       23254
+      ]
+     }
+    },
+    "seed": 7104
+   },
+   {
+    "n": 1,
+    "outcome_equivalent": true,
+    "per_kind": {
+     "exact": {
+      "context-equal": [
+       8,
+       0,
+       0
+      ],
+      "context-selected": [
+       6,
+       12,
+       5556
+      ],
+      "context-unselected": [
+       2,
+       0,
+       0
+      ],
+      "contract": [
+       15,
+       15,
+       4340
+      ],
+      "source": [
+       9,
+       36,
+       11583
+      ]
+     },
+     "full": {
+      "context-equal": [
+       8,
+       32,
+       7762
+      ],
+      "context-selected": [
+       6,
+       24,
+       6073
+      ],
+      "context-unselected": [
+       2,
+       8,
+       1913
+      ],
+      "contract": [
+       15,
+       60,
+       14865
+      ],
+      "source": [
+       9,
+       36,
+       9014
+      ]
+     },
+     "no-cutoff": {
+      "context-equal": [
+       8,
+       0,
+       0
+      ],
+      "context-selected": [
+       6,
+       12,
+       3348
+      ],
+      "context-unselected": [
+       2,
+       0,
+       0
+      ],
+      "contract": [
+       15,
+       42,
+       10153
+      ],
+      "source": [
+       9,
+       36,
+       8285
+      ]
+     },
+     "version": {
+      "context-equal": [
+       8,
+       16,
+       7418
+      ],
+      "context-selected": [
+       6,
+       12,
+       5804
+      ],
+      "context-unselected": [
+       2,
+       4,
+       1828
+      ],
+      "contract": [
+       15,
+       15,
+       4444
+      ],
+      "source": [
+       9,
+       36,
+       11953
+      ]
+     },
+     "workspace": {
+      "context-equal": [
+       8,
+       0,
+       0
+      ],
+      "context-selected": [
+       6,
+       24,
+       12066
+      ],
+      "context-unselected": [
+       2,
+       8,
+       3695
+      ],
+      "contract": [
+       15,
+       15,
+       6735
+      ],
+      "source": [
+       9,
+       36,
+       17791
+      ]
+     }
+    },
+    "seed": 7105
+   },
+   {
+    "n": 2,
+    "outcome_equivalent": true,
+    "per_kind": {
+     "exact": {
+      "context-equal": [
+       7,
+       0,
+       0
+      ],
+      "context-selected": [
+       8,
+       16,
+       7421
+      ],
+      "context-unselected": [
+       3,
+       0,
+       0
+      ],
+      "contract": [
+       12,
+       24,
+       8143
+      ],
+      "source": [
+       10,
+       40,
+       12668
+      ]
+     },
+     "full": {
+      "context-equal": [
+       7,
+       56,
+       13367
+      ],
+      "context-selected": [
+       8,
+       64,
+       15357
+      ],
+      "context-unselected": [
+       3,
+       24,
+       5768
+      ],
+      "contract": [
+       12,
+       96,
+       23005
+      ],
+      "source": [
+       10,
+       80,
+       19233
+      ]
+     },
+     "no-cutoff": {
+      "context-equal": [
+       7,
+       0,
+       0
+      ],
+      "context-selected": [
+       8,
+       16,
+       4476
+      ],
+      "context-unselected": [
+       3,
+       0,
+       0
+      ],
+      "contract": [
+       12,
+       56,
+       13406
+      ],
+      "source": [
+       10,
+       40,
+       9009
+      ]
+     },
+     "version": {
+      "context-equal": [
+       7,
+       28,
+       12788
+      ],
+      "context-selected": [
+       8,
+       32,
+       14650
+      ],
+      "context-unselected": [
+       3,
+       12,
+       5498
+      ],
+      "contract": [
+       12,
+       24,
+       8349
+      ],
+      "source": [
+       10,
+       40,
+       13078
+      ]
+     },
+     "workspace": {
+      "context-equal": [
+       7,
+       0,
+       0
+      ],
+      "context-selected": [
+       8,
+       64,
+       31306
+      ],
+      "context-unselected": [
+       3,
+       24,
+       12274
+      ],
+      "contract": [
+       12,
+       24,
+       12441
+      ],
+      "source": [
+       10,
+       80,
+       40502
+      ]
+     }
+    },
+    "seed": 7202
+   },
+   {
+    "n": 2,
+    "outcome_equivalent": true,
+    "per_kind": {
+     "exact": {
+      "context-equal": [
+       3,
+       0,
+       0
+      ],
+      "context-selected": [
+       6,
+       12,
+       5564
+      ],
+      "context-unselected": [
+       6,
+       0,
+       0
+      ],
+      "contract": [
+       11,
+       22,
+       8813
+      ],
+      "source": [
+       14,
+       56,
+       18049
+      ]
+     },
+     "full": {
+      "context-equal": [
+       3,
+       24,
+       6077
+      ],
+      "context-selected": [
+       6,
+       48,
+       12032
+      ],
+      "context-unselected": [
+       6,
+       48,
+       12018
+      ],
+      "contract": [
+       11,
+       88,
+       22194
+      ],
+      "source": [
+       14,
+       112,
+       28116
+      ]
+     },
+     "no-cutoff": {
+      "context-equal": [
+       3,
+       0,
+       0
+      ],
+      "context-selected": [
+       6,
+       12,
+       3355
+      ],
+      "context-unselected": [
+       6,
+       0,
+       0
+      ],
+      "contract": [
+       11,
+       48,
+       12174
+      ],
+      "source": [
+       14,
+       56,
+       12925
+      ]
+     },
+     "version": {
+      "context-equal": [
+       3,
+       12,
+       5838
+      ],
+      "context-selected": [
+       6,
+       24,
+       11598
+      ],
+      "context-unselected": [
+       6,
+       24,
+       11588
+      ],
+      "contract": [
+       11,
+       22,
+       9097
+      ],
+      "source": [
+       14,
+       56,
+       18621
+      ]
+     },
+     "workspace": {
+      "context-equal": [
+       3,
+       0,
+       0
+      ],
+      "context-selected": [
+       6,
+       48,
+       27104
+      ],
+      "context-unselected": [
+       6,
+       48,
+       27492
+      ],
+      "contract": [
+       11,
+       22,
+       14383
+      ],
+      "source": [
+       14,
+       112,
+       63360
+      ]
+     }
+    },
+    "seed": 7203
+   },
+   {
+    "n": 2,
+    "outcome_equivalent": true,
+    "per_kind": {
+     "exact": {
+      "context-equal": [
+       2,
+       0,
+       0
+      ],
+      "context-selected": [
+       5,
+       10,
+       4636
+      ],
+      "context-unselected": [
+       3,
+       0,
+       0
+      ],
+      "contract": [
+       14,
+       28,
+       9352
+      ],
+      "source": [
+       16,
+       64,
+       20665
+      ]
+     },
+     "full": {
+      "context-equal": [
+       2,
+       16,
+       4031
+      ],
+      "context-selected": [
+       5,
+       40,
+       10078
+      ],
+      "context-unselected": [
+       3,
+       24,
+       6019
+      ],
+      "contract": [
+       14,
+       112,
+       28323
+      ],
+      "source": [
+       16,
+       128,
+       32230
+      ]
+     },
+     "no-cutoff": {
+      "context-equal": [
+       2,
+       0,
+       0
+      ],
+      "context-selected": [
+       5,
+       10,
+       2800
+      ],
+      "context-unselected": [
+       3,
+       0,
+       0
+      ],
+      "contract": [
+       14,
+       70,
+       17626
+      ],
+      "source": [
+       16,
+       64,
+       14818
+      ]
+     },
+     "version": {
+      "context-equal": [
+       2,
+       8,
+       3854
+      ],
+      "context-selected": [
+       5,
+       20,
+       9668
+      ],
+      "context-unselected": [
+       3,
+       12,
+       5760
+      ],
+      "contract": [
+       14,
+       28,
+       9634
+      ],
+      "source": [
+       16,
+       64,
+       21307
+      ]
+     },
+     "workspace": {
+      "context-equal": [
+       2,
+       0,
+       0
+      ],
+      "context-selected": [
+       5,
+       40,
+       23022
+      ],
+      "context-unselected": [
+       3,
+       24,
+       13712
+      ],
+      "contract": [
+       14,
+       28,
+       16398
+      ],
+      "source": [
+       16,
+       128,
+       72408
+      ]
+     }
+    },
+    "seed": 7204
+   },
+   {
+    "n": 2,
+    "outcome_equivalent": true,
+    "per_kind": {
+     "exact": {
+      "context-equal": [
+       3,
+       0,
+       0
+      ],
+      "context-selected": [
+       1,
+       2,
+       930
+      ],
+      "context-unselected": [
+       4,
+       0,
+       0
+      ],
+      "contract": [
+       13,
+       26,
+       10175
+      ],
+      "source": [
+       19,
+       76,
+       23262
+      ]
+     },
+     "full": {
+      "context-equal": [
+       3,
+       24,
+       5722
+      ],
+      "context-selected": [
+       1,
+       8,
+       1933
+      ],
+      "context-unselected": [
+       4,
+       32,
+       7732
+      ],
+      "contract": [
+       13,
+       104,
+       24860
+      ],
+      "source": [
+       19,
+       152,
+       36431
+      ]
+     },
+     "no-cutoff": {
+      "context-equal": [
+       3,
+       0,
+       0
+      ],
+      "context-selected": [
+       1,
+       2,
+       562
+      ],
+      "context-unselected": [
+       4,
+       0,
+       0
+      ],
+      "contract": [
+       13,
+       54,
+       12757
+      ],
+      "source": [
+       19,
+       76,
+       16316
+      ]
+     },
+     "version": {
+      "context-equal": [
+       3,
+       12,
+       5468
+      ],
+      "context-selected": [
+       1,
+       4,
+       1836
+      ],
+      "context-unselected": [
+       4,
+       16,
+       7344
+      ],
+      "contract": [
+       13,
+       26,
+       10535
+      ],
+      "source": [
+       19,
+       76,
+       24022
+      ]
+     },
+     "workspace": {
+      "context-equal": [
+       3,
+       0,
+       0
+      ],
+      "context-selected": [
+       1,
+       8,
+       3612
+      ],
+      "context-unselected": [
+       4,
+       32,
+       16432
+      ],
+      "contract": [
+       13,
+       26,
+       14167
+      ],
+      "source": [
+       19,
+       152,
+       71724
+      ]
+     }
+    },
+    "seed": 7205
+   },
+   {
+    "n": 2,
+    "outcome_equivalent": true,
+    "per_kind": {
+     "exact": {
+      "context-equal": [
+       3,
+       0,
+       0
+      ],
+      "context-selected": [
+       5,
+       10,
+       4644
+      ],
+      "context-unselected": [
+       7,
+       0,
+       0
+      ],
+      "contract": [
+       9,
+       18,
+       7138
+      ],
+      "source": [
+       16,
+       64,
+       20665
+      ]
+     },
+     "full": {
+      "context-equal": [
+       3,
+       24,
+       6064
+      ],
+      "context-selected": [
+       5,
+       40,
+       10074
+      ],
+      "context-unselected": [
+       7,
+       56,
+       13863
+      ],
+      "contract": [
+       9,
+       72,
+       18111
+      ],
+      "source": [
+       16,
+       128,
+       32113
+      ]
+     },
+     "no-cutoff": {
+      "context-equal": [
+       3,
+       0,
+       0
+      ],
+      "context-selected": [
+       5,
+       10,
+       2804
+      ],
+      "context-unselected": [
+       7,
+       0,
+       0
+      ],
+      "contract": [
+       9,
+       38,
+       9787
+      ],
+      "source": [
+       16,
+       64,
+       14807
+      ]
+     },
+     "version": {
+      "context-equal": [
+       3,
+       12,
+       5814
+      ],
+      "context-selected": [
+       5,
+       20,
+       9672
+      ],
+      "context-unselected": [
+       7,
+       28,
+       13312
+      ],
+      "contract": [
+       9,
+       18,
+       7344
+      ],
+      "source": [
+       16,
+       64,
+       21315
+      ]
+     },
+     "workspace": {
+      "context-equal": [
+       3,
+       0,
+       0
+      ],
+      "context-selected": [
+       5,
+       40,
+       22984
+      ],
+      "context-unselected": [
+       7,
+       56,
+       31410
+      ],
+      "contract": [
+       9,
+       18,
+       11638
+      ],
+      "source": [
+       16,
+       128,
+       73176
+      ]
+     }
+    },
+    "seed": 7206
+   },
+   {
+    "n": 4,
+    "outcome_equivalent": true,
+    "per_kind": {
+     "exact": {
+      "context-equal": [
+       6,
+       0,
+       0
+      ],
+      "context-selected": [
+       11,
+       22,
+       10188
+      ],
+      "context-unselected": [
+       2,
+       0,
+       0
+      ],
+      "contract": [
+       10,
+       40,
+       13811
+      ],
+      "source": [
+       11,
+       44,
+       13720
+      ]
+     },
+     "full": {
+      "context-equal": [
+       6,
+       96,
+       23911
+      ],
+      "context-selected": [
+       11,
+       176,
+       43504
+      ],
+      "context-unselected": [
+       2,
+       32,
+       7996
+      ],
+      "contract": [
+       10,
+       160,
+       39671
+      ],
+      "source": [
+       11,
+       176,
+       43142
+      ]
+     },
+     "no-cutoff": {
+      "context-equal": [
+       6,
+       0,
+       0
+      ],
+      "context-selected": [
+       11,
+       22,
+       6151
+      ],
+      "context-unselected": [
+       2,
+       0,
+       0
+      ],
+      "contract": [
+       10,
+       92,
+       23185
+      ],
+      "source": [
+       11,
+       44,
+       9700
+      ]
+     },
+     "version": {
+      "context-equal": [
+       6,
+       48,
+       22796
+      ],
+      "context-selected": [
+       11,
+       88,
+       41592
+      ],
+      "context-unselected": [
+       2,
+       16,
+       7636
+      ],
+      "contract": [
+       10,
+       40,
+       14223
+      ],
+      "source": [
+       11,
+       44,
+       14166
+      ]
+     },
+     "workspace": {
+      "context-equal": [
+       6,
+       0,
+       0
+      ],
+      "context-selected": [
+       11,
+       176,
+       116264
+      ],
+      "context-unselected": [
+       2,
+       32,
+       22344
+      ],
+      "contract": [
+       10,
+       40,
+       27663
+      ],
+      "source": [
+       11,
+       176,
+       113762
+      ]
+     }
+    },
+    "seed": 7404
+   },
+   {
+    "n": 4,
+    "outcome_equivalent": true,
+    "per_kind": {
+     "exact": {
+      "context-equal": [
+       4,
+       0,
+       0
+      ],
+      "context-selected": [
+       6,
+       12,
+       5556
+      ],
+      "context-unselected": [
+       5,
+       0,
+       0
+      ],
+      "contract": [
+       7,
+       28,
+       6031
+      ],
+      "source": [
+       18,
+       72,
+       23173
+      ]
+     },
+     "full": {
+      "context-equal": [
+       4,
+       64,
+       15955
+      ],
+      "context-selected": [
+       6,
+       96,
+       24037
+      ],
+      "context-unselected": [
+       5,
+       80,
+       19806
+      ],
+      "contract": [
+       7,
+       112,
+       27606
+      ],
+      "source": [
+       18,
+       288,
+       71479
+      ]
+     },
+     "no-cutoff": {
+      "context-equal": [
+       4,
+       0,
+       0
+      ],
+      "context-selected": [
+       6,
+       12,
+       3355
+      ],
+      "context-unselected": [
+       5,
+       0,
+       0
+      ],
+      "contract": [
+       7,
+       88,
+       21137
+      ],
+      "source": [
+       18,
+       72,
+       16606
+      ]
+     },
+     "version": {
+      "context-equal": [
+       4,
+       32,
+       15198
+      ],
+      "context-selected": [
+       6,
+       48,
+       22902
+      ],
+      "context-unselected": [
+       5,
+       40,
+       18902
+      ],
+      "contract": [
+       7,
+       28,
+       6195
+      ],
+      "source": [
+       18,
+       72,
+       23909
+      ]
+     },
+     "workspace": {
+      "context-equal": [
+       4,
+       0,
+       0
+      ],
+      "context-selected": [
+       6,
+       96,
+       67508
+      ],
+      "context-unselected": [
+       5,
+       80,
+       54606
+      ],
+      "contract": [
+       7,
+       28,
+       15643
+      ],
+      "source": [
+       18,
+       288,
+       196938
+      ]
+     }
+    },
+    "seed": 7405
+   },
+   {
+    "n": 4,
+    "outcome_equivalent": true,
+    "per_kind": {
+     "exact": {
+      "context-equal": [
+       3,
+       0,
+       0
+      ],
+      "context-selected": [
+       5,
+       10,
+       4654
+      ],
+      "context-unselected": [
+       5,
+       0,
+       0
+      ],
+      "contract": [
+       17,
+       68,
+       19182
+      ],
+      "source": [
+       10,
+       40,
+       12918
+      ]
+     },
+     "full": {
+      "context-equal": [
+       3,
+       48,
+       11916
+      ],
+      "context-selected": [
+       5,
+       80,
+       20172
+      ],
+      "context-unselected": [
+       5,
+       80,
+       20054
+      ],
+      "contract": [
+       17,
+       272,
+       68289
+      ],
+      "source": [
+       10,
+       160,
+       40435
+      ]
+     },
+     "no-cutoff": {
+      "context-equal": [
+       3,
+       0,
+       0
+      ],
+      "context-selected": [
+       5,
+       10,
+       2821
+      ],
+      "context-unselected": [
+       5,
+       0,
+       0
+      ],
+      "contract": [
+       17,
+       176,
+       44967
+      ],
+      "source": [
+       10,
+       40,
+       9274
+      ]
+     },
+     "version": {
+      "context-equal": [
+       3,
+       24,
+       11398
+      ],
+      "context-selected": [
+       5,
+       40,
+       19284
+      ],
+      "context-unselected": [
+       5,
+       40,
+       19172
+      ],
+      "contract": [
+       17,
+       68,
+       19830
+      ],
+      "source": [
+       10,
+       40,
+       13328
+      ]
+     },
+     "workspace": {
+      "context-equal": [
+       3,
+       0,
+       0
+      ],
+      "context-selected": [
+       5,
+       80,
+       57408
+      ],
+      "context-unselected": [
+       5,
+       80,
+       56572
+      ],
+      "contract": [
+       17,
+       68,
+       45418
+      ],
+      "source": [
+       10,
+       160,
+       114790
+      ]
+     }
+    },
+    "seed": 7406
+   },
+   {
+    "n": 4,
+    "outcome_equivalent": true,
+    "per_kind": {
+     "exact": {
+      "context-equal": [
+       5,
+       0,
+       0
+      ],
+      "context-selected": [
+       2,
+       4,
+       1858
+      ],
+      "context-unselected": [
+       4,
+       0,
+       0
+      ],
+      "contract": [
+       16,
+       64,
+       21667
+      ],
+      "source": [
+       13,
+       52,
+       15953
+      ]
+     },
+     "full": {
+      "context-equal": [
+       5,
+       80,
+       18860
+      ],
+      "context-selected": [
+       2,
+       32,
+       7693
+      ],
+      "context-unselected": [
+       4,
+       64,
+       15081
+      ],
+      "contract": [
+       16,
+       256,
+       60530
+      ],
+      "source": [
+       13,
+       208,
+       48758
+      ]
+     },
+     "no-cutoff": {
+      "context-equal": [
+       5,
+       0,
+       0
+      ],
+      "context-selected": [
+       2,
+       4,
+       1126
+      ],
+      "context-unselected": [
+       4,
+       0,
+       0
+      ],
+      "contract": [
+       16,
+       144,
+       33648
+      ],
+      "source": [
+       13,
+       52,
+       11204
+      ]
+     },
+     "version": {
+      "context-equal": [
+       5,
+       40,
+       17956
+      ],
+      "context-selected": [
+       2,
+       16,
+       7314
+      ],
+      "context-unselected": [
+       4,
+       32,
+       14382
+      ],
+      "contract": [
+       16,
+       64,
+       22479
+      ],
+      "source": [
+       13,
+       52,
+       16475
+      ]
+     },
+     "workspace": {
+      "context-equal": [
+       5,
+       0,
+       0
+      ],
+      "context-selected": [
+       2,
+       32,
+       19320
+      ],
+      "context-unselected": [
+       4,
+       64,
+       36652
+      ],
+      "contract": [
+       16,
+       64,
+       38403
+      ],
+      "source": [
+       13,
+       208,
+       115696
+      ]
+     }
+    },
+    "seed": 7407
+   },
+   {
+    "n": 4,
+    "outcome_equivalent": true,
+    "per_kind": {
+     "exact": {
+      "context-equal": [
+       6,
+       0,
+       0
+      ],
+      "context-selected": [
+       5,
+       10,
+       4636
+      ],
+      "context-unselected": [
+       5,
+       0,
+       0
+      ],
+      "contract": [
+       9,
+       36,
+       10464
+      ],
+      "source": [
+       15,
+       60,
+       18458
+      ]
+     },
+     "full": {
+      "context-equal": [
+       6,
+       96,
+       22888
+      ],
+      "context-selected": [
+       5,
+       80,
+       19060
+      ],
+      "context-unselected": [
+       5,
+       80,
+       19210
+      ],
+      "contract": [
+       9,
+       144,
+       34558
+      ],
+      "source": [
+       15,
+       240,
+       56719
+      ]
+     },
+     "no-cutoff": {
+      "context-equal": [
+       6,
+       0,
+       0
+      ],
+      "context-selected": [
+       5,
+       10,
+       2799
+      ],
+      "context-unselected": [
+       5,
+       0,
+       0
+      ],
+      "contract": [
+       9,
+       100,
+       22975
+      ],
+      "source": [
+       15,
+       60,
+       12975
+      ]
+     },
+     "version": {
+      "context-equal": [
+       6,
+       48,
+       21834
+      ],
+      "context-selected": [
+       5,
+       40,
+       18200
+      ],
+      "context-unselected": [
+       5,
+       40,
+       18256
+      ],
+      "contract": [
+       9,
+       36,
+       10792
+      ],
+      "source": [
+       15,
+       60,
+       19072
+      ]
+     },
+     "workspace": {
+      "context-equal": [
+       6,
+       0,
+       0
+      ],
+      "context-selected": [
+       5,
+       80,
+       45928
+      ],
+      "context-unselected": [
+       5,
+       80,
+       48880
+      ],
+      "contract": [
+       9,
+       36,
+       20560
+      ],
+      "source": [
+       15,
+       240,
+       133852
+      ]
+     }
+    },
+    "seed": 7408
+   },
+   {
+    "n": 8,
+    "outcome_equivalent": true,
+    "per_kind": {
+     "exact": {
+      "context-equal": [
+       3,
+       0,
+       0
+      ],
+      "context-selected": [
+       5,
+       10,
+       4648
+      ],
+      "context-unselected": [
+       1,
+       0,
+       0
+      ],
+      "contract": [
+       14,
+       112,
+       39392
+      ],
+      "source": [
+       17,
+       68,
+       21680
+      ]
+     },
+     "full": {
+      "context-equal": [
+       3,
+       96,
+       23661
+      ],
+      "context-selected": [
+       5,
+       160,
+       39890
+      ],
+      "context-unselected": [
+       1,
+       32,
+       7997
+      ],
+      "contract": [
+       14,
+       448,
+       111577
+      ],
+      "source": [
+       17,
+       544,
+       134500
+      ]
+     },
+     "no-cutoff": {
+      "context-equal": [
+       3,
+       0,
+       0
+      ],
+      "context-selected": [
+       5,
+       10,
+       2816
+      ],
+      "context-unselected": [
+       1,
+       0,
+       0
+      ],
+      "contract": [
+       14,
+       272,
+       66965
+      ],
+      "source": [
+       17,
+       68,
+       15478
+      ]
+     },
+     "version": {
+      "context-equal": [
+       3,
+       48,
+       22602
+      ],
+      "context-selected": [
+       5,
+       80,
+       37940
+      ],
+      "context-unselected": [
+       1,
+       16,
+       7608
+      ],
+      "contract": [
+       14,
+       112,
+       40520
+      ],
+      "source": [
+       17,
+       68,
+       22364
+      ]
+     },
+     "workspace": {
+      "context-equal": [
+       3,
+       0,
+       0
+      ],
+      "context-selected": [
+       5,
+       160,
+       146192
+      ],
+      "context-unselected": [
+       1,
+       32,
+       30522
+      ],
+      "contract": [
+       14,
+       112,
+       104784
+      ],
+      "source": [
+       17,
+       544,
+       489076
+      ]
+     }
+    },
+    "seed": 7808
+   },
+   {
+    "n": 8,
+    "outcome_equivalent": true,
+    "per_kind": {
+     "exact": {
+      "context-equal": [
+       7,
+       0,
+       0
+      ],
+      "context-selected": [
+       2,
+       4,
+       1855
+      ],
+      "context-unselected": [
+       7,
+       0,
+       0
+      ],
+      "contract": [
+       14,
+       112,
+       34498
+      ],
+      "source": [
+       10,
+       40,
+       12486
+      ]
+     },
+     "full": {
+      "context-equal": [
+       7,
+       224,
+       53711
+      ],
+      "context-selected": [
+       2,
+       64,
+       15554
+      ],
+      "context-unselected": [
+       7,
+       224,
+       54264
+      ],
+      "contract": [
+       14,
+       448,
+       108562
+      ],
+      "source": [
+       10,
+       320,
+       77381
+      ]
+     },
+     "no-cutoff": {
+      "context-equal": [
+       7,
+       0,
+       0
+      ],
+      "context-selected": [
+       2,
+       4,
+       1123
+      ],
+      "context-unselected": [
+       7,
+       0,
+       0
+      ],
+      "contract": [
+       14,
+       272,
+       65943
+      ],
+      "source": [
+       10,
+       40,
+       8842
+      ]
+     },
+     "version": {
+      "context-equal": [
+       7,
+       112,
+       51418
+      ],
+      "context-selected": [
+       2,
+       32,
+       14784
+      ],
+      "context-unselected": [
+       7,
+       112,
+       51636
+      ],
+      "contract": [
+       14,
+       112,
+       35650
+      ],
+      "source": [
+       10,
+       40,
+       12900
+      ]
+     },
+     "workspace": {
+      "context-equal": [
+       7,
+       0,
+       0
+      ],
+      "context-selected": [
+       2,
+       64,
+       53668
+      ],
+      "context-unselected": [
+       7,
+       224,
+       187060
+      ],
+      "contract": [
+       14,
+       112,
+       91514
+      ],
+      "source": [
+       10,
+       320,
+       261438
+      ]
+     }
+    },
+    "seed": 7809
+   },
+   {
+    "n": 8,
+    "outcome_equivalent": true,
+    "per_kind": {
+     "exact": {
+      "context-equal": [
+       7,
+       0,
+       0
+      ],
+      "context-selected": [
+       9,
+       18,
+       8344
+      ],
+      "context-unselected": [
+       4,
+       0,
+       0
+      ],
+      "contract": [
+       11,
+       88,
+       25425
+      ],
+      "source": [
+       9,
+       36,
+       11417
+      ]
+     },
+     "full": {
+      "context-equal": [
+       7,
+       224,
+       54982
+      ],
+      "context-selected": [
+       9,
+       288,
+       70523
+      ],
+      "context-unselected": [
+       4,
+       128,
+       30921
+      ],
+      "contract": [
+       11,
+       352,
+       85174
+      ],
+      "source": [
+       9,
+       288,
+       70249
+      ]
+     },
+     "no-cutoff": {
+      "context-equal": [
+       7,
+       0,
+       0
+      ],
+      "context-selected": [
+       9,
+       18,
+       5047
+      ],
+      "context-unselected": [
+       4,
+       0,
+       0
+      ],
+      "contract": [
+       11,
+       232,
+       55320
+      ],
+      "source": [
+       9,
+       36,
+       8144
+      ]
+     },
+     "version": {
+      "context-equal": [
+       7,
+       112,
+       52358
+      ],
+      "context-selected": [
+       9,
+       144,
+       67220
+      ],
+      "context-unselected": [
+       4,
+       64,
+       29474
+      ],
+      "contract": [
+       11,
+       88,
+       26241
+      ],
+      "source": [
+       9,
+       36,
+       11787
+      ]
+     },
+     "workspace": {
+      "context-equal": [
+       7,
+       0,
+       0
+      ],
+      "context-selected": [
+       9,
+       288,
+       252138
+      ],
+      "context-unselected": [
+       4,
+       128,
+       106720
+      ],
+      "contract": [
+       11,
+       88,
+       71001
+      ],
+      "source": [
+       9,
+       288,
+       248152
+      ]
+     }
+    },
+    "seed": 7810
+   },
+   {
+    "n": 8,
+    "outcome_equivalent": true,
+    "per_kind": {
+     "exact": {
+      "context-equal": [
+       3,
+       0,
+       0
+      ],
+      "context-selected": [
+       8,
+       16,
+       7450
+      ],
+      "context-unselected": [
+       2,
+       0,
+       0
+      ],
+      "contract": [
+       12,
+       96,
+       38079
+      ],
+      "source": [
+       15,
+       60,
+       18881
+      ]
+     },
+     "full": {
+      "context-equal": [
+       3,
+       96,
+       23497
+      ],
+      "context-selected": [
+       8,
+       256,
+       63585
+      ],
+      "context-unselected": [
+       2,
+       64,
+       15400
+      ],
+      "contract": [
+       12,
+       384,
+       93723
+      ],
+      "source": [
+       15,
+       480,
+       117482
+      ]
+     },
+     "no-cutoff": {
+      "context-equal": [
+       3,
+       0,
+       0
+      ],
+      "context-selected": [
+       8,
+       16,
+       4522
+      ],
+      "context-unselected": [
+       2,
+       0,
+       0
+      ],
+      "contract": [
+       12,
+       184,
+       46224
+      ],
+      "source": [
+       15,
+       60,
+       13418
+      ]
+     },
+     "version": {
+      "context-equal": [
+       3,
+       48,
+       22412
+      ],
+      "context-selected": [
+       8,
+       128,
+       60532
+      ],
+      "context-unselected": [
+       2,
+       32,
+       14800
+      ],
+      "contract": [
+       12,
+       96,
+       39535
+      ],
+      "source": [
+       15,
+       60,
+       19487
+      ]
+     },
+     "workspace": {
+      "context-equal": [
+       3,
+       0,
+       0
+      ],
+      "context-selected": [
+       8,
+       256,
+       237190
+      ],
+      "context-unselected": [
+       2,
+       64,
+       55032
+      ],
+      "contract": [
+       12,
+       96,
+       92151
+      ],
+      "source": [
+       15,
+       480,
+       425124
+      ]
+     }
+    },
+    "seed": 7811
+   },
+   {
+    "n": 8,
+    "outcome_equivalent": true,
+    "per_kind": {
+     "exact": {
+      "context-equal": [
+       5,
+       0,
+       0
+      ],
+      "context-selected": [
+       6,
+       12,
+       5542
+      ],
+      "context-unselected": [
+       1,
+       0,
+       0
+      ],
+      "contract": [
+       12,
+       96,
+       26257
+      ],
+      "source": [
+       16,
+       64,
+       20370
+      ]
+     },
+     "full": {
+      "context-equal": [
+       5,
+       160,
+       39013
+      ],
+      "context-selected": [
+       6,
+       192,
+       47344
+      ],
+      "context-unselected": [
+       1,
+       32,
+       7993
+      ],
+      "contract": [
+       12,
+       384,
+       95423
+      ],
+      "source": [
+       16,
+       512,
+       126018
+      ]
+     },
+     "no-cutoff": {
+      "context-equal": [
+       5,
+       0,
+       0
+      ],
+      "context-selected": [
+       6,
+       12,
+       3342
+      ],
+      "context-unselected": [
+       1,
+       0,
+       0
+      ],
+      "contract": [
+       12,
+       248,
+       62348
+      ],
+      "source": [
+       16,
+       64,
+       14540
+      ]
+     },
+     "version": {
+      "context-equal": [
+       5,
+       80,
+       37424
+      ],
+      "context-selected": [
+       6,
+       96,
+       45216
+      ],
+      "context-unselected": [
+       1,
+       16,
+       7596
+      ],
+      "contract": [
+       12,
+       96,
+       27257
+      ],
+      "source": [
+       16,
+       64,
+       21020
+      ]
+     },
+     "workspace": {
+      "context-equal": [
+       5,
+       0,
+       0
+      ],
+      "context-selected": [
+       6,
+       192,
+       170264
+      ],
+      "context-unselected": [
+       1,
+       32,
+       30686
+      ],
+      "contract": [
+       12,
+       96,
+       83553
+      ],
+      "source": [
+       16,
+       512,
+       449112
+      ]
+     }
+    },
+    "seed": 7812
+   },
+   {
+    "n": 16,
+    "outcome_equivalent": true,
+    "per_kind": {
+     "exact": {
+      "context-equal": [
+       5,
+       0,
+       0
+      ],
+      "context-selected": [
+       2,
+       4,
+       1850
+      ],
+      "context-unselected": [
+       2,
+       0,
+       0
+      ],
+      "contract": [
+       9,
+       144,
+       34159
+      ],
+      "source": [
+       22,
+       88,
+       26858
+      ]
+     },
+     "full": {
+      "context-equal": [
+       5,
+       320,
+       75621
+      ],
+      "context-selected": [
+       2,
+       128,
+       30117
+      ],
+      "context-unselected": [
+       2,
+       128,
+       30213
+      ],
+      "contract": [
+       9,
+       576,
+       136313
+      ],
+      "source": [
+       22,
+       1408,
+       332745
+      ]
+     },
+     "no-cutoff": {
+      "context-equal": [
+       5,
+       0,
+       0
+      ],
+      "context-selected": [
+       2,
+       4,
+       1117
+      ],
+      "context-unselected": [
+       2,
+       0,
+       0
+      ],
+      "contract": [
+       9,
+       384,
+       89800
+      ],
+      "source": [
+       22,
+       88,
+       18859
+      ]
+     },
+     "version": {
+      "context-equal": [
+       5,
+       160,
+       72112
+      ],
+      "context-selected": [
+       2,
+       64,
+       28820
+      ],
+      "context-unselected": [
+       2,
+       64,
+       28852
+      ],
+      "contract": [
+       9,
+       144,
+       35759
+      ],
+      "source": [
+       22,
+       88,
+       27738
+      ]
+     },
+     "workspace": {
+      "context-equal": [
+       5,
+       0,
+       0
+      ],
+      "context-selected": [
+       2,
+       128,
+       137894
+      ],
+      "context-unselected": [
+       2,
+       128,
+       141894
+      ],
+      "contract": [
+       9,
+       144,
+       147791
+      ],
+      "source": [
+       22,
+       1408,
+       1533142
+      ]
+     }
+    },
+    "seed": 8616
+   },
+   {
+    "n": 16,
+    "outcome_equivalent": true,
+    "per_kind": {
+     "exact": {
+      "context-equal": [
+       5,
+       0,
+       0
+      ],
+      "context-selected": [
+       10,
+       20,
+       9289
+      ],
+      "context-unselected": [
+       3,
+       0,
+       0
+      ],
+      "contract": [
+       9,
+       144,
+       54631
+      ],
+      "source": [
+       13,
+       52,
+       15968
+      ]
+     },
+     "full": {
+      "context-equal": [
+       5,
+       320,
+       74992
+      ],
+      "context-selected": [
+       10,
+       640,
+       151185
+      ],
+      "context-unselected": [
+       3,
+       192,
+       45731
+      ],
+      "contract": [
+       9,
+       576,
+       135735
+      ],
+      "source": [
+       13,
+       832,
+       196229
+      ]
+     },
+     "no-cutoff": {
+      "context-equal": [
+       5,
+       0,
+       0
+      ],
+      "context-selected": [
+       10,
+       20,
+       5623
+      ],
+      "context-unselected": [
+       3,
+       0,
+       0
+      ],
+      "contract": [
+       9,
+       304,
+       70853
+      ],
+      "source": [
+       13,
+       52,
+       11238
+      ]
+     },
+     "version": {
+      "context-equal": [
+       5,
+       160,
+       71812
+      ],
+      "context-selected": [
+       10,
+       320,
+       144344
+      ],
+      "context-unselected": [
+       3,
+       96,
+       43518
+      ],
+      "contract": [
+       9,
+       144,
+       56583
+      ],
+      "source": [
+       13,
+       52,
+       16500
+      ]
+     },
+     "workspace": {
+      "context-equal": [
+       5,
+       0,
+       0
+      ],
+      "context-selected": [
+       10,
+       640,
+       674974
+      ],
+      "context-unselected": [
+       3,
+       192,
+       212024
+      ],
+      "contract": [
+       9,
+       144,
+       158871
+      ],
+      "source": [
+       13,
+       832,
+       861240
+      ]
+     }
+    },
+    "seed": 8617
+   },
+   {
+    "n": 16,
+    "outcome_equivalent": true,
+    "per_kind": {
+     "exact": {
+      "context-equal": [
+       4,
+       0,
+       0
+      ],
+      "context-selected": [
+       9,
+       18,
+       8321
+      ],
+      "context-unselected": [
+       5,
+       0,
+       0
+      ],
+      "contract": [
+       10,
+       160,
+       35975
+      ],
+      "source": [
+       12,
+       48,
+       14967
+      ]
+     },
+     "full": {
+      "context-equal": [
+       4,
+       256,
+       61134
+      ],
+      "context-selected": [
+       9,
+       576,
+       137831
+      ],
+      "context-unselected": [
+       5,
+       320,
+       76557
+      ],
+      "contract": [
+       10,
+       640,
+       153050
+      ],
+      "source": [
+       12,
+       768,
+       181330
+      ]
+     },
+     "no-cutoff": {
+      "context-equal": [
+       4,
+       0,
+       0
+      ],
+      "context-selected": [
+       9,
+       18,
+       5025
+      ],
+      "context-unselected": [
+       5,
+       0,
+       0
+      ],
+      "contract": [
+       10,
+       464,
+       108278
+      ],
+      "source": [
+       12,
+       48,
+       10594
+      ]
+     },
+     "version": {
+      "context-equal": [
+       4,
+       128,
+       58150
+      ],
+      "context-selected": [
+       9,
+       288,
+       131208
+      ],
+      "context-unselected": [
+       5,
+       160,
+       72750
+      ],
+      "contract": [
+       10,
+       160,
+       37303
+      ],
+      "source": [
+       12,
+       48,
+       15453
+      ]
+     },
+     "workspace": {
+      "context-equal": [
+       4,
+       0,
+       0
+      ],
+      "context-selected": [
+       9,
+       576,
+       672310
+      ],
+      "context-unselected": [
+       5,
+       320,
+       373676
+      ],
+      "contract": [
+       10,
+       160,
+       171223
+      ],
+      "source": [
+       12,
+       768,
+       840666
+      ]
+     }
+    },
+    "seed": 8618
+   },
+   {
+    "n": 16,
+    "outcome_equivalent": true,
+    "per_kind": {
+     "exact": {
+      "context-equal": [
+       7,
+       0,
+       0
+      ],
+      "context-selected": [
+       8,
+       16,
+       7432
+      ],
+      "context-unselected": [
+       3,
+       0,
+       0
+      ],
+      "contract": [
+       9,
+       144,
+       65222
+      ],
+      "source": [
+       13,
+       52,
+       16026
+      ]
+     },
+     "full": {
+      "context-equal": [
+       7,
+       448,
+       107643
+      ],
+      "context-selected": [
+       8,
+       512,
+       124872
+      ],
+      "context-unselected": [
+       3,
+       192,
+       47162
+      ],
+      "contract": [
+       9,
+       576,
+       139708
+      ],
+      "source": [
+       13,
+       832,
+       201295
+      ]
+     },
+     "no-cutoff": {
+      "context-equal": [
+       7,
+       0,
+       0
+      ],
+      "context-selected": [
+       8,
+       16,
+       4502
+      ],
+      "context-unselected": [
+       3,
+       0,
+       0
+      ],
+      "contract": [
+       9,
+       224,
+       57709
+      ],
+      "source": [
+       13,
+       52,
+       11296
+      ]
+     },
+     "version": {
+      "context-equal": [
+       7,
+       224,
+       103054
+      ],
+      "context-selected": [
+       8,
+       256,
+       119400
+      ],
+      "context-unselected": [
+       3,
+       96,
+       45014
+      ],
+      "contract": [
+       9,
+       144,
+       67862
+      ],
+      "source": [
+       13,
+       52,
+       16560
+      ]
+     },
+     "workspace": {
+      "context-equal": [
+       7,
+       0,
+       0
+      ],
+      "context-selected": [
+       8,
+       512,
+       671112
+      ],
+      "context-unselected": [
+       3,
+       192,
+       260254
+      ],
+      "contract": [
+       9,
+       144,
+       202422
+      ],
+      "source": [
+       13,
+       832,
+       1050330
+      ]
+     }
+    },
+    "seed": 8619
+   },
+   {
+    "n": 16,
+    "outcome_equivalent": true,
+    "per_kind": {
+     "exact": {
+      "context-equal": [
+       2,
+       0,
+       0
+      ],
+      "context-selected": [
+       9,
+       18,
+       8366
+      ],
+      "context-unselected": [
+       2,
+       0,
+       0
+      ],
+      "contract": [
+       9,
+       144,
+       46316
+      ],
+      "source": [
+       18,
+       72,
+       22625
+      ]
+     },
+     "full": {
+      "context-equal": [
+       2,
+       128,
+       31706
+      ],
+      "context-selected": [
+       9,
+       576,
+       141741
+      ],
+      "context-unselected": [
+       2,
+       128,
+       31482
+      ],
+      "contract": [
+       9,
+       576,
+       140155
+      ],
+      "source": [
+       18,
+       1152,
+       281925
+      ]
+     },
+     "no-cutoff": {
+      "context-equal": [
+       2,
+       0,
+       0
+      ],
+      "context-selected": [
+       9,
+       18,
+       5069
+      ],
+      "context-unselected": [
+       2,
+       0,
+       0
+      ],
+      "contract": [
+       9,
+       336,
+       82701
+      ],
+      "source": [
+       18,
+       72,
+       16072
+      ]
+     },
+     "version": {
+      "context-equal": [
+       2,
+       64,
+       30168
+      ],
+      "context-selected": [
+       9,
+       288,
+       135336
+      ],
+      "context-unselected": [
+       2,
+       64,
+       29996
+      ],
+      "contract": [
+       9,
+       144,
+       48236
+      ],
+      "source": [
+       18,
+       72,
+       23357
+      ]
+     },
+     "workspace": {
+      "context-equal": [
+       2,
+       0,
+       0
+      ],
+      "context-selected": [
+       9,
+       576,
+       785576
+      ],
+      "context-unselected": [
+       2,
+       128,
+       175240
+      ],
+      "contract": [
+       9,
+       144,
+       186076
+      ],
+      "source": [
+       18,
+       1152,
+       1520892
+      ]
+     }
+    },
+    "seed": 8620
+   },
+   {
+    "n": 32,
+    "outcome_equivalent": true,
+    "per_kind": {
+     "exact": {
+      "context-equal": [
+       5,
+       0,
+       0
+      ],
+      "context-selected": [
+       6,
+       12,
+       5554
+      ],
+      "context-unselected": [
+       5,
+       0,
+       0
+      ],
+      "contract": [
+       10,
+       320,
+       117010
+      ],
+      "source": [
+       14,
+       56,
+       17077
+      ]
+     },
+     "full": {
+      "context-equal": [
+       5,
+       640,
+       152946
+      ],
+      "context-selected": [
+       6,
+       768,
+       183969
+      ],
+      "context-unselected": [
+       5,
+       640,
+       153116
+      ],
+      "contract": [
+       10,
+       1280,
+       307625
+      ],
+      "source": [
+       14,
+       1792,
+       429867
+      ]
+     },
+     "no-cutoff": {
+      "context-equal": [
+       5,
+       0,
+       0
+      ],
+      "context-selected": [
+       6,
+       12,
+       3357
+      ],
+      "context-unselected": [
+       5,
+       0,
+       0
+      ],
+      "contract": [
+       10,
+       704,
+       170385
+      ],
+      "source": [
+       14,
+       56,
+       11987
+      ]
+     },
+     "version": {
+      "context-equal": [
+       5,
+       320,
+       146128
+      ],
+      "context-selected": [
+       6,
+       384,
+       175924
+      ],
+      "context-unselected": [
+       5,
+       320,
+       146338
+      ],
+      "contract": [
+       10,
+       320,
+       120274
+      ],
+      "source": [
+       14,
+       56,
+       17653
+      ]
+     },
+     "workspace": {
+      "context-equal": [
+       5,
+       0,
+       0
+      ],
+      "context-selected": [
+       6,
+       768,
+       1543086
+      ],
+      "context-unselected": [
+       5,
+       640,
+       1276580
+      ],
+      "contract": [
+       10,
+       320,
+       662610
+      ],
+      "source": [
+       14,
+       1792,
+       3615790
+      ]
+     }
+    },
+    "seed": 10232
+   },
+   {
+    "n": 32,
+    "outcome_equivalent": true,
+    "per_kind": {
+     "exact": {
+      "context-equal": [
+       5,
+       0,
+       0
+      ],
+      "context-selected": [
+       4,
+       8,
+       3707
+      ],
+      "context-unselected": [
+       6,
+       0,
+       0
+      ],
+      "contract": [
+       15,
+       480,
+       159360
+      ],
+      "source": [
+       10,
+       40,
+       12623
+      ]
+     },
+     "full": {
+      "context-equal": [
+       5,
+       640,
+       152692
+      ],
+      "context-selected": [
+       4,
+       512,
+       123436
+      ],
+      "context-unselected": [
+       6,
+       768,
+       182963
+      ],
+      "contract": [
+       15,
+       1920,
+       464057
+      ],
+      "source": [
+       10,
+       1280,
+       306601
+      ]
+     },
+     "no-cutoff": {
+      "context-equal": [
+       5,
+       0,
+       0
+      ],
+      "context-selected": [
+       4,
+       8,
+       2243
+      ],
+      "context-unselected": [
+       6,
+       0,
+       0
+      ],
+      "contract": [
+       15,
+       1216,
+       284866
+      ],
+      "source": [
+       10,
+       40,
+       8993
+      ]
+     },
+     "version": {
+      "context-equal": [
+       5,
+       320,
+       145716
+      ],
+      "context-selected": [
+       4,
+       256,
+       117300
+      ],
+      "context-unselected": [
+       6,
+       384,
+       174468
+      ],
+      "contract": [
+       15,
+       480,
+       164032
+      ],
+      "source": [
+       10,
+       40,
+       13031
+      ]
+     },
+     "workspace": {
+      "context-equal": [
+       5,
+       0,
+       0
+      ],
+      "context-selected": [
+       4,
+       512,
+       1033060
+      ],
+      "context-unselected": [
+       6,
+       768,
+       1492162
+      ],
+      "contract": [
+       15,
+       480,
+       979200
+      ],
+      "source": [
+       10,
+       1280,
+       2524400
+      ]
+     }
+    },
+    "seed": 10233
+   },
+   {
+    "n": 32,
+    "outcome_equivalent": true,
+    "per_kind": {
+     "exact": {
+      "context-equal": [
+       3,
+       0,
+       0
+      ],
+      "context-selected": [
+       10,
+       20,
+       9272
+      ],
+      "context-unselected": [
+       2,
+       0,
+       0
+      ],
+      "contract": [
+       10,
+       320,
+       90666
+      ],
+      "source": [
+       15,
+       60,
+       18726
+      ]
+     },
+     "full": {
+      "context-equal": [
+       3,
+       384,
+       94160
+      ],
+      "context-selected": [
+       10,
+       1280,
+       309349
+      ],
+      "context-unselected": [
+       2,
+       256,
+       61588
+      ],
+      "contract": [
+       10,
+       1280,
+       310506
+      ],
+      "source": [
+       15,
+       1920,
+       464213
+      ]
+     },
+     "no-cutoff": {
+      "context-equal": [
+       3,
+       0,
+       0
+      ],
+      "context-selected": [
+       10,
+       20,
+       5610
+      ],
+      "context-unselected": [
+       2,
+       0,
+       0
+      ],
+      "contract": [
+       10,
+       896,
+       210255
+      ],
+      "source": [
+       15,
+       60,
+       13270
+      ]
+     },
+     "version": {
+      "context-equal": [
+       3,
+       192,
+       89398
+      ],
+      "context-selected": [
+       10,
+       640,
+       294590
+      ],
+      "context-unselected": [
+       2,
+       128,
+       58650
+      ],
+      "contract": [
+       10,
+       320,
+       93258
+      ],
+      "source": [
+       15,
+       60,
+       19332
+      ]
+     },
+     "workspace": {
+      "context-equal": [
+       3,
+       0,
+       0
+      ],
+      "context-selected": [
+       10,
+       1280,
+       2657324
+      ],
+      "context-unselected": [
+       2,
+       256,
+       526076
+      ],
+      "contract": [
+       10,
+       320,
+       657514
+      ],
+      "source": [
+       15,
+       1920,
+       3955470
+      ]
+     }
+    },
+    "seed": 10234
+   },
+   {
+    "n": 32,
+    "outcome_equivalent": true,
+    "per_kind": {
+     "exact": {
+      "context-equal": [
+       6,
+       0,
+       0
+      ],
+      "context-selected": [
+       4,
+       8,
+       3709
+      ],
+      "context-unselected": [
+       5,
+       0,
+       0
+      ],
+      "contract": [
+       8,
+       256,
+       73204
+      ],
+      "source": [
+       17,
+       68,
+       21234
+      ]
+     },
+     "full": {
+      "context-equal": [
+       6,
+       768,
+       185376
+      ],
+      "context-selected": [
+       4,
+       512,
+       123452
+      ],
+      "context-unselected": [
+       5,
+       640,
+       155921
+      ],
+      "contract": [
+       8,
+       1024,
+       248716
+      ],
+      "source": [
+       17,
+       2176,
+       524826
+      ]
+     },
+     "no-cutoff": {
+      "context-equal": [
+       6,
+       0,
+       0
+      ],
+      "context-selected": [
+       4,
+       8,
+       2242
+      ],
+      "context-unselected": [
+       5,
+       0,
+       0
+      ],
+      "contract": [
+       8,
+       640,
+       155111
+      ],
+      "source": [
+       17,
+       68,
+       15052
+      ]
+     },
+     "version": {
+      "context-equal": [
+       6,
+       384,
+       177276
+      ],
+      "context-selected": [
+       4,
+       256,
+       118170
+      ],
+      "context-unselected": [
+       5,
+       320,
+       148566
+      ],
+      "contract": [
+       8,
+       256,
+       76468
+      ],
+      "source": [
+       17,
+       68,
+       21928
+      ]
+     },
+     "workspace": {
+      "context-equal": [
+       6,
+       0,
+       0
+      ],
+      "context-selected": [
+       4,
+       512,
+       1070590
+      ],
+      "context-unselected": [
+       5,
+       640,
+       1374444
+      ],
+      "contract": [
+       8,
+       256,
+       534356
+      ],
+      "source": [
+       17,
+       2176,
+       4556452
+      ]
+     }
+    },
+    "seed": 10235
+   },
+   {
+    "n": 32,
+    "outcome_equivalent": true,
+    "per_kind": {
+     "exact": {
+      "context-equal": [
+       2,
+       0,
+       0
+      ],
+      "context-selected": [
+       5,
+       10,
+       4606
+      ],
+      "context-unselected": [
+       0,
+       0,
+       0
+      ],
+      "contract": [
+       13,
+       416,
+       119084
+      ],
+      "source": [
+       20,
+       80,
+       24874
+      ]
+     },
+     "full": {
+      "context-equal": [
+       2,
+       256,
+       60050
+      ],
+      "context-selected": [
+       5,
+       640,
+       152939
+      ],
+      "context-unselected": [
+       0,
+       0,
+       0
+      ],
+      "contract": [
+       13,
+       1664,
+       400935
+      ],
+      "source": [
+       20,
+       2560,
+       614288
+      ]
+     },
+     "no-cutoff": {
+      "context-equal": [
+       2,
+       0,
+       0
+      ],
+      "context-selected": [
+       5,
+       10,
+       2775
+      ],
+      "context-unselected": [
+       0,
+       0,
+       0
+      ],
+      "contract": [
+       13,
+       1184,
+       273841
+      ],
+      "source": [
+       20,
+       80,
+       17627
+      ]
+     },
+     "version": {
+      "context-equal": [
+       2,
+       128,
+       57844
+      ],
+      "context-selected": [
+       5,
+       320,
+       145396
+      ],
+      "context-unselected": [
+       0,
+       0,
+       0
+      ],
+      "contract": [
+       13,
+       416,
+       121644
+      ],
+      "source": [
+       20,
+       80,
+       25674
+      ]
+     },
+     "workspace": {
+      "context-equal": [
+       2,
+       0,
+       0
+      ],
+      "context-selected": [
+       5,
+       640,
+       1246242
+      ],
+      "context-unselected": [
+       0,
+       0,
+       0
+      ],
+      "contract": [
+       13,
+       416,
+       809388
+      ],
+      "source": [
+       20,
+       2560,
+       5026172
+      ]
+     }
+    },
+    "seed": 10236
+   }
+  ],
+  "summary": {
+   "1": {
+    "exact": {
+     "by_kind": {
+      "context-equal": {
+       "bytes_per_request": null,
+       "changes": 30,
+       "requests_per_change": 0.0
+      },
+      "context-selected": {
+       "bytes_per_request": 463.82894736842104,
+       "changes": 38,
+       "requests_per_change": 2.0
+      },
+      "context-unselected": {
+       "bytes_per_request": null,
+       "changes": 16,
+       "requests_per_change": 0.0
+      },
+      "contract": {
+       "bytes_per_request": 338.10526315789474,
+       "changes": 57,
+       "requests_per_change": 1.0
+      },
+      "source": {
+       "bytes_per_request": 320.1737288135593,
+       "changes": 59,
+       "requests_per_change": 4.0
+      }
+     },
+     "kbytes_per_change": 0.65042,
+     "requests_per_change": 1.845
+    },
+    "full": {
+     "by_kind": {
+      "context-equal": {
+       "bytes_per_request": 245.575,
+       "changes": 30,
+       "requests_per_change": 4.0
+      },
+      "context-selected": {
+       "bytes_per_request": 252.82236842105263,
+       "changes": 38,
+       "requests_per_change": 4.0
+      },
+      "context-unselected": {
+       "bytes_per_request": 243.9375,
+       "changes": 16,
+       "requests_per_change": 4.0
+      },
+      "contract": {
+       "bytes_per_request": 247.49122807017545,
+       "changes": 57,
+       "requests_per_change": 4.0
+      },
+      "source": {
+       "bytes_per_request": 248.71186440677965,
+       "changes": 59,
+       "requests_per_change": 4.0
+      }
+     },
+     "kbytes_per_change": 0.99317,
+     "requests_per_change": 4.0
+    },
+    "no-cutoff": {
+     "by_kind": {
+      "context-equal": {
+       "bytes_per_request": null,
+       "changes": 30,
+       "requests_per_change": 0.0
+      },
+      "context-selected": {
+       "bytes_per_request": 279.7631578947368,
+       "changes": 38,
+       "requests_per_change": 2.0
+      },
+      "context-unselected": {
+       "bytes_per_request": null,
+       "changes": 16,
+       "requests_per_change": 0.0
+      },
+      "contract": {
+       "bytes_per_request": 246.54676258992805,
+       "changes": 57,
+       "requests_per_change": 2.43859649122807
+      },
+      "source": {
+       "bytes_per_request": 228.50423728813558,
+       "changes": 59,
+       "requests_per_change": 4.0
+      }
+     },
+     "kbytes_per_change": 0.547295,
+     "requests_per_change": 2.255
+    },
+    "version": {
+     "by_kind": {
+      "context-equal": {
+       "bytes_per_request": 470.23333333333335,
+       "changes": 30,
+       "requests_per_change": 2.0
+      },
+      "context-selected": {
+       "bytes_per_request": 484.38157894736844,
+       "changes": 38,
+       "requests_per_change": 2.0
+      },
+      "context-unselected": {
+       "bytes_per_request": 467.53125,
+       "changes": 16,
+       "requests_per_change": 2.0
+      },
+      "contract": {
+       "bytes_per_request": 348.9122807017544,
+       "changes": 57,
+       "requests_per_change": 1.0
+      },
+      "source": {
+       "bytes_per_request": 330.4194915254237,
+       "changes": 59,
+       "requests_per_change": 4.0
+      }
+     },
+     "kbytes_per_change": 0.8892749999999999,
+     "requests_per_change": 2.305
+    },
+    "workspace": {
+     "by_kind": {
+      "context-equal": {
+       "bytes_per_request": null,
+       "changes": 30,
+       "requests_per_change": 0.0
+      },
+      "context-selected": {
+       "bytes_per_request": 492.57894736842104,
+       "changes": 38,
+       "requests_per_change": 4.0
+      },
+      "context-unselected": {
+       "bytes_per_request": 477.109375,
+       "changes": 16,
+       "requests_per_change": 4.0
+      },
+      "contract": {
+       "bytes_per_request": 492.3333333333333,
+       "changes": 57,
+       "requests_per_change": 1.0
+      },
+      "source": {
+       "bytes_per_request": 480.71610169491527,
+       "changes": 59,
+       "requests_per_change": 4.0
+      }
+     },
+     "kbytes_per_change": 1.234595,
+     "requests_per_change": 2.545
+    }
+   },
+   "16": {
+    "exact": {
+     "by_kind": {
+      "context-equal": {
+       "bytes_per_request": null,
+       "changes": 23,
+       "requests_per_change": 0.0
+      },
+      "context-selected": {
+       "bytes_per_request": 463.92105263157896,
+       "changes": 38,
+       "requests_per_change": 2.0
+      },
+      "context-unselected": {
+       "bytes_per_request": null,
+       "changes": 15,
+       "requests_per_change": 0.0
+      },
+      "contract": {
+       "bytes_per_request": 321.0638586956522,
+       "changes": 46,
+       "requests_per_change": 16.0
+      },
+      "source": {
+       "bytes_per_request": 309.11538461538464,
+       "changes": 78,
+       "requests_per_change": 4.0
+      }
+     },
+     "kbytes_per_change": 1.840025,
+     "requests_per_change": 5.62
+    },
+    "full": {
+     "by_kind": {
+      "context-equal": {
+       "bytes_per_request": 238.5163043478261,
+       "changes": 23,
+       "requests_per_change": 64.0
+      },
+      "context-selected": {
+       "bytes_per_request": 240.84950657894737,
+       "changes": 38,
+       "requests_per_change": 64.0
+      },
+      "context-unselected": {
+       "bytes_per_request": 240.77604166666666,
+       "changes": 15,
+       "requests_per_change": 64.0
+      },
+      "contract": {
+       "bytes_per_request": 239.45686141304347,
+       "changes": 46,
+       "requests_per_change": 64.0
+      },
+      "source": {
+       "bytes_per_request": 239.08733974358975,
+       "changes": 78,
+       "requests_per_change": 64.0
+      }
+     },
+     "kbytes_per_change": 15.332360000000001,
+     "requests_per_change": 64.0
+    },
+    "no-cutoff": {
+     "by_kind": {
+      "context-equal": {
+       "bytes_per_request": null,
+       "changes": 23,
+       "requests_per_change": 0.0
+      },
+      "context-selected": {
+       "bytes_per_request": 280.7368421052632,
+       "changes": 38,
+       "requests_per_change": 2.0
+      },
+      "context-unselected": {
+       "bytes_per_request": null,
+       "changes": 15,
+       "requests_per_change": 0.0
+      },
+      "contract": {
+       "bytes_per_request": 239.10105140186917,
+       "changes": 46,
+       "requests_per_change": 37.21739130434783
+      },
+      "source": {
+       "bytes_per_request": 218.13782051282053,
+       "changes": 78,
+       "requests_per_change": 4.0
+      }
+     },
+     "kbytes_per_change": 2.49368,
+     "requests_per_change": 10.5
+    },
+    "version": {
+     "by_kind": {
+      "context-equal": {
+       "bytes_per_request": 455.5652173913044,
+       "changes": 23,
+       "requests_per_change": 32.0
+      },
+      "context-selected": {
+       "bytes_per_request": 459.79276315789474,
+       "changes": 38,
+       "requests_per_change": 32.0
+      },
+      "context-unselected": {
+       "bytes_per_request": 458.6041666666667,
+       "changes": 15,
+       "requests_per_change": 32.0
+      },
+      "contract": {
+       "bytes_per_request": 333.88994565217394,
+       "changes": 46,
+       "requests_per_change": 16.0
+      },
+      "source": {
+       "bytes_per_request": 319.2564102564103,
+       "changes": 78,
+       "requests_per_change": 4.0
+      }
+     },
+     "kbytes_per_change": 7.299425,
+     "requests_per_change": 17.4
+    },
+    "workspace": {
+     "by_kind": {
+      "context-equal": {
+       "bytes_per_request": null,
+       "changes": 23,
+       "requests_per_change": 0.0
+      },
+      "context-selected": {
+       "bytes_per_request": 1209.6488486842106,
+       "changes": 38,
+       "requests_per_change": 64.0
+      },
+      "context-unselected": {
+       "bytes_per_request": 1211.55,
+       "changes": 15,
+       "requests_per_change": 64.0
+      },
+      "contract": {
+       "bytes_per_request": 1177.1508152173913,
+       "changes": 46,
+       "requests_per_change": 16.0
+      },
+      "source": {
+       "bytes_per_request": 1163.114983974359,
+       "changes": 78,
+       "requests_per_change": 64.0
+      }
+     },
+     "kbytes_per_change": 53.888035,
+     "requests_per_change": 45.6
+    }
+   },
+   "2": {
+    "exact": {
+     "by_kind": {
+      "context-equal": {
+       "bytes_per_request": null,
+       "changes": 18,
+       "requests_per_change": 0.0
+      },
+      "context-selected": {
+       "bytes_per_request": 463.9,
+       "changes": 25,
+       "requests_per_change": 2.0
+      },
+      "context-unselected": {
+       "bytes_per_request": null,
+       "changes": 23,
+       "requests_per_change": 0.0
+      },
+      "contract": {
+       "bytes_per_request": 369.6694915254237,
+       "changes": 59,
+       "requests_per_change": 2.0
+      },
+      "source": {
+       "bytes_per_request": 317.69666666666666,
+       "changes": 75,
+       "requests_per_change": 4.0
+      }
+     },
+     "kbytes_per_change": 0.810625,
+     "requests_per_change": 2.34
+    },
+    "full": {
+     "by_kind": {
+      "context-equal": {
+       "bytes_per_request": 244.86805555555554,
+       "changes": 18,
+       "requests_per_change": 8.0
+      },
+      "context-selected": {
+       "bytes_per_request": 247.37,
+       "changes": 25,
+       "requests_per_change": 8.0
+      },
+      "context-unselected": {
+       "bytes_per_request": 246.7391304347826,
+       "changes": 23,
+       "requests_per_change": 8.0
+      },
+      "contract": {
+       "bytes_per_request": 246.8072033898305,
+       "changes": 59,
+       "requests_per_change": 8.0
+      },
+      "source": {
+       "bytes_per_request": 246.87166666666667,
+       "changes": 75,
+       "requests_per_change": 8.0
+      }
+     },
+     "kbytes_per_change": 1.9737550000000001,
+     "requests_per_change": 8.0
+    },
+    "no-cutoff": {
+     "by_kind": {
+      "context-equal": {
+       "bytes_per_request": null,
+       "changes": 18,
+       "requests_per_change": 0.0
+      },
+      "context-selected": {
+       "bytes_per_request": 279.94,
+       "changes": 25,
+       "requests_per_change": 2.0
+      },
+      "context-unselected": {
+       "bytes_per_request": null,
+       "changes": 23,
+       "requests_per_change": 0.0
+      },
+      "contract": {
+       "bytes_per_request": 247.18045112781954,
+       "changes": 59,
+       "requests_per_change": 4.508474576271187
+      },
+      "source": {
+       "bytes_per_request": 226.25,
+       "changes": 75,
+       "requests_per_change": 4.0
+      }
+     },
+     "kbytes_per_change": 0.73811,
+     "requests_per_change": 3.08
+    },
+    "version": {
+     "by_kind": {
+      "context-equal": {
+       "bytes_per_request": 468.9166666666667,
+       "changes": 18,
+       "requests_per_change": 4.0
+      },
+      "context-selected": {
+       "bytes_per_request": 474.24,
+       "changes": 25,
+       "requests_per_change": 4.0
+      },
+      "context-unselected": {
+       "bytes_per_request": 472.8478260869565,
+       "changes": 23,
+       "requests_per_change": 4.0
+      },
+      "contract": {
+       "bytes_per_request": 381.00847457627117,
+       "changes": 59,
+       "requests_per_change": 2.0
+      },
+      "source": {
+       "bytes_per_request": 327.81,
+       "changes": 75,
+       "requests_per_change": 4.0
+      }
+     },
+     "kbytes_per_change": 1.33995,
+     "requests_per_change": 3.41
+    },
+    "workspace": {
+     "by_kind": {
+      "context-equal": {
+       "bytes_per_request": null,
+       "changes": 18,
+       "requests_per_change": 0.0
+      },
+      "context-selected": {
+       "bytes_per_request": 540.14,
+       "changes": 25,
+       "requests_per_change": 8.0
+      },
+      "context-unselected": {
+       "bytes_per_request": 550.6521739130435,
+       "changes": 23,
+       "requests_per_change": 8.0
+      },
+      "contract": {
+       "bytes_per_request": 584.9745762711865,
+       "changes": 59,
+       "requests_per_change": 2.0
+      },
+      "source": {
+       "bytes_per_request": 535.2833333333333,
+       "changes": 75,
+       "requests_per_change": 8.0
+      }
+     },
+     "kbytes_per_change": 2.997725,
+     "requests_per_change": 5.51
+    }
+   },
+   "32": {
+    "exact": {
+     "by_kind": {
+      "context-equal": {
+       "bytes_per_request": null,
+       "changes": 21,
+       "requests_per_change": 0.0
+      },
+      "context-selected": {
+       "bytes_per_request": 462.8965517241379,
+       "changes": 29,
+       "requests_per_change": 2.0
+      },
+      "context-unselected": {
+       "bytes_per_request": null,
+       "changes": 18,
+       "requests_per_change": 0.0
+      },
+      "contract": {
+       "bytes_per_request": 312.12276785714283,
+       "changes": 56,
+       "requests_per_change": 32.0
+      },
+      "source": {
+       "bytes_per_request": 310.9671052631579,
+       "changes": 76,
+       "requests_per_change": 4.0
+      }
+     },
+     "kbytes_per_change": 3.4035300000000004,
+     "requests_per_change": 10.77
+    },
+    "full": {
+     "by_kind": {
+      "context-equal": {
+       "bytes_per_request": 240.03869047619048,
+       "changes": 21,
+       "requests_per_change": 128.0
+      },
+      "context-selected": {
+       "bytes_per_request": 240.61018318965517,
+       "changes": 29,
+       "requests_per_change": 128.0
+      },
+      "context-unselected": {
+       "bytes_per_request": 240.27256944444446,
+       "changes": 18,
+       "requests_per_change": 128.0
+      },
+      "contract": {
+       "bytes_per_request": 241.60700334821428,
+       "changes": 56,
+       "requests_per_change": 128.0
+      },
+      "source": {
+       "bytes_per_request": 240.52168996710526,
+       "changes": 76,
+       "requests_per_change": 128.0
+      }
+     },
+     "kbytes_per_change": 30.817955,
+     "requests_per_change": 128.0
+    },
+    "no-cutoff": {
+     "by_kind": {
+      "context-equal": {
+       "bytes_per_request": null,
+       "changes": 21,
+       "requests_per_change": 0.0
+      },
+      "context-selected": {
+       "bytes_per_request": 279.7758620689655,
+       "changes": 29,
+       "requests_per_change": 2.0
+      },
+      "context-unselected": {
+       "bytes_per_request": null,
+       "changes": 18,
+       "requests_per_change": 0.0
+      },
+      "contract": {
+       "bytes_per_request": 235.87456896551726,
+       "changes": 56,
+       "requests_per_change": 82.85714285714286
+      },
+      "source": {
+       "bytes_per_request": 220.16118421052633,
+       "changes": 76,
+       "requests_per_change": 4.0
+      }
+     },
+     "kbytes_per_change": 5.88807,
+     "requests_per_change": 25.01
+    },
+    "version": {
+     "by_kind": {
+      "context-equal": {
+       "bytes_per_request": 458.60267857142856,
+       "changes": 21,
+       "requests_per_change": 64.0
+      },
+      "context-selected": {
+       "bytes_per_request": 458.7176724137931,
+       "changes": 29,
+       "requests_per_change": 64.0
+      },
+      "context-unselected": {
+       "bytes_per_request": 458.35243055555554,
+       "changes": 18,
+       "requests_per_change": 64.0
+      },
+      "contract": {
+       "bytes_per_request": 321.24776785714283,
+       "changes": 56,
+       "requests_per_change": 32.0
+      },
+      "source": {
+       "bytes_per_request": 321.1118421052632,
+       "changes": 76,
+       "requests_per_change": 4.0
+      }
+     },
+     "kbytes_per_change": 13.34529,
+     "requests_per_change": 32.24
+    },
+    "workspace": {
+     "by_kind": {
+      "context-equal": {
+       "bytes_per_request": null,
+       "changes": 21,
+       "requests_per_change": 0.0
+      },
+      "context-selected": {
+       "bytes_per_request": 2034.025323275862,
+       "changes": 29,
+       "requests_per_change": 128.0
+      },
+      "context-unselected": {
+       "bytes_per_request": 2026.5894097222222,
+       "changes": 18,
+       "requests_per_change": 128.0
+      },
+      "contract": {
+       "bytes_per_request": 2032.9620535714287,
+       "changes": 56,
+       "requests_per_change": 32.0
+      },
+      "source": {
+       "bytes_per_request": 2022.849917763158,
+       "changes": 76,
+       "requests_per_change": 128.0
+      }
+     },
+     "kbytes_per_change": 177.70458,
+     "requests_per_change": 87.68
+    }
+   },
+   "4": {
+    "exact": {
+     "by_kind": {
+      "context-equal": {
+       "bytes_per_request": null,
+       "changes": 24,
+       "requests_per_change": 0.0
+      },
+      "context-selected": {
+       "bytes_per_request": 463.6551724137931,
+       "changes": 29,
+       "requests_per_change": 2.0
+      },
+      "context-unselected": {
+       "bytes_per_request": null,
+       "changes": 21,
+       "requests_per_change": 0.0
+      },
+      "contract": {
+       "bytes_per_request": 301.5042372881356,
+       "changes": 59,
+       "requests_per_change": 4.0
+      },
+      "source": {
+       "bytes_per_request": 314.26119402985074,
+       "changes": 67,
+       "requests_per_change": 4.0
+      }
+     },
+     "kbytes_per_change": 0.9113450000000001,
+     "requests_per_change": 2.81
+    },
+    "full": {
+     "by_kind": {
+      "context-equal": {
+       "bytes_per_request": 243.56770833333334,
+       "changes": 24,
+       "requests_per_change": 16.0
+      },
+      "context-selected": {
+       "bytes_per_request": 246.69396551724137,
+       "changes": 29,
+       "requests_per_change": 16.0
+      },
+      "context-unselected": {
+       "bytes_per_request": 244.48511904761904,
+       "changes": 21,
+       "requests_per_change": 16.0
+      },
+      "contract": {
+       "bytes_per_request": 244.33686440677965,
+       "changes": 59,
+       "requests_per_change": 16.0
+      },
+      "source": {
+       "bytes_per_request": 243.03451492537314,
+       "changes": 67,
+       "requests_per_change": 16.0
+      }
+     },
+     "kbytes_per_change": 3.90665,
+     "requests_per_change": 16.0
+    },
+    "no-cutoff": {
+     "by_kind": {
+      "context-equal": {
+       "bytes_per_request": null,
+       "changes": 24,
+       "requests_per_change": 0.0
+      },
+      "context-selected": {
+       "bytes_per_request": 280.2068965517241,
+       "changes": 29,
+       "requests_per_change": 2.0
+      },
+      "context-unselected": {
+       "bytes_per_request": null,
+       "changes": 21,
+       "requests_per_change": 0.0
+      },
+      "contract": {
+       "bytes_per_request": 243.18666666666667,
+       "changes": 59,
+       "requests_per_change": 10.169491525423728
+      },
+      "source": {
+       "bytes_per_request": 222.98134328358208,
+       "changes": 67,
+       "requests_per_change": 4.0
+      }
+     },
+     "kbytes_per_change": 1.109615,
+     "requests_per_change": 4.63
+    },
+    "version": {
+     "by_kind": {
+      "context-equal": {
+       "bytes_per_request": 464.4895833333333,
+       "changes": 24,
+       "requests_per_change": 8.0
+      },
+      "context-selected": {
+       "bytes_per_request": 471.08620689655174,
+       "changes": 29,
+       "requests_per_change": 8.0
+      },
+      "context-unselected": {
+       "bytes_per_request": 466.35714285714283,
+       "changes": 21,
+       "requests_per_change": 8.0
+      },
+      "contract": {
+       "bytes_per_request": 311.521186440678,
+       "changes": 59,
+       "requests_per_change": 4.0
+      },
+      "source": {
+       "bytes_per_request": 324.44029850746267,
+       "changes": 67,
+       "requests_per_change": 4.0
+      }
+     },
+     "kbytes_per_change": 2.186455,
+     "requests_per_change": 5.48
+    },
+    "workspace": {
+     "by_kind": {
+      "context-equal": {
+       "bytes_per_request": null,
+       "changes": 24,
+       "requests_per_change": 0.0
+      },
+      "context-selected": {
+       "bytes_per_request": 660.4051724137931,
+       "changes": 29,
+       "requests_per_change": 16.0
+      },
+      "context-unselected": {
+       "bytes_per_request": 651.9464285714286,
+       "changes": 21,
+       "requests_per_change": 16.0
+      },
+      "contract": {
+       "bytes_per_request": 625.792372881356,
+       "changes": 59,
+       "requests_per_change": 4.0
+      },
+      "source": {
+       "bytes_per_request": 629.6996268656717,
+       "changes": 67,
+       "requests_per_change": 16.0
+      }
+     },
+     "kbytes_per_change": 6.741035,
+     "requests_per_change": 10.54
+    }
+   },
+   "8": {
+    "exact": {
+     "by_kind": {
+      "context-equal": {
+       "bytes_per_request": null,
+       "changes": 25,
+       "requests_per_change": 0.0
+      },
+      "context-selected": {
+       "bytes_per_request": 463.98333333333335,
+       "changes": 30,
+       "requests_per_change": 2.0
+      },
+      "context-unselected": {
+       "bytes_per_request": null,
+       "changes": 15,
+       "requests_per_change": 0.0
+      },
+      "contract": {
+       "bytes_per_request": 324.70436507936506,
+       "changes": 63,
+       "requests_per_change": 8.0
+      },
+      "source": {
+       "bytes_per_request": 316.54477611940297,
+       "changes": 67,
+       "requests_per_change": 4.0
+      }
+     },
+     "kbytes_per_change": 1.3816199999999998,
+     "requests_per_change": 4.16
+    },
+    "full": {
+     "by_kind": {
+      "context-equal": {
+       "bytes_per_request": 243.58,
+       "changes": 25,
+       "requests_per_change": 32.0
+      },
+      "context-selected": {
+       "bytes_per_request": 246.76666666666668,
+       "changes": 30,
+       "requests_per_change": 32.0
+      },
+      "context-unselected": {
+       "bytes_per_request": 242.86458333333334,
+       "changes": 15,
+       "requests_per_change": 32.0
+      },
+      "contract": {
+       "bytes_per_request": 245.26736111111111,
+       "changes": 63,
+       "requests_per_change": 32.0
+      },
+      "source": {
+       "bytes_per_request": 245.1632462686567,
+       "changes": 67,
+       "requests_per_change": 32.0
+      }
+     },
+     "kbytes_per_change": 7.8421199999999995,
+     "requests_per_change": 32.0
+    },
+    "no-cutoff": {
+     "by_kind": {
+      "context-equal": {
+       "bytes_per_request": null,
+       "changes": 25,
+       "requests_per_change": 0.0
+      },
+      "context-selected": {
+       "bytes_per_request": 280.8333333333333,
+       "changes": 30,
+       "requests_per_change": 2.0
+      },
+      "context-unselected": {
+       "bytes_per_request": null,
+       "changes": 15,
+       "requests_per_change": 0.0
+      },
+      "contract": {
+       "bytes_per_request": 245.6953642384106,
+       "changes": 63,
+       "requests_per_change": 19.174603174603174
+      },
+      "source": {
+       "bytes_per_request": 225.455223880597,
+       "changes": 67,
+       "requests_per_change": 4.0
+      }
+     },
+     "kbytes_per_change": 1.8703599999999998,
+     "requests_per_change": 7.68
+    },
+    "version": {
+     "by_kind": {
+      "context-equal": {
+       "bytes_per_request": 465.535,
+       "changes": 25,
+       "requests_per_change": 16.0
+      },
+      "context-selected": {
+       "bytes_per_request": 470.19166666666666,
+       "changes": 30,
+       "requests_per_change": 16.0
+      },
+      "context-unselected": {
+       "bytes_per_request": 462.975,
+       "changes": 15,
+       "requests_per_change": 16.0
+      },
+      "contract": {
+       "bytes_per_request": 335.7202380952381,
+       "changes": 63,
+       "requests_per_change": 8.0
+      },
+      "source": {
+       "bytes_per_request": 326.7089552238806,
+       "changes": 67,
+       "requests_per_change": 4.0
+      }
+     },
+     "kbytes_per_change": 3.898905,
+     "requests_per_change": 9.46
+    },
+    "workspace": {
+     "by_kind": {
+      "context-equal": {
+       "bytes_per_request": null,
+       "changes": 25,
+       "requests_per_change": 0.0
+      },
+      "context-selected": {
+       "bytes_per_request": 895.2625,
+       "changes": 30,
+       "requests_per_change": 32.0
+      },
+      "context-unselected": {
+       "bytes_per_request": 854.2083333333334,
+       "changes": 15,
+       "requests_per_change": 32.0
+      },
+      "contract": {
+       "bytes_per_request": 878.9742063492064,
+       "changes": 63,
+       "requests_per_change": 8.0
+      },
+      "source": {
+       "bytes_per_request": 873.5550373134329,
+       "changes": 67,
+       "requests_per_change": 32.0
+      }
+     },
+     "kbytes_per_change": 17.926885,
+     "requests_per_change": 20.44
+    }
+   }
+  }
+ },
+ "elapsed_seconds": 1280.5417568000266,
+ "platform": "Windows-11-10.0.26100-SP0",
+ "properties": {
+  "authority": "Value from a revoked owner exposed",
+  "budget": "More than k requests in one dependency episode",
+  "invalid": "Value invalid for its current observation exposed",
+  "publish": "Snapshot published that violates the barrier",
+  "stale": "Obsolete or unavailable input exposed as usable",
+  "structure": "Ill-typed structure installed",
+  "upstream": "Value exposed while a prerequisite is unusable"
+ },
+ "python": "3.13.14",
+ "quick": false,
+ "source_sha256": {
+  "experiments/tse_campaign.py": "302f8068a667ecc23d15d1816b55965ab32778255201c4a6bb41680620b36b32",
+  "src/vgc/__init__.py": "78e18666013b59a6bfb5b3c0347eb24f76b111c6a2f74349d4c79ce720f27832",
+  "src/vgc/controller.py": "85c05658addcbaef40367c663c59a0d8a2cc3587fdf9bb649a54237cac16ad21",
+  "src/vgc/observations.py": "6d2275784a1e472bc00f7d60a705a91d488647e2e2a4eaa68ef698e15ce42506",
+  "src/vgc/providers/__init__.py": "783240a1b80efb464cb9de29e633335269c178f7dc54ce5080e82a17d33d637f",
+  "src/vgc/providers/scripted.py": "b2ca5e8123282dc84e13142b967b2564724928c722ab076992accb729f450911",
+  "src/vgc/scheduler.py": "46450668440e5e1b1bf90dd62f11e9c1fdc51dcf31524dc2d701e24188d50545",
+  "src/vgc/structure.py": "733bde0387202105126705a5723d76186de62c1885db922d899240a4f1a584ca",
+  "src/vgc/types.py": "efb7e5c1e41cdde2453c64cb8ef8e617104d60349f4c2949da6bd06ae426e895",
+  "src/vgc/validators.py": "e2bc97a84f20113ff0d3af866bfc4173b5745acfeae847a981625499c0366436"
+ },
+ "strategies": {
+  "exact": "Exact effective footprint (this paper)",
+  "full": "Full regeneration on every input change",
+  "no-cutoff": "No early cutoff (upstream acceptance identity)",
+  "version": "Version-keyed shared context",
+  "workspace": "Whole-workspace footprint"
+ }
+}

@@ -2,6 +2,7 @@
 import argparse
 import json
 import shutil
+import subprocess
 import sys
 from common import ROOT, command, new_run, finish
 
@@ -34,6 +35,10 @@ def stage(name, args):
     if name == "proofs":
         from run_proofs import run
         return run(args.timeout)
+    if name in ("tse-campaign", "tse-paper"):
+        # TSE manuscript: RQ1/RQ2 campaign and generated evaluation fragments.
+        script = "experiments/tse_campaign.py" if name == "tse-campaign" else "experiments/tse_paper.py"
+        return subprocess.run([sys.executable, str(ROOT / script)], cwd=ROOT).returncode
     directory, manifest = new_run(name)
     if name == "baseline":
         missing = ["original explorers", "original reports", "original reviews", "original publisher files"]
@@ -58,7 +63,8 @@ def stage(name, args):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("stage", choices=["doctor", "baseline", "spec-check", "proofs", "models", "mutations", "witnesses",
-                                        "case-study", "conformance", "analyze", "paper", "package", "tests", "claims", "all"])
+                                        "case-study", "conformance", "analyze", "paper", "package", "tests", "claims",
+                                        "tse-campaign", "tse-paper", "all"])
     parser.add_argument("--profile", choices=["smoke", "core"], default="smoke")
     parser.add_argument("--timeout", type=int, default=60)
     args = parser.parse_args()

@@ -38,14 +38,14 @@
   "scoped_proved_obligations": 25,
   "sources": {
     "case-study": {
-      "manifest_sha256": "ce29ac8f5e477c39897c4d2fc822d955bfdc5da9caeb3e03d9966d42e3f783b8",
-      "results_sha256": "f9f17f147da20ac8fccbdb0d37a635139afe10fefda63772546567f7bae36b0a",
-      "run": "20261027T015112-case-study-ee0a5f67"
+      "manifest_sha256": "071234875eba4ad18c291800b2ea902e46a4cea5b6f3fdd739cbc67586602104",
+      "results_sha256": "bebb8474c942fb5f5ab46e7edea986e4dbe84e3246787d67bface607a2aae6d6",
+      "run": "20261027T031145-case-study-297e8db0"
     },
     "conformance": {
-      "manifest_sha256": "1458f6cdc9ba17532910cd805ffd682956efe8371138a01c13b00d3b1d6dc545",
+      "manifest_sha256": "200495f98509afac9dbaea972fe32f436070795a33d3efbca0eb7bc3c1a117fe",
       "results_sha256": "17ed7ccd1d0d448d8210cdbbd33152a6bc56c9b1f7580f8b352275a8229d0ec8",
-      "run": "20261027T015113-conformance-f5dedd91"
+      "run": "20261027T031147-conformance-7b46d0cb"
     },
     "models": {
       "manifest_sha256": "d8057ff57ecef03c2953d2bd276b330e3cde0d2af4b436ca8e3638c6af61d23b",
@@ -63,9 +63,9 @@
       "run": "20261027T014850-proofs-3137953d"
     },
     "tests": {
-      "manifest_sha256": "155869258becdedc0a95ca78ab2734050388b498771a20eeb6cf167fcf183698",
-      "results_sha256": "5c3b147b90695d376b53eda342cfde3cf44de52db986e975525b8cf2f6b4ed23",
-      "run": "20261027T015109-tests-8513609e"
+      "manifest_sha256": "faeb43837a1d9971085c9fd8b34162f1696d47e3a5175f8d219b4244ab7803a7",
+      "results_sha256": "9721fa97e63e5abd7c963aa2967189bc7b228fee300cf5443eb220a5913eb053",
+      "run": "20261027T031142-tests-ebe9cd99"
     },
     "witnesses": {
       "manifest_sha256": "1e0f073666eca02866d86007ae595eda8d7c54d9649de2f3c9ea2e01ef740658",

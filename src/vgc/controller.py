@@ -161,7 +161,7 @@ class Controller:
         return outcome
 
     def _candidate(self):
-        candidate = object.__new__(Controller)
+        candidate = object.__new__(type(self))
         candidate.__dict__ = {k: deepcopy(v) for k, v in self.__dict__.items()
                               if k not in ("lock", "events", "initial")}
         candidate.lock = self.lock
@@ -201,7 +201,12 @@ class Controller:
             c.context, c.context_available = deepcopy(context), available
             c.context_version += 1
             c.revision += 1
-            c._reconcile()
+            try:
+                # Reactivation can fail normalization (e.g., a value admitted while
+                # its consumer was suspended); record the rejection like edit_source.
+                c._reconcile()
+            except ValueError as error:
+                return self._event("UpdateContext", before, "rejected", reason=str(error))
             self._install(c)
             return self._event("UpdateContext", before, "committed", expected_version=expected_version)
 

@@ -274,11 +274,11 @@
     },
     {
       "kind": "case-study",
-      "runs": 5,
+      "runs": 6,
       "statuses": {
         "failed": 0,
         "inconclusive": 0,
-        "passed": 5
+        "passed": 6
       }
     },
     {
@@ -292,11 +292,11 @@
     },
     {
       "kind": "conformance",
-      "runs": 5,
+      "runs": 6,
       "statuses": {
         "failed": 0,
         "inconclusive": 0,
-        "passed": 5
+        "passed": 6
       }
     },
     {
@@ -337,11 +337,11 @@
     },
     {
       "kind": "tests",
-      "runs": 5,
+      "runs": 6,
       "statuses": {
         "failed": 0,
         "inconclusive": 0,
-        "passed": 5
+        "passed": 6
       }
     },
     {
@@ -408,41 +408,44 @@
     "results/raw/20261027T015043-witnesses-b0b032df/reach-publication.log": "9aecee898e5de696adbc185ab394b3ff7be43d383e84c2f39c8687bd9ae32ee5",
     "results/raw/20261027T015043-witnesses-b0b032df/reach-suspension.log": "6e3fb8a48af1dafa6d89683ca536e282cadf953031a5fe6bb85879b7f027b231",
     "results/raw/20261027T015109-tests-8513609e/manifest.json": "155869258becdedc0a95ca78ab2734050388b498771a20eeb6cf167fcf183698",
-    "results/raw/20261027T015109-tests-8513609e/tests.log": "887b094c21365ab74e07fde1551e6914518f073316161ca348e3875aa628fac0",
-    "results/raw/20261027T015112-case-study-ee0a5f67/S01.trace.json": "74a4ed7f5701ddcfba22ae3b9df72005266db9f86b42c47a342bce09a3aa2755",
-    "results/raw/20261027T015112-case-study-ee0a5f67/S02.trace.json": "2da769a270dc50311aae329cdce7afcad3d298fc60da5354daf717ad845a7485",
-    "results/raw/20261027T015112-case-study-ee0a5f67/S03.trace.json": "cb5cdb1130ee18a1dc7d935d711d79ceecf4493e84c41086811e198ee41f2848",
-    "results/raw/20261027T015112-case-study-ee0a5f67/S04.trace.json": "d5a58c2e8cb08cfb4d799bdad93d1f5ccc0778b211d2358285f63585d0740b45",
-    "results/raw/20261027T015112-case-study-ee0a5f67/S05.trace.json": "946ac868d683007dc42e6e401c1adb91bce64a8a4eed61c2dceac05c87d1382b",
-    "results/raw/20261027T015112-case-study-ee0a5f67/S06.trace.json": "2397073d433e36ebe2039cef83b9ce20bb5d0e0600bdd2f293a95e1a03718a99",
-    "results/raw/20261027T015112-case-study-ee0a5f67/S07.trace.json": "b8dc260e4991290276ddb29e36612b3e564558821fcd34909521193a36d7baee",
-    "results/raw/20261027T015112-case-study-ee0a5f67/S08.trace.json": "63592555d490f5d1bf4c7e69cb3667c282fc4280628484fcb3837fb8bff0b2cc",
-    "results/raw/20261027T015112-case-study-ee0a5f67/S09.trace.json": "b8dc260e4991290276ddb29e36612b3e564558821fcd34909521193a36d7baee",
-    "results/raw/20261027T015112-case-study-ee0a5f67/S10.trace.json": "27b99eaced4d7fa760f8270c99d07ef296475dd5bd54ca0bee136396d0397980",
-    "results/raw/20261027T015112-case-study-ee0a5f67/S11.trace.json": "16ddfb7bc31f81993cfb767cf0c5a3b65f8c12ab552389bc509b2a8ff76edf98",
-    "results/raw/20261027T015112-case-study-ee0a5f67/S12.trace.json": "fe61e67980e0b621b9f13934bd2197e3482a532fc9a1c2cdfa36d0989c3eeaeb",
-    "results/raw/20261027T015112-case-study-ee0a5f67/S13.trace.json": "c5d8b2fc46f7aa80b3b02c5c0bbd1dad3326cd363e5394d839aa3a39641f3e39",
-    "results/raw/20261027T015112-case-study-ee0a5f67/S14.trace.json": "d7cb6cd69f92aa43740614b65c821039f6c389c3f59b4c0651f2ee75694ff988",
-    "results/raw/20261027T015112-case-study-ee0a5f67/S15.trace.json": "d7cb6cd69f92aa43740614b65c821039f6c389c3f59b4c0651f2ee75694ff988",
-    "results/raw/20261027T015112-case-study-ee0a5f67/S16.trace.json": "822e17ed513d260cf468d6427b6ab728248d80e3fc56133d3c431a8c00ca96cd",
-    "results/raw/20261027T015112-case-study-ee0a5f67/S17.trace.json": "cb5cdb1130ee18a1dc7d935d711d79ceecf4493e84c41086811e198ee41f2848",
-    "results/raw/20261027T015112-case-study-ee0a5f67/S18.trace.json": "ee1fd53a034149b77805a3c717466c5fe4e1153b9a91c67173ecf3d55a022446",
-    "results/raw/20261027T015112-case-study-ee0a5f67/S19.trace.json": "227b49eb30b346f0e4cd750f37af532ab14031719923d2136b136ce57d8e8760",
-    "results/raw/20261027T015112-case-study-ee0a5f67/S20.trace.json": "45bdb594ee226ad10a14cccb5db91eb16ff59b444a4bd5b7c83afdac4e3cb7d8",
-    "results/raw/20261027T015112-case-study-ee0a5f67/S21.trace.json": "84f33f093bf896b00d3809a623d6380993c28551a7e945194ed6261c9569d35c",
-    "results/raw/20261027T015112-case-study-ee0a5f67/S22.trace.json": "6ac7d71257844811aefd258b9b0e1ae6c7ba5e5271b270570146ece26b9a4036",
-    "results/raw/20261027T015112-case-study-ee0a5f67/S23.trace.json": "a5b02705bf198737501ef33de532065437663e191f8e8e8ddfd5571e4b8d122f",
-    "results/raw/20261027T015112-case-study-ee0a5f67/S24.trace.json": "aa708f40009ebf99944b53b7a2bd79f9bdf3db002367164fac12999adb36137d",
-    "results/raw/20261027T015112-case-study-ee0a5f67/S25.trace.json": "c4c5da09a51b3546b955fef08c455cc4ed63d7eb8d3a9a89a9b959909f2edc7a",
-    "results/raw/20261027T015112-case-study-ee0a5f67/S26.trace.json": "48924eee5b2908a3e85f80cbde704a7fe48bb36d826e928818544b1e34a75712",
-    "results/raw/20261027T015112-case-study-ee0a5f67/S27.trace.json": "f7822d74c252c6a698015b4601f4e7df0452bcc679956e16cc780e936fea2d9a",
-    "results/raw/20261027T015112-case-study-ee0a5f67/S28.trace.json": "449f5eee82ab02ce62d1cc05fa69f39f9c7534ba8df5deb7cf5e49200868f1e5",
     "results/raw/20261027T015112-case-study-ee0a5f67/manifest.json": "ce29ac8f5e477c39897c4d2fc822d955bfdc5da9caeb3e03d9966d42e3f783b8",
     "results/raw/20261027T015113-conformance-f5dedd91/manifest.json": "1458f6cdc9ba17532910cd805ffd682956efe8371138a01c13b00d3b1d6dc545",
     "results/raw/20261027T015448-clean-reproduction-a424b450/manifest.json": "9c251ea55b1f9d01cb0dbe3d99b081330c3b2dbbc8520cce769ec299759b6f7d",
     "results/raw/20261027T015448-clean-reproduction-a424b450/results.json": "30d416efdc17b8a3bd3c7f6777afc2aeab74a47890bb4dbacf53c543bb7c298a",
     "results/raw/20261027T015832-clean-reproduction-3f0dce06/manifest.json": "184a9ab5c48246d40cf4bc148c88318d874ab82b1ed25d47072c0e15971c64c0",
-    "results/raw/20261027T015832-clean-reproduction-3f0dce06/results.json": "0481e456878cbb3e93be72d321441fef0a579a12339fd0aa779a7bc7fc73eabc"
+    "results/raw/20261027T015832-clean-reproduction-3f0dce06/results.json": "0481e456878cbb3e93be72d321441fef0a579a12339fd0aa779a7bc7fc73eabc",
+    "results/raw/20261027T031142-tests-ebe9cd99/manifest.json": "faeb43837a1d9971085c9fd8b34162f1696d47e3a5175f8d219b4244ab7803a7",
+    "results/raw/20261027T031142-tests-ebe9cd99/tests.log": "99196f02e80553c9571b7f94ca5288e4bafb6fd9dd57cd6abb13f34e3721b20c",
+    "results/raw/20261027T031145-case-study-297e8db0/S01.trace.json": "74a4ed7f5701ddcfba22ae3b9df72005266db9f86b42c47a342bce09a3aa2755",
+    "results/raw/20261027T031145-case-study-297e8db0/S02.trace.json": "2da769a270dc50311aae329cdce7afcad3d298fc60da5354daf717ad845a7485",
+    "results/raw/20261027T031145-case-study-297e8db0/S03.trace.json": "cb5cdb1130ee18a1dc7d935d711d79ceecf4493e84c41086811e198ee41f2848",
+    "results/raw/20261027T031145-case-study-297e8db0/S04.trace.json": "d5a58c2e8cb08cfb4d799bdad93d1f5ccc0778b211d2358285f63585d0740b45",
+    "results/raw/20261027T031145-case-study-297e8db0/S05.trace.json": "946ac868d683007dc42e6e401c1adb91bce64a8a4eed61c2dceac05c87d1382b",
+    "results/raw/20261027T031145-case-study-297e8db0/S06.trace.json": "2397073d433e36ebe2039cef83b9ce20bb5d0e0600bdd2f293a95e1a03718a99",
+    "results/raw/20261027T031145-case-study-297e8db0/S07.trace.json": "b8dc260e4991290276ddb29e36612b3e564558821fcd34909521193a36d7baee",
+    "results/raw/20261027T031145-case-study-297e8db0/S08.trace.json": "63592555d490f5d1bf4c7e69cb3667c282fc4280628484fcb3837fb8bff0b2cc",
+    "results/raw/20261027T031145-case-study-297e8db0/S09.trace.json": "b8dc260e4991290276ddb29e36612b3e564558821fcd34909521193a36d7baee",
+    "results/raw/20261027T031145-case-study-297e8db0/S10.trace.json": "27b99eaced4d7fa760f8270c99d07ef296475dd5bd54ca0bee136396d0397980",
+    "results/raw/20261027T031145-case-study-297e8db0/S11.trace.json": "16ddfb7bc31f81993cfb767cf0c5a3b65f8c12ab552389bc509b2a8ff76edf98",
+    "results/raw/20261027T031145-case-study-297e8db0/S12.trace.json": "fe61e67980e0b621b9f13934bd2197e3482a532fc9a1c2cdfa36d0989c3eeaeb",
+    "results/raw/20261027T031145-case-study-297e8db0/S13.trace.json": "c5d8b2fc46f7aa80b3b02c5c0bbd1dad3326cd363e5394d839aa3a39641f3e39",
+    "results/raw/20261027T031145-case-study-297e8db0/S14.trace.json": "d7cb6cd69f92aa43740614b65c821039f6c389c3f59b4c0651f2ee75694ff988",
+    "results/raw/20261027T031145-case-study-297e8db0/S15.trace.json": "d7cb6cd69f92aa43740614b65c821039f6c389c3f59b4c0651f2ee75694ff988",
+    "results/raw/20261027T031145-case-study-297e8db0/S16.trace.json": "822e17ed513d260cf468d6427b6ab728248d80e3fc56133d3c431a8c00ca96cd",
+    "results/raw/20261027T031145-case-study-297e8db0/S17.trace.json": "cb5cdb1130ee18a1dc7d935d711d79ceecf4493e84c41086811e198ee41f2848",
+    "results/raw/20261027T031145-case-study-297e8db0/S18.trace.json": "ee1fd53a034149b77805a3c717466c5fe4e1153b9a91c67173ecf3d55a022446",
+    "results/raw/20261027T031145-case-study-297e8db0/S19.trace.json": "227b49eb30b346f0e4cd750f37af532ab14031719923d2136b136ce57d8e8760",
+    "results/raw/20261027T031145-case-study-297e8db0/S20.trace.json": "45bdb594ee226ad10a14cccb5db91eb16ff59b444a4bd5b7c83afdac4e3cb7d8",
+    "results/raw/20261027T031145-case-study-297e8db0/S21.trace.json": "84f33f093bf896b00d3809a623d6380993c28551a7e945194ed6261c9569d35c",
+    "results/raw/20261027T031145-case-study-297e8db0/S22.trace.json": "6ac7d71257844811aefd258b9b0e1ae6c7ba5e5271b270570146ece26b9a4036",
+    "results/raw/20261027T031145-case-study-297e8db0/S23.trace.json": "a5b02705bf198737501ef33de532065437663e191f8e8e8ddfd5571e4b8d122f",
+    "results/raw/20261027T031145-case-study-297e8db0/S24.trace.json": "aa708f40009ebf99944b53b7a2bd79f9bdf3db002367164fac12999adb36137d",
+    "results/raw/20261027T031145-case-study-297e8db0/S25.trace.json": "c4c5da09a51b3546b955fef08c455cc4ed63d7eb8d3a9a89a9b959909f2edc7a",
+    "results/raw/20261027T031145-case-study-297e8db0/S26.trace.json": "48924eee5b2908a3e85f80cbde704a7fe48bb36d826e928818544b1e34a75712",
+    "results/raw/20261027T031145-case-study-297e8db0/S27.trace.json": "f7822d74c252c6a698015b4601f4e7df0452bcc679956e16cc780e936fea2d9a",
+    "results/raw/20261027T031145-case-study-297e8db0/S28.trace.json": "449f5eee82ab02ce62d1cc05fa69f39f9c7534ba8df5deb7cf5e49200868f1e5",
+    "results/raw/20261027T031145-case-study-297e8db0/manifest.json": "071234875eba4ad18c291800b2ea902e46a4cea5b6f3fdd739cbc67586602104",
+    "results/raw/20261027T031147-conformance-7b46d0cb/manifest.json": "200495f98509afac9dbaea972fe32f436070795a33d3efbca0eb7bc3c1a117fe"
   },
   "models": [
     {
@@ -1403,7 +1406,7 @@
         "R": 0,
         "X": 0
       },
-      "elapsed_seconds": 0.018535700044594705,
+      "elapsed_seconds": 0.014574100030586123,
       "episodes_allocated_upper_bound": 4,
       "events": 9,
       "expect": "four accepted ranked views; successful publication",
@@ -1430,7 +1433,7 @@
         "R": 0,
         "X": 0
       },
-      "elapsed_seconds": 0.013971899985335767,
+      "elapsed_seconds": 0.009407199977431446,
       "episodes_allocated_upper_bound": 4,
       "events": 8,
       "expect": "repair sends no additional requests",
@@ -1457,7 +1460,7 @@
         "R": 0,
         "X": 0
       },
-      "elapsed_seconds": 0.039120899979025126,
+      "elapsed_seconds": 0.017075999989174306,
       "episodes_allocated_upper_bound": 8,
       "events": 17,
       "expect": "policy stamp stale despite equal architecture output",
@@ -1484,7 +1487,7 @@
         "R": 0,
         "X": 0
       },
-      "elapsed_seconds": 0.03803729999344796,
+      "elapsed_seconds": 0.028414700005669147,
       "episodes_allocated_upper_bound": 9,
       "events": 18,
       "expect": "other document retains exact stamps and episodes",
@@ -1511,7 +1514,7 @@
         "R": 0,
         "X": 0
       },
-      "elapsed_seconds": 0.00850590004120022,
+      "elapsed_seconds": 0.005250000045634806,
       "episodes_allocated_upper_bound": 2,
       "events": 1,
       "expect": "new requirements target and job appear",
@@ -1538,7 +1541,7 @@
         "R": 0,
         "X": 0
       },
-      "elapsed_seconds": 0.015166199998930097,
+      "elapsed_seconds": 0.013330599991604686,
       "episodes_allocated_upper_bound": 4,
       "events": 9,
       "expect": "active targets and traces disappear",
@@ -1565,7 +1568,7 @@
         "R": 0,
         "X": 0
       },
-      "elapsed_seconds": 0.016747699992265552,
+      "elapsed_seconds": 0.013808000017888844,
       "episodes_allocated_upper_bound": 5,
       "events": 9,
       "expect": "implementation invalidated",
@@ -1592,7 +1595,7 @@
         "R": 0,
         "X": 0
       },
-      "elapsed_seconds": 0.01613490004092455,
+      "elapsed_seconds": 0.013538200000766665,
       "episodes_allocated_upper_bound": 4,
       "events": 9,
       "expect": "active observations unchanged",
@@ -1619,7 +1622,7 @@
         "R": 0,
         "X": 0
       },
-      "elapsed_seconds": 0.01591809996170923,
+      "elapsed_seconds": 0.01284860004670918,
       "episodes_allocated_upper_bound": 5,
       "events": 9,
       "expect": "newly matching item invalidates policy",
@@ -1646,7 +1649,7 @@
         "R": 0,
         "X": 0
       },
-      "elapsed_seconds": 0.02588800003286451,
+      "elapsed_seconds": 0.019211099948734045,
       "episodes_allocated_upper_bound": 6,
       "events": 14,
       "expect": "no regeneration for unobserved version metadata",
@@ -1673,7 +1676,7 @@
         "R": 0,
         "X": 1
       },
-      "elapsed_seconds": 0.008238799986429513,
+      "elapsed_seconds": 0.007155399944167584,
       "episodes_allocated_upper_bound": 2,
       "events": 3,
       "expect": "old answer discarded",
@@ -1700,7 +1703,7 @@
         "R": 0,
         "X": 1
       },
-      "elapsed_seconds": 0.007816599973011762,
+      "elapsed_seconds": 0.007041000004392117,
       "episodes_allocated_upper_bound": 3,
       "events": 4,
       "expect": "original request remains canceled",
@@ -1727,7 +1730,7 @@
         "R": 1,
         "X": 2
       },
-      "elapsed_seconds": 0.0073148999945260584,
+      "elapsed_seconds": 0.006037899991497397,
       "episodes_allocated_upper_bound": 1,
       "events": 4,
       "expect": "timeout charged; late answer cannot commit",
@@ -1754,7 +1757,7 @@
         "R": 2,
         "X": 0
       },
-      "elapsed_seconds": 0.010739499994087964,
+      "elapsed_seconds": 0.007608399959281087,
       "episodes_allocated_upper_bound": 1,
       "events": 7,
       "expect": "unchanged reconciliation cannot earn more budget",
@@ -1781,7 +1784,7 @@
         "R": 2,
         "X": 0
       },
-      "elapsed_seconds": 0.008026299998164177,
+      "elapsed_seconds": 0.008157500007655472,
       "episodes_allocated_upper_bound": 1,
       "events": 7,
       "expect": "descendants suspended; publication rejected",
@@ -1808,7 +1811,7 @@
         "R": 0,
         "X": 0
       },
-      "elapsed_seconds": 0.019615099998191,
+      "elapsed_seconds": 0.01569320005364716,
       "episodes_allocated_upper_bound": 7,
       "events": 11,
       "expect": "architecture repair restores equal downstream cache without dispatch",
@@ -1835,7 +1838,7 @@
         "R": 0,
         "X": 0
       },
-      "elapsed_seconds": 0.02598010003566742,
+      "elapsed_seconds": 0.03074920002836734,
       "episodes_allocated_upper_bound": 8,
       "events": 17,
       "expect": "changed clause prevents policy cache reuse",
@@ -1862,7 +1865,7 @@
         "R": 0,
         "X": 0
       },
-      "elapsed_seconds": 0.029558400041423738,
+      "elapsed_seconds": 0.020796400029212236,
       "episodes_allocated_upper_bound": 5,
       "events": 12,
       "expect": "string architecture and integer verification block publication",
@@ -1889,7 +1892,7 @@
         "R": 1,
         "X": 0
       },
-      "elapsed_seconds": 0.01870979997329414,
+      "elapsed_seconds": 0.01871839998057112,
       "episodes_allocated_upper_bound": 5,
       "events": 11,
       "expect": "integer architecture locally valid but entire write rolls back",
@@ -1916,7 +1919,7 @@
         "R": 0,
         "X": 0
       },
-      "elapsed_seconds": 0.029677700018510222,
+      "elapsed_seconds": 0.016420100000686944,
       "episodes_allocated_upper_bound": 5,
       "events": 13,
       "expect": "new assessment prevents publication",
@@ -1943,7 +1946,7 @@
         "R": 0,
         "X": 0
       },
-      "elapsed_seconds": 0.023502299969550222,
+      "elapsed_seconds": 0.014341600006446242,
       "episodes_allocated_upper_bound": 6,
       "events": 12,
       "expect": "missing prerequisite rejects transaction",
@@ -1970,7 +1973,7 @@
         "R": 0,
         "X": 1
       },
-      "elapsed_seconds": 0.010911000019405037,
+      "elapsed_seconds": 0.00478560000192374,
       "episodes_allocated_upper_bound": 1,
       "events": 3,
       "expect": "pending owner cannot commit",
@@ -1997,7 +2000,7 @@
         "R": 0,
         "X": 1
       },
-      "elapsed_seconds": 0.016220199991948903,
+      "elapsed_seconds": 0.011246500012930483,
       "episodes_allocated_upper_bound": 6,
       "events": 12,
       "expect": "old evidence and pending request invalidated",
@@ -2024,7 +2027,7 @@
         "R": 0,
         "X": 0
       },
-      "elapsed_seconds": 0.008912299992516637,
+      "elapsed_seconds": 0.006645900022704154,
       "episodes_allocated_upper_bound": 1,
       "events": 2,
       "expect": "exactly one context update commits",
@@ -2051,7 +2054,7 @@
         "R": 0,
         "X": 0
       },
-      "elapsed_seconds": 0.012866700009908527,
+      "elapsed_seconds": 0.012836300011258572,
       "episodes_allocated_upper_bound": 5,
       "events": 10,
       "expect": "check from prior semantic revision rejected",
@@ -2078,7 +2081,7 @@
         "R": 0,
         "X": 0
       },
-      "elapsed_seconds": 0.02139130001887679,
+      "elapsed_seconds": 0.014796899980865419,
       "episodes_allocated_upper_bound": 4,
       "events": 10,
       "expect": "observer stutter preserves all authoritative state",
@@ -2105,7 +2108,7 @@
         "R": 0,
         "X": 0
       },
-      "elapsed_seconds": 0.005431200028397143,
+      "elapsed_seconds": 0.004700099991168827,
       "episodes_allocated_upper_bound": 1,
       "events": 2,
       "expect": "invalid schema and target namespace rejected atomically",
@@ -2132,7 +2135,7 @@
         "R": 0,
         "X": 0
       },
-      "elapsed_seconds": 0.059552600025199354,
+      "elapsed_seconds": 0.038697200012393296,
       "episodes_allocated_upper_bound": 1,
       "events": 0,
       "expect": "exhaust all 4096 typed tables for each policy; all event words through length six obey reference",
@@ -2155,14 +2158,14 @@
   ],
   "sources": {
     "case-study": {
-      "manifest_sha256": "ce29ac8f5e477c39897c4d2fc822d955bfdc5da9caeb3e03d9966d42e3f783b8",
-      "results_sha256": "f9f17f147da20ac8fccbdb0d37a635139afe10fefda63772546567f7bae36b0a",
-      "run": "20261027T015112-case-study-ee0a5f67"
+      "manifest_sha256": "071234875eba4ad18c291800b2ea902e46a4cea5b6f3fdd739cbc67586602104",
+      "results_sha256": "bebb8474c942fb5f5ab46e7edea986e4dbe84e3246787d67bface607a2aae6d6",
+      "run": "20261027T031145-case-study-297e8db0"
     },
     "conformance": {
-      "manifest_sha256": "1458f6cdc9ba17532910cd805ffd682956efe8371138a01c13b00d3b1d6dc545",
+      "manifest_sha256": "200495f98509afac9dbaea972fe32f436070795a33d3efbca0eb7bc3c1a117fe",
       "results_sha256": "17ed7ccd1d0d448d8210cdbbd33152a6bc56c9b1f7580f8b352275a8229d0ec8",
-      "run": "20261027T015113-conformance-f5dedd91"
+      "run": "20261027T031147-conformance-7b46d0cb"
     },
     "models": {
       "manifest_sha256": "d8057ff57ecef03c2953d2bd276b330e3cde0d2af4b436ca8e3638c6af61d23b",
@@ -2180,9 +2183,9 @@
       "run": "20261027T014850-proofs-3137953d"
     },
     "tests": {
-      "manifest_sha256": "155869258becdedc0a95ca78ab2734050388b498771a20eeb6cf167fcf183698",
-      "results_sha256": "5c3b147b90695d376b53eda342cfde3cf44de52db986e975525b8cf2f6b4ed23",
-      "run": "20261027T015109-tests-8513609e"
+      "manifest_sha256": "faeb43837a1d9971085c9fd8b34162f1696d47e3a5175f8d219b4244ab7803a7",
+      "results_sha256": "9721fa97e63e5abd7c963aa2967189bc7b228fee300cf5443eb220a5913eb053",
+      "run": "20261027T031142-tests-ebe9cd99"
     },
     "witnesses": {
       "manifest_sha256": "1e0f073666eca02866d86007ae595eda8d7c54d9649de2f3c9ea2e01ef740658",
@@ -2235,6 +2238,11 @@
       "name": "Primitive types and malformed rows",
       "status": "ok",
       "test": "test_boolean_not_integer_and_malformed_rows_rejected"
+    },
+    {
+      "name": "Failed context reactivation recorded",
+      "status": "ok",
+      "test": "test_context_reactivation_failure_is_recorded_not_raised"
     },
     {
       "name": "Deletion/recreation request identity",

@@ -28,6 +28,7 @@ TEST_NAMES = {"boolean_not_integer_and_malformed_rows_rejected": "Primitive type
  "rejected_reconfiguration_rolls_back_everything": "Atomic reconfiguration rollback",
  "required_views_and_structural_reads_cannot_be_omitted": "Mandatory views and structural reads",
  "unavailable_context_blocks_publication_and_reactivates": "Context suspension / reactivation",
+ "context_reactivation_failure_is_recorded_not_raised": "Failed context reactivation recorded",
  "zero_match_workflow_can_publish": "Successful zero-match completion"}
 CHANNELS = ["D", "A", "R", "X", "E", "P", "B", "O"]
 
